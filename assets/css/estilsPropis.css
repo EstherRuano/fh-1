@@ -1,0 +1,13 @@
+.titol {
+  font-family: 'Abril Fatface';
+}
+
+.destacat {
+  font-family: 'Euphoria Script';
+  color: var(--bs-green);
+}
+
+.logo_img {
+  max-inline-size: 120px;
+}
+
