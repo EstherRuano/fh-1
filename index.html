@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Features - Brand</title>
+    <title>Login - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
@@ -16,48 +16,28 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container">
-            <a href="landing_page.html">
-            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
-            </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div id="navcol-1" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="maleta.html">Maleta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
-                    <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main class="page">
-        <section class="clean-block features">
+    
+    <main class="page login-page">
+        <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Features</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <h2 class="text-info">Inicia sessió</h2>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-5 feature-box"><i class="icon-star icon"></i>
-                        <h4>Bootstrap 5</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                <form>
+                    <div class="mb-3"><label class="form-label" for="email">Correu electrònic</label><input class="form-control item" type="email" id="email"></div>
+                    <div class="mb-3"><label class="form-label" for="password">Contrassenya</label><input class="form-control" type="password" id="password"></div>
+                    <div>
+                    <div text-align="center">
+                        <button class="btn btn-primary" type="submit" text-align="center">Inicia sessió</button>
                     </div>
-                    <div class="col-md-5 feature-box"><i class="icon-pencil icon"></i>
-                        <h4>Customizable</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <div>
+                        <button class="btn btn-secundary" type="submit">Continua amb Google</button>
                     </div>
-                    <div class="col-md-5 feature-box"><i class="icon-screen-smartphone icon"></i>
-                        <h4>Responsive</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
-                    </div>
-                    <div class="col-md-5 feature-box"><i class="icon-refresh icon"></i>
-                        <h4>All Browser Compatibility</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <div>
+                        <a href="#">No tens compte? Registra't</a>
                     </div>
                 </div>
+                </form>
             </div>
         </section>
     </main>

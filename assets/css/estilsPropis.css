@@ -4,10 +4,13 @@
 
 .destacat {
   font-family: 'Euphoria Script';
-  color: var(--bs-green);
+  color: rgb(74, 108, 47);
 }
 
 .logo_img {
-  max-inline-size: 120px;
+  max-inline-size: 150px;
 }
 
+.prova{
+  box-shadow: 0px 0px 15px rgba(0,0,0);
+}
