@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login - Brand</title>
+    <title>Home - Suited Penguin</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
@@ -16,70 +16,147 @@
 </head>
 
 <body>
-    
-    <main class="page login-page">
-        <section class="clean-block clean-form dark">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a class="col-m" href="index.html">
+            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+            </a>
+            
+            <div class="col-m" ><button class="btn btn-primary" type="button">Log in</button><button class="btn btn-outline-primary" type="button">Register</button></div>
+            </div>
+    </nav>
+   
+
+    <main class="page landing-page">
+        <div id="carousel-2" class="carousel slide" data-bs-ride="carousel" style="height: 700px;">
+            <div class="carousel-inner h-100">
+                <div class="fixed_carousel">
+                    <div class="interior_carousel">
+                    <h2 class="titol">Suited penguin</h2>
+                    <p>Viatja tranquil</p>
+                    <p>A Suited Penguin ens preocupem per la teva comoditat
+                    <br>T'ajudarem a preparar els teus viatges, orgranitzar-te la maleta, controlar els teus armaris i <span class="destacat">molt més!</span></p>
+                    <a class="btn btn-primary fs-5 py-2 px-4" role="button" href="#">Maleta ràpida</a>
+                    </div>
+
+                </div>
+                <div class="carousel-item active h-100"><img class="imatges_carousel" src="assets/img/scenery/landing-page1.jpg" alt="Slide Image" style="z-index: -1;" />
+                </div>
+                <div class="carousel-item h-100"><img class="imatges_carousel" src="assets/img/scenery/landing-page2.jpg" alt="Slide Image" style="z-index: -1;" />
+                    
+                </div>
+                <div class="carousel-item h-100"><img class="imatges_carousel" src="assets/img/scenery/landing-page3.jpg" alt="Slide Image" style="z-index: -1;" />
+                    
+                </div>
+            </div>
+            <div><a class="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+            <ol class="carousel-indicators">
+                <li class="active" data-bs-target="#carousel-2" data-bs-slide-to="0"></li>
+                <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
+                <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
+            </ol>
+        </div>
+
+
+
+    <section class="clean-block clean-info dark" >
             <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">Inicia sessió</h2>
+                <div class="border rounded border-0 border-light d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+                    <div class="col-sm-10 pb-2 pb-lg-1">
+                        <h2 class="titol">Genera una maleta ràpidament</h2>
+                        <p>Introdueix a continuació la informació del teu viatge i et generarem una maleta!</p>
+                            <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la previsió metereològica del teu lloc de destí i molt més
+                             per proposar-te la <span class="destacat">millor maleta possible</span></p>
+                        <input type="search" placeholder="On viatjaràs?">
+                        <input type="date" id="anada" >
+                        <input type="date" id="tornada" >
+                    </div>
+                    <div class="col-sm-2 align-self-end my-2"><a class="btn btn-primary fs-5 py-2 px-4" role="button" href="#">Maleta ràpida</a></div>
                 </div>
-                <form>
-                    <div class="mb-3"><label class="form-label" for="email">Correu electrònic</label><input class="form-control item" type="email" id="email"></div>
-                    <div class="mb-3"><label class="form-label" for="password">Contrassenya</label><input class="form-control" type="password" id="password"></div>
-                    <div>
-                    <div text-align="center">
-                        <button class="btn btn-primary" type="submit" text-align="center">Inicia sessió</button>
-                    </div>
-                    <div>
-                        <button class="btn btn-secundary" type="submit">Continua amb Google</button>
-                    </div>
-                    <div>
-                        <a href="#">No tens compte? Registra't</a>
-                    </div>
-                </div>
-                </form>
             </div>
         </section>
-    </main>
+    
+   
+    <section class="clean-block clean-info dark">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6"><img class="img-thumbnail" src="assets/img/scenery/maleta.jpg" /></div>
+                <div class="col-md-6">
+                    <h3 class="titol">Perd menys temps, organitza't <span class="destacat">millor</span></h3>
+                    <div class="getting-started-info">
+                        <p>El generador de maletes aleatòries de Suited Penguin et permet organitzar-te la maleta en segons. Omplint els camps demanats, et generarà una combinació de peces de roba idònies pel viatge.</p>
+                    </div><a class="btn btn-outline-primary btn-lg" type="button" href="maleta.html">Crear una maleta personalitzada</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clean-block clean-info dark">
+        <div class="container">
+            
+            <div class="row align-items-center">
+                
+                <div class="col-md-6">
+                    <h3  class="titol">Controla les peces de roba dels diferents <span class="destacat">armaris</span></h3>
+                    <div class="getting-started-info">
+                        <p>A Suited Penguin  t'ajudem a no perdre la roba.<br>Pots crear diversos armaris i emmagatzemar en cada un d'ells la roba que deses en
+                        cada una de les residències. Així, tindràs control total sobre la localització de les teves peces!</p>
+                    </div><a class="btn btn-outline-primary btn-lg" type="button" href="armari.html">Anar a l'armari</a>
+                </div>
+                <div class="col-md-6"><img class="img-thumbnail" src="assets/img/scenery/roba.jpg" /></div>
+            </div>
+        </div>
+    </section>
+    <section class="clean-block clean-info dark">
+        <div class="container">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6"><img class="img-thumbnail" src="assets/img/scenery/outfit.jpg" /></div>
+                <div class="col-md-6">
+                    <h3 class="titol">Crea <span class="destacat">outfits</span> per a cada ocasió</h3>
+                    <div class="getting-started-info">
+                        <p>Combina la roba dels teus armaris com més t'agradi! Crea els outfits que més t'agraden i desa'ls amb Suited Penguin. A més, els podràs afegir a la teva maleta per dur els teus looks arreu.</p>
+                    </div><a class="btn btn-outline-primary btn-lg" type="button" href="outfit.html">Anar a outfits</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+  
+</main>
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <h5>Get started</h5>
+                    <h5>Maleta</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
+                        <li><a href="maleta.html">Les meves maletes</a></li>
+                        <li><a href="nova_maleta.html">Crea una maleta</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h5>About us</h5>
+                    <h5>Armari</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li><a href="armari.html">Els meus armaris</a></li>
+                        <li><a href="#">Crea un armari</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h5>Support</h5>
+                    <h5>Outfits</h5>
                     <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
+                        <li><a href="outfit.html">Els meus outfits</a></li>
+                        <li><a href="#">Crea un outfit</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
-                    <h5>Legal</h5>
+                    <h5>Perfil</h5>
                     <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">El meu perfil</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2022 Copyright Text</p>
+            <p>© 2022 Suited Penguin</p>
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
