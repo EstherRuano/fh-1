@@ -49,11 +49,10 @@
   grid-row-end: line3;
   grid-column-start: third;
   grid-column-end: end;
+  margin-left: 5%;
   
 }
-.gordo{
-  width: 80%;
-}
+
 .titol-armari{
   grid-row-start: line2;
   grid-row-end: line3;
@@ -72,15 +71,14 @@
   grid-row-end: line5;
   grid-column-start: third;
   grid-column-end: end;
+  margin-left: 5%;
 }
 .column{
   width: 100%;
   padding-right: 5%;
   padding-bottom: 10px;
 }
-.row {
-  margin: 0 -5px;
-}
+
 .card {
   position: relative;
   min-width: 0;
@@ -97,14 +95,24 @@
 .card-title {
   margin-bottom: .5rem;
 }
-
-
-
-
-
-.separador{
-  border-bottom: 2px solid black;
+.filter-button{
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  border: 0px;
+  
 }
+.Folder:hover{
+  border: 2px solid #236477;
+ 
+}
+.folder-div{
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  
+}
+
 .logo_img {
   max-inline-size: 200px;
 }
@@ -135,6 +143,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  }
+  .folder_active{
+    font-weight: bold;
   }
 
   .fixed_carousel {

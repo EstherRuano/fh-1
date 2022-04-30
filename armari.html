@@ -16,6 +16,8 @@
     <link rel="stylesheet"
           href=
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/vue@next"></script>
+    <script src="assets\js\armari.js" defer></script>
 </head>
 
 <body>
@@ -51,14 +53,127 @@
                     
                 
                 <!-- Columna de la dreta -->
+                <div class="boto-armari">
+                    <div class="d-none d-md-block" style="margin-top: 1rem;">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          Afegeix un armari
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Afegir armari</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+        
+                                <!-- Form -->
+                                <form>
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                        <div class="row">
+                                          <input type="file" accept="image/*" onchange="loadFile(event)">
+                                          <img id="output" />
+                                          <script>
+                                            var loadFile = function (event) {
+                                              var output = document.getElementById('output');
+                                              output.src = URL.createObjectURL(event.target.files[0]);
+                                              output.onload = function () {
+                                                URL.revokeObjectURL(output.src) // free memory
+                                              }
+                                            };
+                                          </script>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-8">
+                                        <div class="row">
+                                          <div class="form-group">
+                                            <label for="Nom">Nom de l'armari'</label>
+                                            <input type="Nom" class="form-control" id="exampleInputNom1"
+                                              aria-describedby="nomHelp" placeholder="Introdueix el nom de l'armari'">
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="form-group">
+                                            <label for="Àmbit">Àmbit</label>
+                                            <select class="form-select" aria-label="Default select àmbit">
+                                              <option selected>Selecciona l'àmbit</option>
+                                              <option value="1">Formal</option>
+                                              <option value="2">Informal</option>
+                                            </select>
+                                            <small id="ambitHelp" class="form-text text-muted">En quin
+                                              context
+                                              social et posaries aquesta peça?</small>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="form-group">
+                                            <label for="Armari">Armari</label>
+                                            <select class="form-select" aria-label="Default select armari">
+                                              <option selected>Selecciona l'armari</option>
+                                              <option value="1">Lleida</option>
+                                              <option value="2">Barcelona</option>
+                                            </select>
+                                            <small id="armariHelp" class="form-text text-muted">En quin
+                                              armari es
+                                              troba guardada la peça de roba?</small>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="form-group">
+                                            <label for="Categoria">Categoria</label>
+                                            <select class="form-select" aria-label="Default select categoria">
+                                              <option selected>Selecciona la categoria</option>
+                                              <option value="1">Pantalons</option>
+                                              <option value="2">Samarretes</option>
+                                            </select>
+                                            <small id="categoriaHelp" class="form-text text-muted">En quina
+                                              part del
+                                              cos et col·loques la peça de roba?</small>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary me-5"
+                                  data-bs-dismiss="modal">Cancel·la</button>
+                                <button type="button" class="btn btn-outline-primary me-3">Desa</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <section id="app">
+                            <hr style="margin-bottom: 0px;"/>
+                            <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
+                               Recents
+                            </div>
+                            <hr style="margin: 0px;"/>
+                            <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
+                                Favorits
+                            </div>
+                            <hr style="margin: 0px;"/>
+                            <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
+                                Paperera
+                            </div>
+                            <hr style="margin-top: 0px;"/>
+                            </section>
+                      </div>
+                </div>
                 <div class = "cercador">
                     <!--Cercador-->
                     <form id="form bordes-marcats"> 
                         <i class="fa fa-search"></i>
-                        <input class="gordo" type="search" id="cercador"  placeholder="Cerca...">
+                        <input style="width: 80%;" type="search" id="cercador"  placeholder="Cerca...">
                     </form>
                 </div>
-                <div class="llista row">
+                <div class="llista">
                     <div class="column">
                         <div class="card grid-armari">
                             <div class="card-body">
