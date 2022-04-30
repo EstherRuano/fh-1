@@ -11,3 +11,32 @@
   max-inline-size: 120px;
 }
 
+
+.card-box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px #c5c5c5;
+  margin-bottom: 30px;
+  float: left;
+  border-radius: 10px;
+}
+.card-box .card-img-top {
+  width: 100%;
+  height: 16vw;
+  object-fit:contain;
+  transition: 1s;
+}
+.card-box .card-img-top:hover {
+  transform: scale(1.2);
+}
+.card-box h3 a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.visualitzar-armari {
+  padding-bottom: 50px;
+  padding-left: 4rem;
+  padding-top: 40px;
+  text-align: center;
+}
