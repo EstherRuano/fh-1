@@ -7,6 +7,101 @@
   color: var(--bs-green);
 }
 
+.contenidor {
+  display: grid;
+  grid-template-rows: [line1] 30px [line2] 50px [line3] 50px [line4] 50px [line5] 50px [line6] auto [end];
+  grid-template-columns: [first] 5% [second] 20% [third] auto [end];
+}
+.grid-armari{
+  display: grid;
+  grid-template-rows: [line1] 80% [line2] 20% ;
+  grid-template-columns: [first] 33% [second] 33% [third] auto [end];
+}
+.imatge-card{
+  grid-row-start: line1;
+  grid-row-end: line2;
+  grid-column-start: first;
+  grid-column-end: second;
+}
+.img{
+  max-width: 100%;
+  max-height: auto;
+  /*object-fit: contain; /*Contain o fit o com és millor?*/
+}
+.espaiat-horitzontal{
+  grid-row-start: line1;
+  grid-row-end: line2;
+  grid-column-start: first;
+  grid-column-end: end;
+}
+.espaiat-vertical{
+  grid-row-start: line1;
+  grid-row-end: lend;
+  grid-column-start: first;
+  grid-column-end: second;
+
+}
+.cercador{
+  grid-row-start: line2;
+  grid-row-end: line3;
+  grid-column-start: third;
+  grid-column-end: end;
+  
+}
+.gordo{
+  width: 80%;
+}
+.titol-armari{
+  grid-row-start: line2;
+  grid-row-end: line3;
+  grid-column-start: second;
+  grid-column-end: third;
+
+}
+.boto-armari{
+  grid-row-start: line3;
+  grid-row-end: line5;
+  grid-column-start: second;
+  grid-column-end: third;
+}
+.llista{
+  grid-row-start: line3;
+  grid-row-end: line5;
+  grid-column-start: third;
+  grid-column-end: end;
+}
+.column{
+  width: 100%;
+  padding-right: 5%;
+  padding-bottom: 10px;
+}
+.row {
+  margin: 0 -5px;
+}
+.card {
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+.card-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+.card-title {
+  margin-bottom: .5rem;
+}
+
+
+
+
+
+.separador{
+  border-bottom: 2px solid black;
+}
 .logo_img {
   max-inline-size: 120px;
 }
