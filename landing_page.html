@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="assets/css/estilsPropis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -25,7 +28,15 @@
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="landing_page.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="maleta.html">Maleta</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Maleta
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="maleta.html">Les meves maletes</a>
+                            <a class="dropdown-item" href="llistar_maletes.html">Crea una maleta</a>
+                        </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
                     <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
@@ -137,7 +148,7 @@
                 <div class="col-sm-3">
                     <h5>Maleta</h5>
                     <ul>
-                        <li><a href="maleta.html">Les meves maletes</a></li>
+                        <li><a href="llistar_maletes.html">Les meves maletes</a></li>
                         <li><a href="nova_maleta.html">Crea una maleta</a></li>
                     </ul>
                 </div>
