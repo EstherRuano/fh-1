@@ -40,11 +40,13 @@
                     <div class="mb-3">
                         <div class="form-check"><input id="checkbox" class="form-check-input" type="checkbox" /><label class="form-check-label" for="checkbox">Recorda'm</label></div>
                     </div>
-                    <div>
-                        <a class="btn btn-primary" type="submit" href="landing_page.html">Register</a>
-                    </div>
                     
-                </form>
+                    <div id="register">
+                        <button v-on:click="mostra()" class="btn btn-primary" type="button">Register</button>
+                        <p v-if="!isHidden"><br>Ups! Sembla que tenim problemes per registrar-te.<br>Prova a <a href="login.html">iniciar sessió</a> </p>
+                    </div>
+
+                    </form>
             </div>
         </section>
     </main>
@@ -54,6 +56,8 @@
         </div>
     </footer>
     
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets/js/register.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
