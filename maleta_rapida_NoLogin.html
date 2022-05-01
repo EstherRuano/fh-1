@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Suited Penguin</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="assets/css/estilsPropis.css">
+</head>
+
+<body>
+    <!--NavBar sense login-->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a class="col-m" href="index.html">
+            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+            </a>
+            <div class="col-m" ><a class="btn btn-primary" type="button" href="login.html">Log in</a>
+                <a class="btn btn-outline-primary" type="button" href="register.html">Register</a></div>
+            </div>
+    </nav>
+
+    <!-- Bloc principal -->
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Nova maleta</h2>
+                </div>
+
+                <!-- Formulari -->
+                <form style="max-width:800px">
+                    <div class="mb-3"><label class="form-label" for="name">Nom</label><input class="form-control" type="text" id="name" name="name"></div>
+                    <div class="mb-3"><label class="form-label" for="subject">Destí</label><input class="form-control" type="text" id="subject" name="subject"></div>
+                    <div class="mb-3"><label class="form-label" for="email">Pes</label><input class="form-control" type="email" id="email" name="email"></div>
+                    <div style="margin: 0px 0px 16px;">
+                        <div class="row">
+                            <div class="col" style="margin: 20px;">
+                                <label class="form-label">Data inici</label>
+                                <input class="form-control" type="date">
+                                <label class="form-label" style="margin-top: 10px;">Data final</label>
+                                <input class="form-control" type="date"></div>
+                            <div class="col" style="margin: 20px;"><label class="form-label">Àmbit</label>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Formal</label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Informal</label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Esportiu</label></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3" style="text-align:right">
+                        <button class="btn btn-primary" type="submit" style="margin-right: 10px;">Desa</button>
+                        <button class="btn btn-primary" type="submit" style="margin-right: 10px;">Cancel·la</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--Footer sense login-->
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Maleta</h5>
+                    <ul>
+                        <li><a href="register.html">Les meves maletes</a></li>
+                        <li><a href="register.html">Crea una maleta</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Armari</h5>
+                    <ul>
+                        <li><a href="register.html">Els meus armaris</a></li>
+                        <li><a href="register.html">Crea un armari</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Outfits</h5>
+                    <ul>
+                        <li><a href="register.html">Els meus outfits</a></li>
+                        <li><a href="register.html">Crea un outfit</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Perfil</h5>
+                    <ul>
+                        <li><a href="register.html">El meu perfil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2022 Suited Penguin</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets/js/maletaRapida.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
