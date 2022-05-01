@@ -18,22 +18,30 @@
 
 <body>
   <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-    <div class="container"><a href="landing_page.html">
-        <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
-
-      </a><button class="navbar-toggler" data-bs-toggle="collapse"><span class="visually-hidden">Toggle
-          navigation</span><span class="navbar-toggler-icon"></span></button>
-      <div id="navcol-1" class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="landing_page.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="maleta.html">Maleta</a></li>
-          <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
-          <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
-          <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-        </ul>
-      </div>
+    <div class="container">
+        <a href="landing_page.html">
+        <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+        </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div id="navcol-1" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Maleta
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                      <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
+                      <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
+                <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
+                <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
 
   <main class="page">
     <section class="container-fluid visualitzar-armari">
