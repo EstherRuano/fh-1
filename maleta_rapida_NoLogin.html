@@ -14,23 +14,15 @@
 </head>
 
 <body>
-    <!-- Navigation bar -->
+    <!--NavBar sense login-->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container">
-            <a href="landing_page.html">
+            <a class="col-m" href="index.html">
             <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
             </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div id="navcol-1" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="landing_page.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="maleta.html">Maleta</a></li>
-                    <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
-                    <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-                </ul>
+            <div class="col-m" ><a class="btn btn-primary" type="button" href="login.html">Log in</a>
+                <a class="btn btn-outline-primary" type="button" href="register.html">Register</a></div>
             </div>
-        </div>
     </nav>
 
     <!-- Bloc principal -->
@@ -68,7 +60,46 @@
             </div>
         </section>
     </main>
-    
+    <!--Footer sense login-->
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Maleta</h5>
+                    <ul>
+                        <li><a href="register.html">Les meves maletes</a></li>
+                        <li><a href="register.html">Crea una maleta</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Armari</h5>
+                    <ul>
+                        <li><a href="register.html">Els meus armaris</a></li>
+                        <li><a href="register.html">Crea un armari</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Outfits</h5>
+                    <ul>
+                        <li><a href="register.html">Els meus outfits</a></li>
+                        <li><a href="register.html">Crea un outfit</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Perfil</h5>
+                    <ul>
+                        <li><a href="register.html">El meu perfil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2022 Suited Penguin</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets/js/maletaRapida.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
