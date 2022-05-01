@@ -10,26 +10,21 @@ const miapp = Vue.createApp({
         selectedFolder(opcio){
             if ( opcio == 1 ){
                 console.log("executant opcio 1");
-                if(this.recentSelected==true){
-                    this.recentSelected = false;
-                }
-                else{
-                    this.recentSelected = true;
-                }
+                this.recentSelected = !this.recentSelected;
                 this.favoritsSelected = false;
                 this.papereraSelected = false;
             }
             else if (opcio == 2){
                 console.log("executant opcio 2");
                 this.recentSelected = false;
-                this.favoritsSelected = true;
+                this.favoritsSelected = !this.favoritsSelected;
                 this.papereraSelected = false;
             }
             else if (opcio == 3){
                 console.log("executant opcio 3");
                 this.recentSelected = false;
                 this.favoritsSelected = false;
-                this.papereraSelected = true;
+                this.papereraSelected = !this.papereraSelected;
             }
         }
     }
