@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Pricing - Brand</title>
+    <title>About Us - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
@@ -21,203 +21,254 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-    <div class="container">
-        <a href="landing_page.html">
-        <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
-        </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div id="navcol-1" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Maleta
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                      <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                      <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-                    </ul>
-                  </li>
-                <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
-                <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
-                <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-            </ul>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a href="landing_page.html">
+            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+            </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div id="navcol-1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Maleta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                          <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
+                          <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-    <main class="page pricing-table-page">
-    <section class="clean-block clean-pricing dark">
-        <div class="contenidor" >
-           <div class="espaiat-horitzontal espaiat-vertical"></div> 
-                <!--Columna de l'esquerra -->
-                
-                  <!--  <div class="titol-armari">
-                        <h3 class="titol">Els meus armaris</h3>
-                    </div>
-                    <div class="boto-armari separador">
-                        <button class="btn btn-outline-primary " type="button" href="">Crear armari</button>
-                    </div> -->
-                    
-                
-                <!-- Columna de la dreta -->
-                <div class="boto-armari">
-                    <div class="d-none d-md-block" style="margin-top: 1rem;">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                          Afegeix un armari
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Afegir armari</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-        
-                                <!-- Form -->
-                                <form>
-                                  <div class="container-fluid">
-                                    <div class="row">
-                                      <div class="col-md-4">
-                                        <div class="row">
-                                          <input type="file" accept="image/*" onchange="loadFile(event)">
-                                          <img id="output" />
-                                          <script>
-                                            var loadFile = function (event) {
-                                              var output = document.getElementById('output');
-                                              output.src = URL.createObjectURL(event.target.files[0]);
-                                              output.onload = function () {
-                                                URL.revokeObjectURL(output.src) // free memory
-                                              }
-                                            };
-                                          </script>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-8">
-                                        <div class="row">
-                                          <div class="form-group">
-                                            <label for="Nom">Nom de l'armari'</label>
-                                            <input type="Nom" class="form-control" id="exampleInputNom1"
-                                              aria-describedby="nomHelp" placeholder="Introdueix el nom de l'armari'">
-                                          </div>
-                                        </div>
-                                        <div class="row">
-                                          <div class="form-group">
-                                            <label for="Àmbit">Àmbit</label>
-                                            <select class="form-select" aria-label="Default select àmbit">
-                                              <option selected>Selecciona l'àmbit</option>
-                                              <option value="1">Formal</option>
-                                              <option value="2">Informal</option>
-                                            </select>
-                                            <small id="ambitHelp" class="form-text text-muted">En quin
-                                              context
-                                              social et posaries aquesta peça?</small>
-                                          </div>
-                                        </div>
-                                        <div class="row">
-                                          <div class="form-group">
-                                            <label for="Armari">Armari</label>
-                                            <select class="form-select" aria-label="Default select armari">
-                                              <option selected>Selecciona l'armari</option>
-                                              <option value="1">Lleida</option>
-                                              <option value="2">Barcelona</option>
-                                            </select>
-                                            <small id="armariHelp" class="form-text text-muted">En quin
-                                              armari es
-                                              troba guardada la peça de roba?</small>
-                                          </div>
-                                        </div>
-                                        <div class="row">
-                                          <div class="form-group">
-                                            <label for="Categoria">Categoria</label>
-                                            <select class="form-select" aria-label="Default select categoria">
-                                              <option selected>Selecciona la categoria</option>
-                                              <option value="1">Pantalons</option>
-                                              <option value="2">Samarretes</option>
-                                            </select>
-                                            <small id="categoriaHelp" class="form-text text-muted">En quina
-                                              part del
-                                              cos et col·loques la peça de roba?</small>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-secondary me-5"
-                                  data-bs-dismiss="modal">Cancel·la</button>
-                                <button type="button" class="btn btn-outline-primary me-3">Desa</button>
-                              </div>
-                            </div>
+    </nav>
+    <main class="page">
+        <section class="clean-block ">
+          <div class="contenidor" >
+            <div class="espaiat-horitzontal espaiat-vertical"></div> 
+                 <!--Columna de l'esquerra -->
+                 
+                   <!--  <div class="titol-armari">
+                         <h3 class="titol">Els meus armaris</h3>
+                     </div>
+                     <div class="boto-armari separador">
+                         <button class="btn btn-outline-primary " type="button" href="">Crear armari</button>
+                     </div> -->
+                     
+                 
+                 <!-- Columna de la dreta -->
+                 <div class="boto-armari">
+                     <div class="d-none d-md-block" >
+                         <!-- Button trigger modal -->
+                         <button type="button" class="btn btn-primary" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                           Afegeix un armari
+                         </button>
+                         <!-- Modal -->
+                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                           tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                           <div class="modal-dialog modal-xl">
+                             <div class="modal-content">
+                               <div class="modal-header">
+                                 <h5 class="modal-title" id="staticBackdropLabel">Afegir armari</h5>
+                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                               </div>
+                               <div class="modal-body">
+         
+                                 <!-- Form -->
+                                 <form>
+                                   <div class="container-fluid">
+                                     <div class="row">
+                                       <div class="col-md-4">
+                                         <div class="row">
+                                           <input type="file" accept="image/*" onchange="loadFile(event)">
+                                           <img id="output" />
+                                           <script>
+                                             var loadFile = function (event) {
+                                               var output = document.getElementById('output');
+                                               output.src = URL.createObjectURL(event.target.files[0]);
+                                               output.onload = function () {
+                                                 URL.revokeObjectURL(output.src) // free memory
+                                               }
+                                             };
+                                           </script>
+                                         </div>
+                                       </div>
+                                       <div class="col-md-8">
+                                         <div class="row">
+                                           <div class="form-group">
+                                             <label for="Nom">Nom de l'armari'</label>
+                                             <input type="Nom" class="form-control" id="exampleInputNom1"
+                                               aria-describedby="nomHelp" placeholder="Introdueix el nom de l'armari'">
+                                           </div>
+                                         </div>
+                                         <div class="row">
+                                           <div class="form-group">
+                                             <label for="Àmbit">Àmbit</label>
+                                             <select class="form-select" aria-label="Default select àmbit">
+                                               <option selected>Selecciona l'àmbit</option>
+                                               <option value="1">Formal</option>
+                                               <option value="2">Informal</option>
+                                             </select>
+                                             <small id="ambitHelp" class="form-text text-muted">En quin
+                                               context
+                                               social et posaries aquesta peça?</small>
+                                           </div>
+                                         </div>
+                                         <div class="row">
+                                           <div class="form-group">
+                                             <label for="Armari">Armari</label>
+                                             <select class="form-select" aria-label="Default select armari">
+                                               <option selected>Selecciona l'armari</option>
+                                               <option value="1">Lleida</option>
+                                               <option value="2">Barcelona</option>
+                                             </select>
+                                             <small id="armariHelp" class="form-text text-muted">En quin
+                                               armari es
+                                               troba guardada la peça de roba?</small>
+                                           </div>
+                                         </div>
+                                         <div class="row">
+                                           <div class="form-group">
+                                             <label for="Categoria">Categoria</label>
+                                             <select class="form-select" aria-label="Default select categoria">
+                                               <option selected>Selecciona la categoria</option>
+                                               <option value="1">Pantalons</option>
+                                               <option value="2">Samarretes</option>
+                                             </select>
+                                             <small id="categoriaHelp" class="form-text text-muted">En quina
+                                               part del
+                                               cos et col·loques la peça de roba?</small>
+                                           </div>
+                                         </div>
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </form>
+                               </div>
+                               <div class="modal-footer">
+                                 <button type="button" class="btn btn-outline-secondary me-5"
+                                   data-bs-dismiss="modal">Cancel·la</button>
+                                 <button type="button" class="btn btn-outline-primary me-3">Desa</button>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                         <section id="app">
+                             <hr style="margin-bottom: 0px;"/>
+                             <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
+                                Recents
+                             </div>
+                             <hr style="margin: 0px;"/>
+                             <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
+                                 Favorits
+                             </div>
+                             <hr style="margin: 0px;"/>
+                             <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
+                                 Paperera
+                             </div>
+                             <hr style="margin-top: 0px;"/>
+                         </section>
+                       </div>
+                 </div>
+                 <div class = "cercador">
+                     <!--Cercador-->
+                     <form id="form bordes-marcats"> 
+                         <i class="fa fa-search"></i>
+                         <input style="width: 80%;" type="search" id="cercador"  placeholder="Cerca...">
+                     </form>
+                 </div>
+                 <div class="llista">
+                     <div class="column">
+                       <div class="card grid-armari" >
+                         <a href="visualitzar_armari.html"></a>
+                           <div class="card-body">
+                               
+                               <p style="font-size:1.5vw;">Ubicació: Lleida <br/>
+                                 Nombre d'items: 32</p>
+                               
+                           </div>
+                           <div class="imatge-card">
+                             
+                              <img class="img"   src="assets/img/scenery/casa.jpg" alt="casa armari 1"> 
+                           </div>
+                           <div class="card-buttons">
+                             <button class="buttons" type="button" style="margin-left: 50% ;"><i class="fa fa-edit icon-button"></i></button>
+                             <button class="buttons" type="button"><i class="fa fa-remove"></i></button>
+                             
+                           </div>
+                           <div class="card-footer">
+                             
+                               <div class="card-title">
+                                 <h3 class="title" style="font-size:2.5vw;">Armari1</h3> 
+                               </div> 
+                           </div>
+  
+                       </div>
+                     </div>
+                     <div class="column">
+                      <div class="card grid-armari" >
+                          <div class="card-body">
+                              
+                              <p style="font-size:1.5vw;">Ubicació: Barcelona <br/>
+                                Nombre d'items: 12</p>
+                              
                           </div>
-                        </div>
-                        <section id="app">
-                            <hr style="margin-bottom: 0px;"/>
-                            <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
-                               Recents
-                            </div>
-                            <hr style="margin: 0px;"/>
-                            <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
-                                Favorits
-                            </div>
-                            <hr style="margin: 0px;"/>
-                            <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
-                                Paperera
-                            </div>
-                            <hr style="margin-top: 0px;"/>
-                            </section>
+                          <div class="imatge-card">
+                            
+                             <img class="img"   src="assets/img/scenery/piso.jpg" alt="pis armari 2"> 
+                          </div>
+                          <div class="card-buttons">
+                            <button class="buttons" type="button" style="margin-left: 50% ;"><i class="fa fa-edit icon-button"></i></button>
+                            <button class="buttons" type="button"><i class="fa fa-remove"></i></button>
+                            
+                          </div>
+                          <div class="card-footer">
+                            
+                              <div class="card-title">
+                                <h3 class="title" style="font-size:2.5vw;">Armari2</h3> 
+                              </div> 
+                          </div>
+ 
                       </div>
-                </div>
-                <div class = "cercador">
-                    <!--Cercador-->
-                    <form id="form bordes-marcats"> 
-                        <i class="fa fa-search"></i>
-                        <input style="width: 80%;" type="search" id="cercador"  placeholder="Cerca...">
-                    </form>
-                </div>
-                <div class="llista">
-                    <div class="column">
-                        <div class="card grid-armari">
-                            <div class="card-body">
-                                <h3 class="titol">Armari 1</h3>
-                                <p>Aquest és l'armari 1</p>
-                                <button>Anar a l'armari</button>
-                            </div>
-                            <div class="imatge-card">
-                               <img class="img"   src="assets/img/scenery/casa.jpg" alt="casa armari 1"> 
-                            </div>
-                        </div>
                     </div>
                     <div class="column">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="titol">Armari 2</h3>
-                                <p>Aquest és l'armari 2</p>
-                                <button>Anar a l'armari</button>
-                            </div>
-                        </div>
+                      <div class="card grid-armari" >
+                        <a href="visualitzar_armari.html"></a>
+                          <div class="card-body">
+                              
+                              <p style="font-size:1.5vw;">Ubicació: Estocolm <br/>
+                                Nombre d'items: 7</p>
+                              
+                          </div>
+                          <div class="imatge-card">
+                            
+                             <img class="img"   src="assets/img/scenery/caravana.jpg" alt="casa armari 3"> 
+                          </div>
+                          <div class="card-buttons">
+                            <button class="buttons" type="button" style="margin-left: 50% ;"><i class="fa fa-edit icon-button"></i></button>
+                            <button class="buttons" type="button"><i class="fa fa-remove"></i></button>
+                            
+                          </div>
+                          <div class="card-footer">
+                            
+                              <div class="card-title">
+                                <h3 class="title" style="font-size:2vw">Armari3</h3> 
+                              </div> 
+                          </div>
+                          
+ 
+                      </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="titol">Armari 3</h3>
-                                <p>Aquest és l'armari 3</p>
-                                <button>Anar a l'armari</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-        </div>
-    </section>    
+                 </div>
+             
+         </div>
+        </section>
     </main>
-    <!-- <footer class="page-footer dark">
+    <!--<footer class="page-footer dark">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
