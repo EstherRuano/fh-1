@@ -66,9 +66,9 @@
                         <p>Introdueix a continuació la informació del teu viatge i et generarem una maleta!</p>
                             <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la previsió metereològica del teu lloc de destí i molt més
                              per proposar-te la <span class="destacat">millor maleta possible</span></p>
-                        <input type="search" placeholder="On viatjaràs?" v-on:input="setDesti">
-                        <input type="date" id="anada" >
-                        <input type="date" id="tornada" >
+                        <input type="search" placeholder="On viatjaràs?" v-model="desti">
+                        <input type="date" id="anada" v-model="anada">
+                        <input type="date" id="tornada" v-model="tornada">
                     </div>
                     <div class="col-sm-2 align-self-end my-2"><button v-on:click="envia()" class="btn btn-primary fs-5 py-2 px-4" role="button" type="button">Maleta ràpida</button></div>
                 </div>

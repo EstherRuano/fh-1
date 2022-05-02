@@ -7,11 +7,8 @@ const index = Vue.createApp({
         };
     },
     methods: {
-        setDesti(event){ //event se pasa automáticamente sp que se genera un evento
-            this.desti = event.target.value; //r-value es vanilla JS
-        },
         envia(){
-            location.href=('maleta_rapida_NoLogin.html?desti=').concat(this.desti);
+            location.href=('maleta_rapida_NoLogin.html?desti=').concat(this.desti).concat('&anada=').concat(this.anada).concat('&tornada=').concat(this.tornada);
         }
     }
 });
