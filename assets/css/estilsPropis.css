@@ -24,18 +24,12 @@
 .mostraMaletaImprescindible {
   border-radius: calc(0.50rem - 1px);
   padding:10px;
-  background-color: rgba(207, 223, 218,0.35);
+  margin: 10px;
+  background-color: rgba(207, 223, 218,0.8);
 }
 
 .mostraMaletaCarta {
   background-color: #fff;
-}
-
-.mostraMaletaOpcionals {
-  border-radius: calc(0.50rem - 1px);
-  padding:10px;
-  background-color: rgba(207, 223, 218,0.35);
-
 }
 
 .grid-armari{
