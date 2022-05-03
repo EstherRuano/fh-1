@@ -71,7 +71,7 @@
                 </div>
 
                 <!-- Formulari -->
-                <form style="max-width:800px">
+                <form style="max-width:800px" id = "maletaRapida">
                     <div class="mb-3"><label class="form-label" for="name">Nom</label><input class="form-control" type="text" id="name" name="name"></div>
                     <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti" class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
                     <script src="assets/js/country_list.js" type="text/javascript"></script>
@@ -92,6 +92,156 @@
                     </div>
                     <div class="mb-3" style="text-align:right">
                         <button class="btn btn-primary" type="submit" style="margin-right: 10px;">Desa</button>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Genera la maleta
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+        
+                                <!-- Contingut per la maleta a Roma, hardcoded -->
+                                <form>
+                                    <div class="container-fluid">
+                                                <div class="mostraMaletaTitol">
+                                                    <h2 class="text-info">Maleta</h2>
+                                                </div>  
+                                            <div class="row mostraMaletaImprescindible">
+                                                <h3 class="mostraMaletaTitol">Imprescindibles</h3>
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/samarreta.png" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Samarreta</h5>
+                                                      </li>
+                                                      <li class="list-group-item">Unitats: 4</li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/partsDeBaix.jpg" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Pantalons o faldilles</h5>
+                                                      </li>
+                                                      <li class="list-group-item">Unitats: 2</li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/mitjons.jpg" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Roba interior</h5>
+                                                      </li>
+                                                      <li class="list-group-item">Unitats: 4</li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/higiene.png" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Articles d'higiene</h5>
+                                                      </li>
+                                                      <li class="list-group-item">Gel, xampú, raspall i pasta de dents, desodorant, pinta, crema solar</li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/cartera.png" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Documentació i diners</h5>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/medicines.jpg" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Medicines</h5>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+
+                                              <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                  <div class="card-thumbnail">
+                                                    <img src="assets/img/maletaRapida/mobil.jpg" class="card-img-top img-fluid" alt="">
+                                                  </div>
+                                                  <div class="card-body">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Mòbil i carregador</h5>
+                                                      </li>
+                                                    </ul>
+                                                  </div>
+                                                </div>
+                                              </div>
+                             
+                                    </div>
+                                </form>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary me-5"
+                                    data-bs-dismiss="modal">Cancel·la</button>
+                                <button type="button" class="btn btn-outline-primary me-3">Desa</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
                         <button class="btn btn-primary" type="submit" style="margin-right: 10px;">Cancel·la</button>
                     </div>
                 </form>
@@ -145,8 +295,7 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="assets/js/maletaRapida.js"></script>
+    <script src="assets/css/estilsPropis.css"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
