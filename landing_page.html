@@ -87,22 +87,19 @@
 
 
 
-        <section class="clean-block clean-info dark">
+        <section class="clean-block clean-info dark" id="landing">
             <div class="container">
-                <div
-                    class="border rounded border-0 border-light d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
-                    <div class="col-sm-10 pb-2 pb-lg-1">
+                <div class="border rounded border-0 border-light d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+                    <div class="col-sm-8 pb-2 pb-lg-1">
                         <h2 class="titol">Genera una maleta ràpidament</h2>
                         <p>Introdueix a continuació la informació del teu viatge i et generarem una maleta!</p>
-                        <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la
-                            previsió metereològica del teu lloc de destí i molt més
-                            per proposar-te la <span class="destacat">millor maleta possible</span></p>
-                        <input type="search" placeholder="On viatjaràs?">
-                        <input type="date" id="anada">
-                        <input type="date" id="tornada">
+                            <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la previsió metereològica del teu lloc de destí i molt més
+                             per proposar-te la <span class="destacat">millor maleta possible</span></p>
+                        <input type="search" placeholder="On viatjaràs?" v-model="desti">
+                        <input type="date" id="anada" v-model="anada">
+                        <input type="date" id="tornada" v-model="tornada">
                     </div>
-                    <div class="col-sm-2 align-self-end my-2"><a class="btn btn-primary fs-5 py-2 px-4" role="button"
-                            href="#">Maleta ràpida</a></div>
+                    <div class="col-sm-4 align-self-end my-2"><button v-on:click="envia()" class="btn btn-primary fs-5 py-2 px-4" role="button" type="button">Maleta ràpida</button></div>
                 </div>
             </div>
         </section>
@@ -171,7 +168,7 @@
                     <h5>Maleta</h5>
                     <ul>
                         <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-                        <li><a href="nova_maleta.html">Crea una maleta</a></li>
+                        <li><a href="maleta.html">Crea una maleta</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -201,6 +198,8 @@
         </div>
     </footer>
     
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets/js/landing.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
