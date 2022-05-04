@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Visualitzar armari</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -23,14 +24,16 @@
             <a href="landing_page.html">
                 <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Maleta
-                    </a>
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarLightDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Maleta
+                        </a>
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                             <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
                             <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
@@ -58,7 +61,9 @@
                         </div>
                         <div class="col-md-9">
                             <div class="input-group">
-                                <input type="search" class="form-control rounded" placeholder="Introdueix la maleta a cercar" aria-label="Cerca" aria-describedby="search-addon" />
+                                <input type="search" class="form-control rounded"
+                                    placeholder="Introdueix la maleta a cercar" aria-label="Cerca"
+                                    aria-describedby="search-addon" />
                                 <button type="button" class="btn btn-outline-primary">Cerca</button>
                             </div>
                         </div>
@@ -69,32 +74,44 @@
                         <div class="col-md-3 d-flex" style="position: sticky">
                             <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
                                 <!-- Button to maleta -->
-                                <a type="button" class="btn btn-primary" style="width:100%;" data-bs-target="#staticBackdrop" href="maleta.html">
-                  Crear Maleta
-                </a>
+                                <a type="button" class="btn btn-primary" style="width:100%;"
+                                    data-bs-target="#staticBackdrop" href="maleta.html">
+                                    Crear Maleta
+                                </a>
 
                                 <section id="app">
                                     <hr style="margin-bottom: 0px;" />
-                                    <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
+                                    <div class="Folder folder-div" :class="{folder_active:recentSelected}"
+                                        @click="selectedFolder(1)">
                                         Recents
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-clock" viewBox="0 0 16 16">
-                                          <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                                          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                            class="bi bi-clock" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                            <path
+                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                                         </svg>
                                     </div>
                                     <hr style="margin: 0px;" />
-                                    <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
+                                    <div class="Folder folder-div" :class="{folder_active:favoritsSelected}"
+                                        @click="selectedFolder(2)">
                                         Favorits
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-star" viewBox="0 0 16 16">
-                                        <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
-                                      </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                            class="bi bi-star" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                        </svg>
                                     </div>
                                     <hr style="margin: 0px;" />
-                                    <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
+                                    <div class="Folder folder-div" :class="{folder_active:papereraSelected}"
+                                        @click="selectedFolder(3)">
                                         Paperera
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash" viewBox="0 0 16 16">
-                                          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                          <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                            class="bi bi-trash" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                            <path fill-rule="evenodd"
+                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                         </svg>
                                     </div>
                                     <hr style="margin-top: 0px;" />
@@ -112,56 +129,88 @@
                                 <div class="card-body grid-maleta">
 
                                     <div class="maleta-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                                        <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                                      </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#173042"
+                                            class="bi bi-briefcase-fill" viewBox="0 0 16 16"
+                                            style="grid-area: icon; align-self:center; justify-self:center;">
+                                            <path
+                                                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                        </svg>
                                     </div>
 
                                     <div class="maleta-general-info">
                                         <div class="maleta-gi-element" style="grid-area: gi-pes;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                          <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                                <path
+                                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">20kg</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-durada;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-calendar-event" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-calendar-event" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">9 dies</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-elements;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-basket3" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-basket3" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">35</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-desti;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-globe" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-globe" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">Glasgow</p>
                                         </div>
                                     </div>
 
                                     <div class="maleta-clothing-list">
-                                        <img class="rounded float-start" style="grid-area: cl-1; justify-self: center; width:70%;" src="assets/img/clothes/texans.png">
-                                        <img class="rounded float-end" style="grid-area: cl-2; justify-self: center; width:70%;" src="assets/img/clothes/biquini_flors.png">
-                                        <img class="rounded float-end" style="grid-area: cl-3; justify-self: center; width:70%;" src="assets/img/clothes/jersei_vans.png">
-                                        <img class="rounded float-end" style="grid-area: cl-4; justify-self: center; width:70%;" src="assets/img/clothes/dessuadora_nike.png">
-                                        <img class="rounded float-end" style="grid-area: cl-5; justify-self: center; width:70%;" src="assets/img/clothes/pantalons_blancs_campana.png">
+                                        <img class="rounded float-start"
+                                            style="grid-area: cl-1; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/texans.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-2; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/biquini_flors.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-3; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/jersei_vans.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-4; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/dessuadora_nike.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-5; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/pantalons_blancs_campana.png">
                                     </div>
 
                                 </div>
 
                                 <div class="card-footer maleta-bottom-line">
                                     <h3 class="titol" style="grid-area: bl-name"> Maleta a Escòcia </h3>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16" style="justify-self:right">
-                                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                        class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16"
+                                        style="justify-self:right">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                     </svg>
                                 </div>
                             </div>
@@ -172,47 +221,75 @@
                                 <div class="card-body grid-maleta">
 
                                     <div class="maleta-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                                        <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                                      </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#173042"
+                                            class="bi bi-briefcase-fill" viewBox="0 0 16 16"
+                                            style="grid-area: icon; align-self:center; justify-self:center;">
+                                            <path
+                                                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                        </svg>
                                     </div>
 
                                     <div class="maleta-general-info">
                                         <div class="maleta-gi-element" style="grid-area: gi-pes;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                          <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                                <path
+                                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">15kg</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-durada;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-calendar-event" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-calendar-event" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">6 dies</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-elements;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-basket3" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-basket3" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">27</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-desti;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-globe" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-globe" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">Lisbon</p>
                                         </div>
                                     </div>
 
                                     <div class="maleta-clothing-list">
-                                        <img class="rounded float-start" style="grid-area: cl-1; justify-self: center; width:70%;" src="assets/img/clothes/faldilla_flors.png">
-                                        <img class="rounded float-end" style="grid-area: cl-2; justify-self: center; width:70%;" src="assets/img/clothes/dessuadora_nike.png">
-                                        <img class="rounded float-end" style="grid-area: cl-3; justify-self: center; width:70%;" src="assets/img/clothes/parca.png">
-                                        <img class="rounded float-end" style="grid-area: cl-4; justify-self: center; width:70%;" src="assets/img/clothes/samarreta_esport.png">
-                                        <img class="rounded float-end" style="grid-area: cl-5; justify-self: center; width:70%;" src="assets/img/clothes/texans.png">
+                                        <img class="rounded float-start"
+                                            style="grid-area: cl-1; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/faldilla_flors.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-2; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/dessuadora_nike.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-3; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/parca.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-4; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/samarreta_esport.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-5; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/texans.png">
                                     </div>
 
                                 </div>
@@ -220,9 +297,13 @@
                                 <div class="card-footer maleta-bottom-line">
                                     <h3 class="titol" style="grid-area: bl-name"> Maleta 1 </h3>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16" style="justify-self:right">
-                                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                        class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16"
+                                        style="justify-self:right">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                     </svg>
 
                                 </div>
@@ -233,47 +314,75 @@
                                 <div class="card-body grid-maleta">
 
                                     <div class="maleta-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                                        <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                                        <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                                      </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="#173042"
+                                            class="bi bi-briefcase-fill" viewBox="0 0 16 16"
+                                            style="grid-area: icon; align-self:center; justify-self:center;">
+                                            <path
+                                                d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                            <path
+                                                d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                        </svg>
                                     </div>
 
                                     <div class="maleta-general-info">
                                         <div class="maleta-gi-element" style="grid-area: gi-pes;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"/>
-                          <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-briefcase-fill" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                                <path
+                                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">15kg</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-durada;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-calendar-event" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-                          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-calendar-event" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z" />
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">6 dies</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-elements;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-basket3" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-basket3" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">27</p>
                                         </div>
                                         <div class="maleta-gi-element" style="grid-area: gi-desti;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-globe" viewBox="0 0 16 16" style="grid-area: icon; align-self:center; justify-self:center;">
-                          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-                        </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-globe" viewBox="0 0 16 16"
+                                                style="grid-area: icon; align-self:center; justify-self:center;">
+                                                <path
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                                            </svg>
                                             <p style="grid-area: text; text-align: center;">Lisbon</p>
                                         </div>
                                     </div>
 
                                     <div class="maleta-clothing-list">
-                                        <img class="rounded float-start" style="grid-area: cl-1; justify-self: center; width:70%;" src="assets/img/clothes/faldilla_flors.png">
-                                        <img class="rounded float-end" style="grid-area: cl-2; justify-self: center; width:70%;" src="assets/img/clothes/dessuadora_nike.png">
-                                        <img class="rounded float-end" style="grid-area: cl-3; justify-self: center; width:70%;" src="assets/img/clothes/parca.png">
-                                        <img class="rounded float-end" style="grid-area: cl-4; justify-self: center; width:70%;" src="assets/img/clothes/samarreta_esport.png">
-                                        <img class="rounded float-end" style="grid-area: cl-5; justify-self: center; width:70%;" src="assets/img/clothes/texans.png">
+                                        <img class="rounded float-start"
+                                            style="grid-area: cl-1; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/faldilla_flors.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-2; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/dessuadora_nike.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-3; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/parca.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-4; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/samarreta_esport.png">
+                                        <img class="rounded float-end"
+                                            style="grid-area: cl-5; justify-self: center; width:70%;"
+                                            src="assets/img/clothes/texans.png">
                                     </div>
 
                                 </div>
@@ -281,9 +390,13 @@
                                 <div class="card-footer maleta-bottom-line">
                                     <h3 class="titol" style="grid-area: bl-name"> Maleta esborrada </h3>
 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16" style="justify-self:right">
-                                      <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                                      <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                        class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16"
+                                        style="justify-self:right">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                                     </svg>
                                 </div>
                             </div>
