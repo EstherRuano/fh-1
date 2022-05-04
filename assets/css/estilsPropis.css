@@ -15,6 +15,23 @@
   grid-template-rows: [line1] 30px [line2] 50px [line3] 50px [line4] 50px [line5] 50px [line6] auto [end];
   grid-template-columns: [first] 5% [second] 20% [third] auto [end];
 }
+
+.mostraMaletaTitol {
+  padding: 20px;
+  text-align: center;
+}
+
+.mostraMaletaImprescindible {
+  border-radius: calc(0.50rem - 1px);
+  padding:10px;
+  margin: 10px;
+  background-color: rgba(207, 223, 218,0.8);
+}
+
+.mostraMaletaCarta {
+  background-color: #fff;
+}
+
 .grid-armari{
   display: grid;
   grid-template-rows: [line1] 80% [line2] 20% [end];
