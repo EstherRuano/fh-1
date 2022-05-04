@@ -226,6 +226,10 @@
     height: 100%;
 }
 
+.card.is-hidden {
+    display: none;
+  }
+
 .sticky-top {
     top: 100px;
 }
