@@ -65,10 +65,7 @@ const outfit_app = Vue.createApp({
             }
         },
         enviaOutfit() {
-            console.log("CHANGE");
-            location.href = ('outfit.html?mostra=true');
-            
-            document.getElementById("changing_card").style.display= contents;
+            location.href = ('outfit.html?mostra=1')
         }
     }
 });
