@@ -15,6 +15,21 @@
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets\js\drag_drop.js" defer></script>
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        </script>
 </head>
 
 <body>
@@ -64,7 +79,21 @@
                 </div>
             </div>
         </template>
+        <div style="background-image: url(assets/img/avatars/Stick.png); height: 300px; width: 250px;">
+        
+           <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 2px solid black; text-align: center; height: 100px; width: 100px;">
+               
+           </div>
+           
+
+        </div>
+        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 2px solid black; text-align: center;  height: 100px; width: 100px;">
+            <img id="drag1" src="assets/img/clothes/t-shirt.png" draggable="true" ondragstart="drag(event)" style="width :100%; height: auto;">
+        </div>
+        
+        
         </section>
+        
 
 
 
