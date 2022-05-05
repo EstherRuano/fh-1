@@ -2,7 +2,8 @@ const viz_maleta = Vue.createApp({
     data() {
         return {
             hideCard: true,
-            selected: false
+            selected: false,
+            peca: true,
         };
     },
     methods: {
@@ -12,6 +13,9 @@ const viz_maleta = Vue.createApp({
         },
         selectNewOutfit() {
             this.selected = true;
+        },
+        onChange(event) {
+            this.peca = !this.peca;
         }
     }
 });

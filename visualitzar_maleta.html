@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/estilsPropis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="assets/css/toggle-switches.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets\js\visualitzar_maleta.js" defer></script>
 </head>
@@ -55,7 +56,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                            <h3 class="text-info"></h3>
+                          <div class="toggle">
+                            <input id="cond_new" type="radio" name="bike_cond" checked="checked" @change="onChange($event)" value="peces"/>
+                            <label class="form-label" for="cond_new">Peces</label>
+                            <input id="cond_used" type="radio" name="bike_cond" @change="onChange($event)" value="outfits"/>
+                            <label class="form-label" for="cond_used">Outfits</label>
+                          </div>
+                          <p>peca val {{peca}}</p>
+                          <p>peca val {{hideCard}}</p>
                         </div>
                         <div class="col-md-9">
                             <div class="input-group">
@@ -352,7 +360,7 @@
                                 <hr />
                             </div>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
                                 <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
