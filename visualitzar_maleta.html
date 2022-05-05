@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/estilsPropis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets\js\visualitzar_maleta.js" defer></script>
 </head>
 
 <body>
@@ -43,7 +45,7 @@
     </nav>
 
     <main class="page">
-        <section class="container-fluid visualitzar-armari">
+        <section class="container-fluid visualitzar-armari" id="viz_maleta">
             <div class="container">
                 <div class="block-heading">
                     <div class="row">
@@ -311,7 +313,7 @@
                                                         </div>
                                                         <div class="row mostraMaletaImprescindible">
                                                             <h3 class="mostraMaletaTitol">Outfits creats</h3>
-                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch" @click="selectNewOutfit()">
                                                                 <!-- Bootstrap 5 card box -->
                                                                 <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                                                                     <div class="card-thumbnail">
@@ -333,7 +335,8 @@
                                                 </form>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal">Surt</button>
+                                                    <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal" @click="hideNewOutfit(true)">Cancel·la</button>
+                                                    <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss="modal" @click="hideNewOutfit(false)">Desa</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -522,6 +525,24 @@
                                     </div>
                                 </div>
 
+                                <!-- Outfit afegit per l'usuari-->
+                                <div :class="{hidingCard:hideCard}">
+                                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                        <!-- Bootstrap 5 card box -->
+                                        <div class="card-box" style="width: 20rem;">
+                                            <div class="card-thumbnail">
+                                                <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
+                                            </div>
+                                            <div class="card-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item" style="text-align: center;">
+                                                        <h5>Outfit 1</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
