@@ -8,7 +8,7 @@ const landing = Vue.createApp({
     },
     methods: {
         envia(){
-            location.href=('maleta.html?desti=').concat(this.desti).concat('&anada=').concat(this.anada).concat('&tornada=').concat(this.tornada);
+            location.href=('nova_maleta_rapida.html?desti=').concat(this.desti).concat('&anada=').concat(this.anada).concat('&tornada=').concat(this.tornada);
         }
     }
 });
