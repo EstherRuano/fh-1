@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Suited Penguin - Outfits</title>
+    <title>Suited Penguin - Llistat maletes</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
@@ -14,22 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="assets\js\drag_drop.js" defer></script>
-    <script>
-        function allowDrop(ev) {
-          ev.preventDefault();
-        }
-        
-        function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
-        
-        function drop(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-        }
-        </script>
+    <script src="assets\js\outfit_edition.js" defer></script>
+
 </head>
 
 <body>
@@ -38,13 +24,14 @@
             <a href="landing_page.html">
                 <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Maleta
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Maleta
                         </a>
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                             <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
@@ -52,54 +39,140 @@
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="outfit.html">Outfit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <main class="page">
-        <section id="dragdrop">
-            <div class="drag-el" v-for="item in cataleg" :key="item.title" draggable @dragstart="startDrag($event, item)">
-                {{ item.title }}
-            </div>
+        <section class="container-fluid visualitzar-armari">
+            <div class="container">
 
 
-            <template>
-            <div>
-                <div class='drop-zone'>
-                    <div v-for='item in cataleg' :key='item.title' class='drag-el'>
-                        {{ item.title }}
+
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-5 d-flex">
+                            <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
+                                <div class="sticky-top">
+                                    <div class="grid-outfit" style="width:100%">
+                                        <div class="d-none d-md-block maniqui" style="width:100%; margin-top: 1rem;">
+                                            <img src="assets/img/avatars/stick-figure.png" style="width:100%;">
+                                        </div>
+                                        <div class="btn maniqui-boto-cap" onclick="filterSelection('cap')">Cap</div>
+                                        <div class="btn maniqui-boto-cos" onclick="filterSelection('cos')">Cos</div>
+                                        <div class="btn maniqui-boto-cames" onclick="filterSelection('cames')">Cames</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-md-7 " style=" margin-top: 1rem; margin-bottom: 1rem; ">
+                            <!--he posat px per mostrar el scroll, les altres coses que he provat mai es tallava-->
+                            <div class="block-heading ">
+
+                                <div class="row ">
+
+                                    <div class="input-group " style="margin-bottom:1em; ">
+                                        <input type="search " class="form-control rounded " placeholder="Cercar peça " aria-label="Cerca " aria-describedby="search-addon " />
+                                        <button type="button " class="btn btn-outline-primary ">Cerca</button>
+                                    </div>
+
+                                    <div class="row ">
+                                        <div class="filterDiv cames ">
+                                            <div id="mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="baix " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/texans.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Texans</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cos">
+
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="abric " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/jersei_vans.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Jersei Vans</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cames ">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="baix " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/pantalons_blancs_campana.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Pantalons Blancs Campana</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cos ">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="abric " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/parca.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Parca</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
                 </div>
-                <div class='drop-zone'>
-                    <div v-for='item in maniqui' :key='item.title' class='drag-el'>
-                        {{ item.title }}
-                    </div>
-                </div>
             </div>
-        </template>
-        <div style="background-image: url(assets/img/avatars/Stick.png); height: 300px; width: 250px;">
-        
-           <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 2px solid black; text-align: center; height: 100px; width: 100px;">
-               
-           </div>
-           
-
-        </div>
-        <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 2px solid black; text-align: center;  height: 100px; width: 100px;">
-            <img id="drag1" src="assets/img/clothes/t-shirt.png" draggable="true" ondragstart="drag(event)" style="width :100%; height: auto;">
-        </div>
-        
-        
         </section>
-        
-
-
-
-
     </main>
-    <footer class=" page-footer dark ">
+
+    <footer class="page-footer dark ">
         <div class="container ">
             <div class="row ">
                 <div class="col-sm-3 ">
@@ -142,3 +215,4 @@
 </body>
 
 </html>
+```
