@@ -9,12 +9,6 @@
     color: rgb(74, 108, 47);
 }
 
-/*.contenidor {
-  display: grid;
-  grid-template-rows: [line1] 30px [line2] 50px [line3] 50px [line4] 50px [line5] 50px [line6] auto [end];
-  grid-template-columns: [first] 5% [second] 20% [third] auto [end];
-}*/
-
 .mostraMaletaTitol {
     padding: 20px;
     text-align: center;
@@ -114,77 +108,11 @@
     "gi-pes gi-durada gi-elements gi-desti";
 }
 
-
-/*.imatge-card{
-  grid-row-start: line1;
-  grid-row-end: line2;
-  grid-column-start: first;
-  grid-column-end: second;
-  padding-left:20px;
-  padding-top: 20px;
-}*/
 .img{
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
-/*
-.espaiat-horitzontal{
-  grid-row-start: line1;
-  grid-row-end: line2;
-  grid-column-start: first;
-  grid-column-end: end;
-}
-.espaiat-vertical{
-  grid-row-start: line1;
-  grid-row-end: lend;
-  grid-column-start: first;
-  grid-column-end: second;
-
-}
-.cercador{
-  grid-row-start: line2;
-  grid-row-end: line3;
-  grid-column-start: third;
-  grid-column-end: end;
-  margin-left: 5%;
-  
-  
-}
-
-.maleta-icon {
-    grid-area: maleta-icon-space;
-    max-width: 100%;
-    max-height: auto;
-    padding-bottom: 10px;
-}
-
-.maleta-bottom-line {
-    grid-area: maleta-bottom;
-    display: flex;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
-    grid-template-areas: "bl-void bl-name bl-options";
-}
-
-.maleta-bl-options {
-    grid-area: bl-options;
-}
-
-.maleta-clothing-list {
-    grid-area: maleta-clothing;
-    display: grid;
-    grid-template-columns: 16% 16% 16% 16% 16%;
-    gap: 5%;
-    grid-template-areas: "cl-1 cl-2 cl-3 cl-4 cl-5";
-}
-.column{
-  width: 100%;
-  padding-right: 5%;
-  padding-bottom: 10px;
-}*/
 
 .card {
     position: relative;
@@ -207,43 +135,6 @@
 .card:hover {
     border: 2px solid #236477;
 }
-/*
-.card-body {
-    grid-row-start: line1;
-    grid-row-end: line2;
-    grid-column-start: second;
-    grid-column-end: end;
-    font-size: small;
-    padding-right: 20px;
-    padding-top: 20px;
-}
-
-.card-buttons {
-    grid-row-start: line2;
-    grid-row-end: end;
-    grid-column-start: third;
-    grid-column-end: end;
-    align-items: center;
-}
-
-.card-footer {
-    grid-row-start: line2;
-    grid-row-end: end;
-    grid-column-start: first;
-    grid-column-end: end;
-}
-
-.card-title {
-  grid-row-start: line2;
-  grid-row-end: end;
-  grid-column-start: first;
-  grid-column-end: third;
-  line-height:normal;
-  text-align: center;
-  height: fit-content;
-  margin-bottom: 5%;
-  
-}*/
 
 .filter-button {
     width: 100%;
