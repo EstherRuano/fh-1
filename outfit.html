@@ -241,24 +241,23 @@
                         </div>
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
-                                <div id="mycard" class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card" data-category="baix" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5 class="card-title">Outfit 1</h5>
-                                                </li>
-                                            </ul>
+                                <div id="cardAOcultar" style="display:none;">
+                                    <div id="mycard"  class="col-md-6 col-lg-4 d-flex align-items-stretch" >
+                                        <!-- Bootstrap 5 card box -->
+                                        <div class="card" data-category="baix" style="width: 20rem;">
+                                            <div class="card-thumbnail">
+                                                <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
+                                            </div>
+                                            <div class="card-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item" style="text-align: center;">
+                                                        <h5 class="card-title">Outfit 1</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
                         </div>
                     </div>
@@ -341,6 +340,16 @@
             });
         });
     </script>
+
+         
+    <script language="JavaScript">
+        var desti = obtener_valor("mostra");
+
+        if(desti== 1)
+            document.getElementById("cardAOcultar").style="display:block;";             
+    </script> 
+
+
 
 
 

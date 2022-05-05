@@ -65,7 +65,7 @@ const outfit_app = Vue.createApp({
             }
         },
         enviaOutfit() {
-            location.href = ('outfit.html?mostra=true')
+            location.href = ('outfit.html?mostra=1')
         }
     }
 });
