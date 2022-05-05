@@ -2,18 +2,19 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Suited Penguin - Llistat armaris</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="assets/css/estilsPropis.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
-    <link rel="stylesheet"
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Suited Penguin - Llistat d'armaris</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
+  <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+  <link rel="stylesheet" href="assets/css/estilsPropis.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+  <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+  <link rel="stylesheet"
           href=
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://unpkg.com/vue@next"></script>
@@ -21,298 +22,457 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container">
-            <a href="landing_page.html">
-            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
-            </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div id="navcol-1" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Maleta
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                          <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                          <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-                        </ul>
-                      </li>
-                    <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
-                    <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+    <div class="container">
+        <a href="landing_page.html">
+        <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+        </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div id="navcol-1" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Maleta
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                      <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
+                      <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
+                    </ul>
+                  </li>
+                <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
+                <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
+                <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <main class="page">
+    <section class="container-fluid visualitzar-armari">
+      <div class="container">
+        <div class="block-heading">
+          <div class="row">
+            <div class="col-md-5">
+              <h3 class="text-info" style="padding-bottom: 1rem">Els meus armaris</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <h3 class="text-info"></h3>
+            </div>
+            <div class="col-md-9">
+              <div class="input-group">
+                <input type="search" class="form-control rounded" placeholder="Introdueix l'armari . . ."
+                  aria-label="Cerca" aria-describedby="search-addon" />
+                <button type="button" class="btn btn-outline-primary">Cerca</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="col-md-3 d-flex">
+              <div class="d-none d-md-block" style="width: 100%; margin-top: 1rem;">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Afegeix un armari
+                </button>
+    
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Afegir roba</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+
+                        <!-- Form -->
+                        <form>
+                          <div class="container-fluid">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="row">
+                                  <input type="file" accept="image/*" onchange="loadFile(event)">
+                                  <img id="output" />
+                                  <script>
+                                    var loadFile = function (event) {
+                                      var output = document.getElementById('output');
+                                      output.src = URL.createObjectURL(event.target.files[0]);
+                                      output.onload = function () {
+                                        URL.revokeObjectURL(output.src) // free memory
+                                      }
+                                    };
+                                  </script>
+                                </div>
+                              </div>
+                              <div class="col-md-8">
+                                <div class="row">
+                                  <div class="form-group">
+                                    <label for="Nom">Nom de la peça</label>
+                                    <input type="Nom" class="form-control" id="exampleInputNom1"
+                                      aria-describedby="nomHelp" placeholder="Introdueix el nom de la peça">
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="form-group">
+                                    <label for="Àmbit">Àmbit</label>
+                                    <select class="form-select" aria-label="Default select àmbit">
+                                      <option selected>Selecciona l'àmbit</option>
+                                      <option value="1">Formal</option>
+                                      <option value="2">Informal</option>
+                                    </select>
+                                    <small id="ambitHelp" class="form-text text-muted">En quin
+                                      context
+                                      social et posaries aquesta peça?</small>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="form-group">
+                                    <label for="Armari">Armari</label>
+                                    <select class="form-select" aria-label="Default select armari">
+                                      <option selected>Selecciona l'armari</option>
+                                      <option value="1">Lleida</option>
+                                      <option value="2">Barcelona</option>
+                                    </select>
+                                    <small id="armariHelp" class="form-text text-muted">En quin
+                                      armari es
+                                      troba guardada la peça de roba?</small>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="form-group">
+                                    <label for="Categoria">Categoria</label>
+                                    <select class="form-select" aria-label="Default select categoria">
+                                      <option selected>Selecciona la categoria</option>
+                                      <option value="1">Pantalons</option>
+                                      <option value="2">Samarretes</option>
+                                    </select>
+                                    <small id="categoriaHelp" class="form-text text-muted">En quina
+                                      part del
+                                      cos et col·loques la peça de roba?</small>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary me-5"
+                          data-bs-dismiss="modal">Cancel·la</button>
+                        <button type="button" class="btn btn-outline-primary me-3">Desa</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section id="app">
+                  <hr style="margin-bottom: 0px;" />
+                  <div class="Folder folder-div" :class="{folder_active:recentSelected}"
+                      @click="selectedFolder(1)">
+                      Recents
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                          class="bi bi-clock" viewBox="0 0 16 16">
+                          <path
+                              d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                          <path
+                              d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                      </svg>
+                  </div>
+                  <hr style="margin: 0px;" />
+                  <div class="Folder folder-div" :class="{folder_active:favoritsSelected}"
+                      @click="selectedFolder(2)">
+                      Favorits
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                          class="bi bi-star" viewBox="0 0 16 16">
+                          <path
+                              d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                      </svg>
+                  </div>
+                  <hr style="margin: 0px;" />
+                  <div class="Folder folder-div" :class="{folder_active:papereraSelected}"
+                      @click="selectedFolder(3)">
+                      Paperera
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                          class="bi bi-trash" viewBox="0 0 16 16">
+                          <path
+                              d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                          <path fill-rule="evenodd"
+                              d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                      </svg>
+                  </div>
+                  <hr style="margin-top: 0px;" />
+              </section>
+              </div>
+            </div>
+            <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
+              <!--he posat px per mostrar el scroll, les altres coses que he provat mai es tallava-->
+              <!-- CARDS -->
+
+              <!--PRIMER ARMARI-->
+              <div class="card text-center recent" style=" margin-bottom: 1rem;">
+                  <a href="visualitzar_armari.html"></a>
+                  <div class="card-body grid-armari-card">
+
+                      <div class="armari-img">
+                        <img class="img"   src="assets/img/scenery/casa.jpg" alt="casa armari 1">
+                      </div>
+
+                      <div class="armari-body-card">
+                        <div class="maleta-gi-element" style="grid-area: localitzacio;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16"
+                          style="grid-area: icon; align-self:center; justify-self:center;">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                          </svg>
+                            <p style="grid-area: text; text-align: center;">Lleida</p>
+                        </div>
+                          <div class="maleta-gi-element" style="grid-area: cos;">
+                            <img style="grid-area: icon; align-self:center; justify-self:center;" width="20" height="20" src="assets/img/icons/shirt.png">
+                            <p style="grid-area: text; text-align: center;">7</p>
+                          </div>
+                          <div class="maleta-gi-element" style="grid-area: cames;">
+                            <img style="grid-area: icon; align-self:center; justify-self:center;" width="25" height="25" src="assets/img/icons/pants.png">
+                            <p style="grid-area: text; text-align: center;">3</p>
+                          </div>
+                          <div class="maleta-gi-element" style="grid-area: sabates;">
+                            <img style="grid-area: icon; align-self:center; justify-self:center;" width="30" height="30" src="assets/img/icons/shoes.png">
+                            <p style="grid-area: text; text-align: center;">2</p>
+                          </div>
+                          <div class="maleta-gi-element" style="grid-area: altres;">
+                            <img style="grid-area: icon; align-self:center; justify-self:center;" width="20" height="20" src="assets/img/icons/accessory.png">
+                            <p style="grid-area: text; text-align: center;">10</p>
+                          </div>
+                          
+                          
+                      </div>
+
+                      <div class="armari-clothing-view">
+                          <img class="rounded float-start"
+                              style="grid-area: cl-1; justify-self: center; width:70%;"
+                              src="assets/img/clothes/texans.png">
+                          <img class="rounded float-end"
+                              style="grid-area: cl-2; justify-self: center; width:70%;"
+                              src="assets/img/clothes/biquini_flors.png">
+                          <img class="rounded float-end"
+                              style="grid-area: cl-3; justify-self: center; width:70%;"
+                              src="assets/img/clothes/jersei_vans.png">
+                          <img class="rounded float-end"
+                              style="grid-area: cl-4; justify-self: center; width:70%;"
+                              src="assets/img/clothes/dessuadora_nike.png">
+                          <img class="rounded float-end"
+                              style="grid-area: cl-5; justify-self: center; width:70%;"
+                              src="assets/img/clothes/pantalons_blancs_campana.png">
+                      </div>
+
+                  </div>
+
+                  <div class="card-footer maleta-bottom-line">
+                      <h3 class="titol" style="grid-area: bl-name"> Casa pares </h3>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                          class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16"
+                          style="justify-self:right">
+                          <path
+                              d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                          <path fill-rule="evenodd"
+                              d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                      </svg>
+                  </div>
+              </div>
+
+              <!--ARMARI 2-->
+              <div class="card text-center recent" style=" margin-bottom: 1rem;">
+                
+                <div class="card-body grid-armari-card">
+
+                    <div class="armari-img">
+                      <img class="img"   src="assets/img/scenery/casa.jpg" alt="casa armari 1">
+                    </div>
+
+                    <div class="armari-body-card">
+                        <div class="maleta-gi-element" style="grid-area: localitzacio;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16"
+                          style="grid-area: icon; align-self:center; justify-self:center;">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                          </svg>
+                            <p style="grid-area: text; text-align: center;">Lleida</p>
+                        </div>
+                        <div class="maleta-gi-element" style="grid-area: cos;">
+                          <img style="grid-area: icon; align-self:center; justify-self:center;" width="20" height="20" src="assets/img/icons/shirt.png">
+                          <p style="grid-area: text; text-align: center;">7</p>
+                        </div>
+                        <div class="maleta-gi-element" style="grid-area: cames;">
+                          <img style="grid-area: icon; align-self:center; justify-self:center;" width="25" height="25" src="assets/img/icons/pants.png">
+                          <p style="grid-area: text; text-align: center;">3</p>
+                        </div>
+                        <div class="maleta-gi-element" style="grid-area: sabates;">
+                          <img style="grid-area: icon; align-self:center; justify-self:center;" width="30" height="30" src="assets/img/icons/shoes.png">
+                          <p style="grid-area: text; text-align: center;">2</p>
+                        </div>
+                        <div class="maleta-gi-element" style="grid-area: altres;">
+                          <img style="grid-area: icon; align-self:center; justify-self:center;" width="20" height="20" src="assets/img/icons/accessory.png">
+                          <p style="grid-area: text; text-align: center;">10</p>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="armari-clothing-view">
+                        <img class="rounded float-start"
+                            style="grid-area: cl-1; justify-self: center; width:70%;"
+                            src="assets/img/clothes/texans.png">
+                        <img class="rounded float-end"
+                            style="grid-area: cl-2; justify-self: center; width:70%;"
+                            src="assets/img/clothes/biquini_flors.png">
+                        <img class="rounded float-end"
+                            style="grid-area: cl-3; justify-self: center; width:70%;"
+                            src="assets/img/clothes/jersei_vans.png">
+                        <img class="rounded float-end"
+                            style="grid-area: cl-4; justify-self: center; width:70%;"
+                            src="assets/img/clothes/dessuadora_nike.png">
+                        <img class="rounded float-end"
+                            style="grid-area: cl-5; justify-self: center; width:70%;"
+                            src="assets/img/clothes/pantalons_blancs_campana.png">
+                    </div>
+
+                </div>
+
+                <div class="card-footer maleta-bottom-line">
+                    <h3 class="titol" style="grid-area: bl-name"> Maleta a Escòcia </h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                        class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16"
+                        style="justify-self:right">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </div>
+            </div>
+            <!--ARMARI 3-->
+
+            <div class="card text-center recent" style=" margin-bottom: 1rem;">
+              
+              <div class="card-body grid-armari-card">
+
+                  <div class="armari-img">
+                    <img class="img"   src="assets/img/scenery/casa.jpg" alt="casa armari 1">
+                  </div>
+
+                  <div class="armari-body-card">
+                    <div class="maleta-gi-element" style="grid-area: localitzacio;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16"
+                      style="grid-area: icon; align-self:center; justify-self:center;">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>
+                        <p style="grid-area: text; text-align: center;">Lleida</p>
+                    </div>
+                      <div class="maleta-gi-element" style="grid-area: cos;">
+                        <img style="grid-area: icon; align-self:center; justify-self:center;" width="20" height="20" src="assets/img/icons/shirt.png">
+                        <p style="grid-area: text; text-align: center;">7</p>
+                      </div>
+                      <div class="maleta-gi-element" style="grid-area: cames;">
+                        <img style="grid-area: icon; align-self:center; justify-self:center;" width="25" height="25" src="assets/img/icons/pants.png">
+                        <p style="grid-area: text; text-align: center;">3</p>
+                      </div>
+                      <div class="maleta-gi-element" style="grid-area: sabates;">
+                        <img style="grid-area: icon; align-self:center; justify-self:center;" width="30" height="30" src="assets/img/icons/shoes.png">
+                        <p style="grid-area: text; text-align: center;">2</p>
+                      </div>
+                      <div class="maleta-gi-element" style="grid-area: altres;">
+                        <img style="grid-area: icon; align-self:center; justify-self:center;" width="20" height="20" src="assets/img/icons/accessory.png">
+                        <p style="grid-area: text; text-align: center;">10</p>
+                      </div>
+                      
+                      
+                  </div>
+
+                  <div class="armari-clothing-view">
+                      <img class="rounded float-start"
+                          style="grid-area: cl-1; justify-self: center; width:70%;"
+                          src="assets/img/clothes/texans.png">
+                      <img class="rounded float-end"
+                          style="grid-area: cl-2; justify-self: center; width:70%;"
+                          src="assets/img/clothes/biquini_flors.png">
+                      <img class="rounded float-end"
+                          style="grid-area: cl-3; justify-self: center; width:70%;"
+                          src="assets/img/clothes/jersei_vans.png">
+                      <img class="rounded float-end"
+                          style="grid-area: cl-4; justify-self: center; width:70%;"
+                          src="assets/img/clothes/dessuadora_nike.png">
+                      <img class="rounded float-end"
+                          style="grid-area: cl-5; justify-self: center; width:70%;"
+                          src="assets/img/clothes/pantalons_blancs_campana.png">
+                  </div>
+
+              </div>
+
+              <div class="card-footer maleta-bottom-line">
+                  <h3 class="titol" style="grid-area: bl-name"> Maleta a Escòcia </h3>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                      class="bi bi-trash maleta-bl-options" viewBox="0 0 16 16"
+                      style="justify-self:right">
+                      <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                      <path fill-rule="evenodd"
+                          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                  </svg>
+              </div>
+          </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="page-footer dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h5>Maleta</h5>
+                <ul>
+                    <li><a href="llistar_maletes.html">Les meves maletes</a></li>
+                    <li><a href="maleta.html">Crea una maleta</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Armari</h5>
+                <ul>
+                    <li><a href="armari.html">Els meus armaris</a></li>
+                    <li><a href="#">Crea un armari</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Outfits</h5>
+                <ul>
+                    <li><a href="outfit.html">Els meus outfits</a></li>
+                    <li><a href="#">Crea un outfit</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <h5>Perfil</h5>
+                <ul>
+                    <li><a href="#">El meu perfil</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
-    <main class="page">
-        <section class="clean-block ">
-          <div class="contenidor" >
-            <div class="espaiat-horitzontal espaiat-vertical"></div> 
-                 <!--Columna de l'esquerra -->
-                 
-                   <!--  <div class="titol-armari">
-                         <h3 class="titol">Els meus armaris</h3>
-                     </div>
-                     <div class="boto-armari separador">
-                         <button class="btn btn-outline-primary " type="button" href="">Crear armari</button>
-                     </div> -->
-                     
-                 
-                 <!-- Columna de la dreta -->
-                 <div class="boto-armari">
-                     <div class="d-none d-md-block" >
-                         <!-- Button trigger modal -->
-                         <button type="button" class="btn btn-primary" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                           Afegeix un armari
-                         </button>
-                         <!-- Modal -->
-                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                           tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                           <div class="modal-dialog modal-xl">
-                             <div class="modal-content">
-                               <div class="modal-header">
-                                 <h5 class="modal-title" id="staticBackdropLabel">Afegir armari</h5>
-                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                               </div>
-                               <div class="modal-body">
-         
-                                 <!-- Form -->
-                                 <form>
-                                   <div class="container-fluid">
-                                     <div class="row">
-                                       <div class="col-md-4">
-                                         <div class="row">
-                                           <input type="file" accept="image/*" onchange="loadFile(event)">
-                                           <img id="output" />
-                                           <script>
-                                             var loadFile = function (event) {
-                                               var output = document.getElementById('output');
-                                               output.src = URL.createObjectURL(event.target.files[0]);
-                                               output.onload = function () {
-                                                 URL.revokeObjectURL(output.src) // free memory
-                                               }
-                                             };
-                                           </script>
-                                         </div>
-                                       </div>
-                                       <div class="col-md-8">
-                                         <div class="row">
-                                           <div class="form-group">
-                                             <label for="Nom">Nom de l'armari'</label>
-                                             <input type="Nom" class="form-control" id="exampleInputNom1"
-                                               aria-describedby="nomHelp" placeholder="Introdueix el nom de l'armari'">
-                                           </div>
-                                         </div>
-                                         <div class="row">
-                                           <div class="form-group">
-                                             <label for="Àmbit">Àmbit</label>
-                                             <select class="form-select" aria-label="Default select àmbit">
-                                               <option selected>Selecciona l'àmbit</option>
-                                               <option value="1">Formal</option>
-                                               <option value="2">Informal</option>
-                                             </select>
-                                             <small id="ambitHelp" class="form-text text-muted">En quin
-                                               context
-                                               social et posaries aquesta peça?</small>
-                                           </div>
-                                         </div>
-                                         <div class="row">
-                                           <div class="form-group">
-                                             <label for="Armari">Armari</label>
-                                             <select class="form-select" aria-label="Default select armari">
-                                               <option selected>Selecciona l'armari</option>
-                                               <option value="1">Lleida</option>
-                                               <option value="2">Barcelona</option>
-                                             </select>
-                                             <small id="armariHelp" class="form-text text-muted">En quin
-                                               armari es
-                                               troba guardada la peça de roba?</small>
-                                           </div>
-                                         </div>
-                                         <div class="row">
-                                           <div class="form-group">
-                                             <label for="Categoria">Categoria</label>
-                                             <select class="form-select" aria-label="Default select categoria">
-                                               <option selected>Selecciona la categoria</option>
-                                               <option value="1">Pantalons</option>
-                                               <option value="2">Samarretes</option>
-                                             </select>
-                                             <small id="categoriaHelp" class="form-text text-muted">En quina
-                                               part del
-                                               cos et col·loques la peça de roba?</small>
-                                           </div>
-                                         </div>
-                                       </div>
-                                     </div>
-                                   </div>
-                                 </form>
-                               </div>
-                               <div class="modal-footer">
-                                 <button type="button" class="btn btn-outline-secondary me-5"
-                                   data-bs-dismiss="modal">Cancel·la</button>
-                                 <button type="button" class="btn btn-outline-primary me-3">Desa</button>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-                         <section id="app">
-                             <hr style="margin-bottom: 0px;"/>
-                             <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
-                                Recents
-                             </div>
-                             <hr style="margin: 0px;"/>
-                             <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
-                                 Favorits
-                             </div>
-                             <hr style="margin: 0px;"/>
-                             <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
-                                 Paperera
-                             </div>
-                             <hr style="margin-top: 0px;"/>
-                         </section>
-                       </div>
-                 </div>
-                 <div class = "cercador">
-                     <!--Cercador-->
-                     <form id="form bordes-marcats"> 
-                         <i class="fa fa-search"></i>
-                         <input style="width: 80%;" type="search" id="cercador"  placeholder="Cerca...">
-                     </form>
-                 </div>
-                 <div class="llista">
-                     <div class="column">
-                       <div class="card grid-armari" >
-                         <a href="visualitzar_armari.html"></a>
-                           <div class="card-body">
-                               
-                               <p style="font-size:1.5vw;">Ubicació: Lleida <br/>
-                                 Nombre d'items: 32</p>
-                               
-                           </div>
-                           <div class="imatge-card">
-                             
-                              <img class="img"   src="assets/img/scenery/casa.jpg" alt="casa armari 1"> 
-                           </div>
-                           <div class="card-buttons">
-                             <button class="buttons" type="button" style="margin-left: 50% ;"><i class="fa fa-edit icon-button"></i></button>
-                             <button class="buttons" type="button"><i class="fa fa-remove"></i></button>
-                             
-                           </div>
-                           <div class="card-footer">
-                             
-                               <div class="card-title">
-                                 <h3 class="title" style="font-size:2.5vw;">Armari1</h3> 
-                               </div> 
-                           </div>
-  
-                       </div>
-                     </div>
-                     <div class="column">
-                      <div class="card grid-armari" >
-                          <div class="card-body">
-                              
-                              <p style="font-size:1.5vw;">Ubicació: Barcelona <br/>
-                                Nombre d'items: 12</p>
-                              
-                          </div>
-                          <div class="imatge-card">
-                            
-                             <img class="img"   src="assets/img/scenery/piso.jpg" alt="pis armari 2"> 
-                          </div>
-                          <div class="card-buttons">
-                            <button class="buttons" type="button" style="margin-left: 50% ;"><i class="fa fa-edit icon-button"></i></button>
-                            <button class="buttons" type="button"><i class="fa fa-remove"></i></button>
-                            
-                          </div>
-                          <div class="card-footer">
-                            
-                              <div class="card-title">
-                                <h3 class="title" style="font-size:2.5vw;">Armari2</h3> 
-                              </div> 
-                          </div>
- 
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="card grid-armari" >
-                        <a href="visualitzar_armari.html"></a>
-                          <div class="card-body">
-                              
-                              <p style="font-size:1.5vw;">Ubicació: Estocolm <br/>
-                                Nombre d'items: 7</p>
-                              
-                          </div>
-                          <div class="imatge-card">
-                            
-                             <img class="img"   src="assets/img/scenery/caravana.jpg" alt="casa armari 3"> 
-                          </div>
-                          <div class="card-buttons">
-                            <button class="buttons" type="button" style="margin-left: 50% ;"><i class="fa fa-edit icon-button"></i></button>
-                            <button class="buttons" type="button"><i class="fa fa-remove"></i></button>
-                            
-                          </div>
-                          <div class="card-footer">
-                            
-                              <div class="card-title">
-                                <h3 class="title" style="font-size:2vw">Armari3</h3> 
-                              </div> 
-                          </div>
-                          
- 
-                      </div>
-                    </div>
-                 </div>
-             
-         </div>
-        </section>
-    </main>
-    <!--<footer class="page-footer dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2022 Copyright Text</p>
-        </div>
-    </footer>-->
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
-    <script src="assets/js/vanilla-zoom.js"></script>
-    <script src="assets/js/theme.js"></script>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2022 Suited Penguin</p>
+    </div>
+</footer>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+  <script src="assets/js/vanilla-zoom.js"></script>
+  <script src="assets/js/theme.js"></script>
 </body>
 
 </html>
