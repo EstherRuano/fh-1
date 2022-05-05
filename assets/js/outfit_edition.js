@@ -44,3 +44,27 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
+const outfit_app = Vue.createApp({
+    data: function() {
+        return {
+            opcio: 3,
+            img_outfit: "assets/img/avatars/stick-figure.png"
+        };
+    },
+    methods: {
+        changeOutfit(opcio) {
+            this.opcio = opcio;
+            if (this.opcio == 1) {
+                console.log("apretat");
+                this.img_outfit = "assets/img/outfits/outfit_pantalons.png";
+            } else if (this.opcio == 2) {
+                this.img_outfit = "assets/img/outfits/outfit_sencer.png";
+            } else if (this.opcio == 3) {
+                this.img_outfit = "assets/img/avatars/stick-figure.png";
+            }
+
+        }
+    }
+});
+outfit_app.mount("#outfit_app");

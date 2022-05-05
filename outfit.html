@@ -47,7 +47,7 @@
     </nav>
 
     <main class="page">
-        <section class="container-fluid visualitzar-armari">
+        <section class="container-fluid visualitzar-armari" id="outfit_app">
             <div class="container">
 
 
@@ -57,13 +57,31 @@
                         <div class="col-md-5 d-flex">
                             <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
                                 <div class="sticky-top">
+                                    <div type="button" class="btn btn-primary" style="width:100%;" data-bs-target="#staticBackdrop">
+                                        Guardar outfit
+                                    </div>
                                     <div class="grid-outfit" style="width:100%">
                                         <div class="d-none d-md-block maniqui" style="width:100%; margin-top: 1rem;">
-                                            <img src="assets/img/avatars/stick-figure.png" style="width:100%;">
+                                            <img v-bind:src="img_outfit" style=" width:100%; ">
                                         </div>
-                                        <div class="btn maniqui-boto-cap" onclick="filterSelection('cap')">Cap</div>
-                                        <div class="btn maniqui-boto-cos" onclick="filterSelection('cos')">Cos</div>
-                                        <div class="btn maniqui-boto-cames" onclick="filterSelection('cames')">Cames</div>
+                                        <div class="btn maniqui-boto-cap " onclick="filterSelection( 'cap') ">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            </svg>
+                                        </div>
+                                        <div class="btn maniqui-boto-cos " onclick="filterSelection( 'cos') ">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            </svg>
+                                        </div>
+                                        <div class="btn maniqui-boto-cames " onclick="filterSelection( 'cames') ">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            </svg>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -80,10 +98,9 @@
                                         <input type="search " class="form-control rounded " placeholder="Cercar peça " aria-label="Cerca " aria-describedby="search-addon " />
                                         <button type="button " class="btn btn-outline-primary ">Cerca</button>
                                     </div>
-
                                     <div class="row ">
-                                        <div class="filterDiv cames ">
-                                            <div id="mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                        <div class="filterDiv cames " v-on:click.left="changeOutfit(1) ">
+                                            <div id="mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="baix " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
@@ -101,9 +118,9 @@
                                             </div>
                                         </div>
 
-                                        <div class="filterDiv cos">
+                                        <div class="filterDiv cos ">
 
-                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="abric " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
@@ -122,7 +139,7 @@
                                         </div>
 
                                         <div class="filterDiv cames ">
-                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="baix " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
@@ -151,6 +168,25 @@
                                                         <ul class="list-group list-group-flush ">
                                                             <li class="list-group-item " style="text-align: center; ">
                                                                 <h5 class="card-title ">Parca</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cos " v-on:click.left="changeOutfit(2) ">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="abric " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/termica.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Tèrmica</h5>
                                                             </li>
 
                                                         </ul>
