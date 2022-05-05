@@ -13,15 +13,17 @@
     <link rel="stylesheet" href="assets/css/estilsPropis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets\js\drag_drop.js" defer></script>
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container">
             <a href="landing_page.html">
-            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
@@ -30,10 +32,10 @@
                           Maleta
                         </a>
                         <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                          <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                          <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
+                            <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
+                            <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
                         </ul>
-                      </li>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
                     <li class="nav-item"><a class="nav-link active" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
@@ -42,84 +44,72 @@
         </div>
     </nav>
     <main class="page">
-        <section class="clean-block about-us">
-            <div class="container">
-                <div class="block-heading">
-                    <h2 class="text-info">About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+        <section id="dragdrop">
+            <div class="drag-el" v-for="item in cataleg" :key="item.title" draggable @dragstart="startDrag($event, item)">
+                {{ item.title }}
+            </div>
+
+
+            <template>
+            <div>
+                <div class='drop-zone'>
+                    <div v-for='item in cataleg' :key='item.title' class='drag-el'>
+                        {{ item.title }}
+                    </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar1.jpg">
-                            <div class="card-body info">
-                                <h4 class="card-title">John Smith</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar2.jpg">
-                            <div class="card-body info">
-                                <h4 class="card-title">Robert Downturn</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card text-center clean-card"><img class="card-img-top w-100 d-block" src="assets/img/avatars/avatar3.jpg">
-                            <div class="card-body info">
-                                <h4 class="card-title">Ally Sanders</h4>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <div class="icons"><a href="#"><i class="icon-social-facebook"></i></a><a href="#"><i class="icon-social-instagram"></i></a><a href="#"><i class="icon-social-twitter"></i></a></div>
-                            </div>
-                        </div>
+                <div class='drop-zone'>
+                    <div v-for='item in maniqui' :key='item.title' class='drag-el'>
+                        {{ item.title }}
                     </div>
                 </div>
             </div>
+        </template>
         </section>
+
+
+
+
     </main>
-    <footer class="page-footer dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
+    <footer class=" page-footer dark ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-3 ">
                     <h5>Maleta</h5>
                     <ul>
-                        <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-                        <li><a href="maleta.html">Crea una maleta</a></li>
+                        <li><a href="llistar_maletes.html ">Les meves maletes</a></li>
+                        <li><a href="maleta.html ">Crea una maleta</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 ">
                     <h5>Armari</h5>
                     <ul>
-                        <li><a href="armari.html">Els meus armaris</a></li>
-                        <li><a href="#">Crea un armari</a></li>
+                        <li><a href="armari.html ">Els meus armaris</a></li>
+                        <li><a href="# ">Crea un armari</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 ">
                     <h5>Outfits</h5>
                     <ul>
-                        <li><a href="outfit.html">Els meus outfits</a></li>
-                        <li><a href="#">Crea un outfit</a></li>
+                        <li><a href="outfit.html ">Els meus outfits</a></li>
+                        <li><a href="# ">Crea un outfit</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-3 ">
                     <h5>Perfil</h5>
                     <ul>
-                        <li><a href="#">El meu perfil</a></li>
+                        <li><a href="# ">El meu perfil</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright ">
             <p>© 2022 Suited Penguin</p>
         </div>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
-    <script src="assets/js/vanilla-zoom.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js "></script>
+    <script src="assets/js/vanilla-zoom.js "></script>
+    <script src="assets/js/theme.js "></script>
 </body>
 
 </html>
