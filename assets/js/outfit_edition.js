@@ -63,7 +63,9 @@ const outfit_app = Vue.createApp({
             } else if (this.opcio == 3) {
                 this.img_outfit = "assets/img/avatars/stick-figure.png";
             }
-
+        },
+        enviaOutfit() {
+            location.href = ('outfit.html?mostra=true')
         }
     }
 });

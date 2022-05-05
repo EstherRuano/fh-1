@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Suited Penguin - Llistat maletes</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/estilsPropis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="assets\js\outfit_edition.js" defer></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container">
+            <a href="landing_page.html">
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div id="navcol-1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Maleta
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
+                            <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="outfit.html">Outfit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="container-fluid visualitzar-armari" id="outfit_app">
+            <div class="container">
+
+
+
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-5 d-flex">
+                            <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
+                                <div class="sticky-top">
+                                    <div type="button" class="btn btn-primary" style="width:100%;" data-bs-target="#staticBackdrop" v-on:click="enviaOutfit()">
+                                        Guardar outfit
+                                    </div>
+                                    <div class="grid-outfit" style="width:100%">
+                                        <div class="d-none d-md-block maniqui" style="width:100%; margin-top: 1rem;">
+                                            <img v-bind:src="img_outfit" style=" width:100%; ">
+                                        </div>
+                                        <div class="btn maniqui-boto-cap " onclick="filterSelection( 'cap') ">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            </svg>
+                                        </div>
+                                        <div class="btn maniqui-boto-cos " onclick="filterSelection( 'cos') ">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            </svg>
+                                        </div>
+                                        <div class="btn maniqui-boto-cames " onclick="filterSelection( 'cames') ">
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
+                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-md-7 " style=" margin-top: 1rem; margin-bottom: 1rem; ">
+                            <!--he posat px per mostrar el scroll, les altres coses que he provat mai es tallava-->
+                            <div class="block-heading ">
+
+                                <div class="row ">
+
+                                    <div class="input-group " style="margin-bottom:1em; ">
+                                        <input type="search " class="form-control rounded " placeholder="Cercar peça " aria-label="Cerca " aria-describedby="search-addon " />
+                                        <button type="button " class="btn btn-outline-primary ">Cerca</button>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="filterDiv cames " v-on:click.left="changeOutfit(1) ">
+                                            <div id="mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="baix " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/texans.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Texans</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cos ">
+
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="abric " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/jersei_vans.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Jersei Vans</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cames ">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="baix " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/pantalons_blancs_campana.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Pantalons Blancs Campana</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cos ">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="abric " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/parca.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Parca</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="filterDiv cos " v-on:click.left="changeOutfit(2) ">
+                                            <div id=" mycard " class="col-md-6 col-lg-4 d-flex align-items-stretch ">
+                                                <!-- Bootstrap 5 card box -->
+                                                <div class="card " data-category="abric " style="width: 20rem; ">
+                                                    <div class="card-thumbnail ">
+                                                        <img src="assets/img/clothes/termica.png " class="card-img-top img-fluid " alt=" ">
+                                                    </div>
+                                                    <div class="card-body ">
+                                                        <ul class="list-group list-group-flush ">
+                                                            <li class="list-group-item " style="text-align: center; ">
+                                                                <h5 class="card-title ">Tèrmica</h5>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer dark ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-sm-3 ">
+                    <h5>Maleta</h5>
+                    <ul>
+                        <li><a href="llistar_maletes.html ">Els meus outfits</a></li>
+                        <li><a href="outfit.html ">Crea un outfit</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 ">
+                    <h5>Armari</h5>
+                    <ul>
+                        <li><a href="armari.html ">Els meus armaris</a></li>
+                        <li><a href="# ">Crea un armari</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 ">
+                    <h5>Outfits</h5>
+                    <ul>
+                        <li><a href="outfit.html ">Els meus outfits</a></li>
+                        <li><a href="# ">Crea un outfit</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 ">
+                    <h5>Perfil</h5>
+                    <ul>
+                        <li><a href="# ">El meu perfil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright ">
+            <p>© 2022 Suited Penguin</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js "></script>
+    <script src="assets/js/vanilla-zoom.js "></script>
+    <script src="assets/js/theme.js "></script>
+</body>
+
+</html>
