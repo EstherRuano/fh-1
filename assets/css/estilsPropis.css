@@ -154,6 +154,10 @@
     display: none;
 }
 
+.hidingCard {
+    display: none;
+}
+
 .sticky-top {
     top: 100px;
 }
