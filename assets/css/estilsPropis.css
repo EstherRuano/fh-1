@@ -9,12 +9,6 @@
     color: rgb(74, 108, 47);
 }
 
-.contenidor {
-    display: grid;
-    grid-template-rows: [line1] 30px [line2] 50px [line3] 50px [line4] 50px [line5] 50px [line6] auto [end];
-    grid-template-columns: [first] 5% [second] 20% [third] auto [end];
-}
-
 .mostraMaletaTitol {
     padding: 20px;
     text-align: center;
@@ -31,127 +25,93 @@
     background-color: #fff;
 }
 
-.grid-armari {
-    display: grid;
-    grid-template-rows: [line1] 80% [line2] 20% [end];
-    grid-template-columns: [first] 33% [second] 33% [third] auto [end];
+.grid-armari-card{
+  display: grid;
+  grid-template-columns: 30% 70%; 
+  grid-template-rows: 40% 60%; 
+  gap: 5px 5px; 
+  grid-template-areas: 
+    "armari-img armari-icons"
+    "armari-img armari-clothing";
+}
+.armari-img{
+  grid-area: armari-img;
+  max-width: 100%;
+  max-height:auto;
+  padding-bottom: 10px;
+}
+.armari-body-card{
+  grid-area: armari-icons;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16%; 
+  gap: 5%;
+  grid-template-areas:
+    "localitzacio cos cames sabates altres";
+}
+.armari-clothing-view{
+  grid-area: armari-clothing;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16%; 
+  gap: 5%;
+  grid-template-areas:
+    "cl-1 cl-2 cl-3 cl-4 cl-5";
+}
+.grid-maleta{
+  display: grid; 
+  grid-template-columns: 30% 70%; 
+  grid-template-rows: 40% 60%; 
+  gap: 5px 5px; 
+  grid-template-areas: 
+    "maleta-icon-space maleta-icons"
+    "maleta-icon-space maleta-clothing";
+}
+.maleta-icon{
+  grid-area: maleta-icon-space;
+  max-width: 100%;
+  max-height:auto;
+  padding-bottom: 10px;
+}
+.maleta-bottom-line{
+  grid-area: maleta-bottom;
+  display: flex;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  grid-template-areas: "bl-void bl-name bl-options";
+}
+.maleta-bl-options{
+  grid-area: bl-options;
+}
+.maleta-clothing-list{
+  grid-area: maleta-clothing;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16%; 
+  gap: 5%;
+  grid-template-areas:
+    "cl-1 cl-2 cl-3 cl-4 cl-5";
+}
+.maleta-gi-element{
+  display: grid;
+  grid-template-rows: 35% 65%;
+  gap: 5px;
+  grid-template-areas: 
+  "icon"
+  "text";
+}
+.maleta-general-info{
+  grid-area: maleta-icons;
+  display: grid;
+  grid-template-columns: 22% 22% 22% 22%; 
+  gap: 3%;
+  grid-template-areas:
+    "gi-pes gi-durada gi-elements gi-desti";
 }
 
-.grid-maleta {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 40% 60%;
-    gap: 5px 5px;
-    grid-template-areas: "maleta-icon-space maleta-icons" "maleta-icon-space maleta-clothing";
-}
-
-.maleta-icon {
-    grid-area: maleta-icon-space;
-    max-width: 100%;
-    max-height: auto;
-    padding-bottom: 10px;
-}
-
-.maleta-bottom-line {
-    grid-area: maleta-bottom;
-    display: flex;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5px;
-    grid-template-areas: "bl-void bl-name bl-options";
-}
-
-.maleta-bl-options {
-    grid-area: bl-options;
-}
-
-.maleta-clothing-list {
-    grid-area: maleta-clothing;
-    display: grid;
-    grid-template-columns: 16% 16% 16% 16% 16%;
-    gap: 5%;
-    grid-template-areas: "cl-1 cl-2 cl-3 cl-4 cl-5";
-}
-
-.maleta-gi-element {
-    display: grid;
-    grid-template-rows: 35% 65%;
-    gap: 5px;
-    grid-template-areas: "icon" "text";
-}
-
-.maleta-general-info {
-    grid-area: maleta-icons;
-    display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
-    gap: 3%;
-    grid-template-areas: "gi-pes gi-durada gi-elements gi-desti";
-}
-
-.imatge-card {
-    grid-row-start: line1;
-    grid-row-end: line2;
-    grid-column-start: first;
-    grid-column-end: second;
-    padding-left: 20px;
-    padding-top: 20px;
-}
-
-.img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-}
-
-.espaiat-horitzontal {
-    grid-row-start: line1;
-    grid-row-end: line2;
-    grid-column-start: first;
-    grid-column-end: end;
-}
-
-.espaiat-vertical {
-    grid-row-start: line1;
-    grid-row-end: lend;
-    grid-column-start: first;
-    grid-column-end: second;
-}
-
-.cercador {
-    grid-row-start: line2;
-    grid-row-end: line3;
-    grid-column-start: third;
-    grid-column-end: end;
-    margin-left: 5%;
-}
-
-.titol-armari {
-    grid-row-start: line2;
-    grid-row-end: line3;
-    grid-column-start: second;
-    grid-column-end: third;
-}
-
-.boto-armari {
-    grid-row-start: line3;
-    grid-row-end: line5;
-    grid-column-start: second;
-    grid-column-end: third;
-}
-
-.llista {
-    grid-row-start: line3;
-    grid-row-end: line5;
-    grid-column-start: third;
-    grid-column-end: end;
-    margin-left: 5%;
-}
-
-.column {
-    width: 100%;
-    padding-right: 5%;
-    padding-bottom: 10px;
+.img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .card {
@@ -174,42 +134,6 @@
 
 .card:hover {
     border: 2px solid #236477;
-}
-
-.card-body {
-    grid-row-start: line1;
-    grid-row-end: line2;
-    grid-column-start: second;
-    grid-column-end: end;
-    font-size: small;
-    padding-right: 20px;
-    padding-top: 20px;
-}
-
-.card-buttons {
-    grid-row-start: line2;
-    grid-row-end: end;
-    grid-column-start: third;
-    grid-column-end: end;
-    align-items: center;
-}
-
-.card-footer {
-    grid-row-start: line2;
-    grid-row-end: end;
-    grid-column-start: first;
-    grid-column-end: end;
-}
-
-.card-title {
-    grid-row-start: line2;
-    grid-row-end: end;
-    grid-column-start: first;
-    grid-column-end: third;
-    line-height: normal;
-    text-align: center;
-    height: fit-content;
-    margin-bottom: 5%;
 }
 
 .filter-button {
