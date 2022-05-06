@@ -399,7 +399,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div id="cardOcultable" class="card" data-category="complements" style="width: 20rem;display: none;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="">
+                      <img id="mostraImatge" src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -506,16 +506,17 @@
       var armari = $('select[name="armari"] option:selected').text();
       var categoria = $('select[name="categoria"] option:selected').text();
       var nom = document.getElementById("nomPeça").value;
-      console.log(nom);
-
+      var image=document.getElementById("output").src;
       if(ambit != "Selecciona l'àmbit" && armari!="Selecciona l'armari"
-      && categoria!="Selecciona Categoria" && nom!=""){
+      && categoria!="Selecciona Categoria" && nom!="" && image!=""){
         console.log("ENTRO2");
         document.getElementById("mostraAmbit").textContent="Àmbit: "+ambit;
         document.getElementById("mostraArmari").textContent="Armari: "+armari;
         document.getElementById("mostraCategoria").textContent="Categoria: "+categoria;
         document.getElementById("mostraNom").innerHTML=nom;
         document.getElementById("cardOcultable").style="display:flex;";
+        document.getElementById("mostraImatge").src=image;
+        $('#staticBackdrop').modal('hide');
       }
       
     }
@@ -545,15 +546,13 @@
             <div class="row">
               <div class="col-md-4">
                 <div class="row">
-                  <input type="file" accept="image/*" onchange="loadFile(event)">
+                  <input id="imatge" type="file" accept="image/*" onchange="loadFile(event)">
                   <img id="output" />
                   <script>
                     var loadFile = function (event) {
                       var output = document.getElementById('output');
                       output.src = URL.createObjectURL(event.target.files[0]);
-                      output.onload = function () {
-                        URL.revokeObjectURL(output.src) // free memory
-                      }
+                      
                     };
                   </script>
                 </div>
@@ -573,6 +572,7 @@
                       <option selected>Selecciona l'àmbit</option>
                       <option value="1">Formal</option>
                       <option value="2">Informal</option>
+                      <option value="3">Esportiu</option>
                     </select>
                     <small id="ambitHelp" class="form-text text-muted">En quin
                       context
@@ -586,6 +586,7 @@
                       <option selected>Selecciona l'armari</option>
                       <option value="1">Lleida</option>
                       <option value="2">Barcelona</option>
+                      <option value="3">Pineda</option>
                     </select>
                     <small id="armariHelp" class="form-text text-muted">En quin
                       armari es
@@ -597,8 +598,13 @@
                     <label for="Categoria">Categoria</label>
                     <select id="categoria" name="categoria" class="form-select" aria-label="Default select categoria">
                       <option selected>Selecciona la categoria</option>
-                      <option value="1">Pantalons</option>
-                      <option value="2">Samarretes</option>
+                      <option value="1">Roba interior</option>
+                      <option value="2">Calçat</option>
+                      <option value="3">Complements</option>
+                      <option value="4">Roba d'abric</option>
+                      <option value="5">Part de dalt</option>
+                      <option value="6">Part de baix</option>
+                      <option value="7">Una peça</option>
                     </select>
                     <small id="categoriaHelp" class="form-text text-muted">En quina
                       part del
@@ -612,7 +618,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal">Cancel·la</button>
-        <button type="button" class="btn btn-outline-primary me-3" onclick="visualitzarCard()">Desa</button>
+        <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss="" onclick="visualitzarCard()">Desa</button>
       </div>
     </div>
   </div>
