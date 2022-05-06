@@ -2,6 +2,14 @@
     font-family: 'Abril Fatface';
 }
 
+.mystyle {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+  }
+
 .destacat {
     font-family: 'Euphoria Script';
     font-size: 130%;
