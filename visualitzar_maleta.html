@@ -57,13 +57,11 @@
                     <div class="row">
                         <div class="col-md-3">
                           <div class="toggle">
-                            <input id="cond_new" type="radio" name="bike_cond" checked="checked" @change="onChange($event)" value="peces"/>
+                            <input id="cond_new" type="radio" name="bike_cond" checked="checked" onchange="mostraPeces(); ocultaOutfit()" value="peces"/>
                             <label class="form-label" for="cond_new">Peces</label>
-                            <input id="cond_used" type="radio" name="bike_cond" @change="onChange($event)" value="outfits"/>
+                            <input id="cond_used" type="radio" name="bike_cond" onchange="ocultaPeces(); mostraOutfit();" value="outfits"/>
                             <label class="form-label" for="cond_used">Outfits</label>
                           </div>
-                          <p>peca val {{peca}}</p>
-                          <p>peca val {{hideCard}}</p>
                         </div>
                         <div class="col-md-9">
                             <div class="input-group">
@@ -203,8 +201,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-
-                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch ">
                                                                 <!-- Bootstrap 5 card box -->
                                                                 <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                                                                     <div class="card-thumbnail">
@@ -360,9 +357,12 @@
                                 <hr />
                             </div>
                         </div>
+                       
+
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                  
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch" >
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -381,7 +381,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -400,7 +400,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -419,7 +419,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -438,7 +438,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -457,7 +457,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -476,7 +476,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -495,7 +495,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -514,7 +514,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
                                     <!-- Bootstrap 5 card box -->
                                     <div class="card-box" style="width: 20rem;">
                                         <div class="card-thumbnail">
@@ -534,7 +534,7 @@
                                 </div>
 
                                 <!-- Outfit afegit per l'usuari-->
-                                <div :class="{hidingCard:hideCard}">
+                                <div id="outfit" :class="{hidingCard:hideCard}">
                                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                         <!-- Bootstrap 5 card box -->
                                         <div class="card-box" style="width: 20rem;">
@@ -557,6 +557,28 @@
                 </div>
             </div>
         </section>
+        <script language="JavaScript">
+          function ocultaPeces() {
+                var elements = document.getElementsByClassName("peca");
+                for(var i = 0; i < elements.length; i++) {
+                  elements[i].classList.add("d-none");
+                }
+              }     
+              function mostraPeces() {
+                var elements = document.getElementsByClassName("peca");
+                for(var i = 0; i < elements.length; i++) {
+                  elements[i].classList.remove("d-none");
+                }
+              }     
+              function ocultaOutfit() {
+                var element = document.getElementById("outfit");
+                element.classList.add("d-none");
+              }      
+              function mostraOutfit() {
+                var element = document.getElementById("outfit");
+                element.classList.remove("d-none");
+              }     
+      </script>
     </main>
 
 
