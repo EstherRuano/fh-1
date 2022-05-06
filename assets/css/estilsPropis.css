@@ -308,3 +308,7 @@
 .outfit_card_selected{
     border: 3px solid #173042;
 }
+
+.alert-not-shown{
+    display: none;
+}

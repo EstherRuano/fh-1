@@ -15,9 +15,7 @@
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
     <link rel="stylesheet" href="assets/css/toggle-switches.css">
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="assets\js\visualitzar_maleta.js" defer></script>
-
-  
+    <script src="assets\js\visualitzar_maleta.js" defer></script>  
 
 </head>
 
@@ -344,7 +342,7 @@
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal" @click="hideNewOutfit(true)">Cancel·la</button>
-                                                    <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss="modal" @click="hideNewOutfit(false)">Desa</button>
+                                                    <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss="modal"  @click="hideNewOutfit(false); showAlert()">Desa</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -386,9 +384,18 @@
                                 <a type="button" class="btn btn-primary" href="llistar_maletes.html" style="width:100%;">Guardar maleta</a> 
                             </div>
                         </div>
-                       
 
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
+                            <!--ALERTA TOT S'HA FET BE!-->
+                            <!--<div id="alert-btn" class="alert alert-success alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Success! message sent successfully.
+                            </div>-->
+
+                            <div id="alert-container">
+                                
+                            </div>
+
                             <div class="row">
                   
                                 <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch" >
@@ -608,10 +615,11 @@
               function mostraOutfit() {
                 var elements = document.getElementsByClassName("outfit");
                 for(var i = 0; i < elements.length; i++) {
-                  elements[i].classList.remove("d-none");
+                    elements[i].classList.remove("d-none");
               } 
             }    
       </script>
+
     </main>
 
 
@@ -655,6 +663,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
+    
+
 </body>
 
 </html>
