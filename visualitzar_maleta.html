@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="assets/css/toggle-switches.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets\js\visualitzar_maleta.js" defer></script>
+
+  
+
 </head>
 
 <body>
@@ -563,21 +566,25 @@
                 for(var i = 0; i < elements.length; i++) {
                   elements[i].classList.add("d-none");
                 }
-              }     
+              }    
               function mostraPeces() {
                 var elements = document.getElementsByClassName("peca");
                 for(var i = 0; i < elements.length; i++) {
                   elements[i].classList.remove("d-none");
                 }
-              }     
+              }    
               function ocultaOutfit() {
-                var element = document.getElementById("outfit");
-                element.classList.add("d-none");
-              }      
+                var elements = document.getElementsByClassName("outfit");
+                for(var i = 0; i < elements.length; i++) {
+                  elements[i].classList.add("d-none");
+              }  
+            }   
               function mostraOutfit() {
-                var element = document.getElementById("outfit");
-                element.classList.remove("d-none");
-              }     
+                var elements = document.getElementsByClassName("outfit");
+                for(var i = 0; i < elements.length; i++) {
+                  elements[i].classList.remove("d-none");
+              } 
+            }    
       </script>
     </main>
 
