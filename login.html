@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Suited Penguin - Login</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -13,15 +14,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
 </head>
+
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container">
             <a class="col-m" href="index.html">
-            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
-            <div class="col-m" ><a class="btn btn-primary" type="button" href="login.html">Log in</a>
-                <a class="btn btn-outline-primary" type="button" href="register.html">Register</a></div>
+            <div class="col-m"><a class="btn btn-primary" type="button" href="login.html">Log in</a>
+                <a class="btn btn-outline-primary" type="button" href="register.html">Register</a>
             </div>
+        </div>
     </nav>
 
     <main class="page login-page">
@@ -34,16 +37,21 @@
                     </p>
                 </div>
                 <form id="login">
-                    <div class="mb-3"><label class="form-label" for="email">Email</label><input id="email" v-on:input="setUser" class="form-control item" type="email" /></div>
-                    <div class="mb-3"><label class="form-label" for="password">Contrassenya</label><input id="password" v-on:input="setPass" class="form-control" type="password" /></div>
+                    <div class="mb-3"><label class="form-label" for="email">Email</label><input id="email"
+                            v-on:input="setUser" class="form-control item" type="email" /></div>
+                    <div class="mb-3"><label class="form-label" for="password">Contrassenya</label><input id="password"
+                            v-on:input="setPass" class="form-control" type="password" /></div>
                     <div class="mb-3">
-                        <div class="form-check"><input id="checkbox" class="form-check-input" type="checkbox" /><label class="form-check-label" for="checkbox">Recorda'm</label></div>
+                        <div class="form-check"><input id="checkbox" class="form-check-input" type="checkbox" /><label
+                                class="form-check-label" for="checkbox">Recorda'm</label></div>
                     </div>
                     <button v-on:click="comprova()" class="btn btn-primary" type="button">Log in</button>
                     <p v-if="!isHidden"><br>Usuari o contrassenya incorrectes </p>
-               
-                    <a href="register.html"> <p><br>Encara no tens compte? Registra't</p></a>
-                    
+
+                    <a href="register.html">
+                        <p><br>Encara no tens compte? Registra't</p>
+                    </a>
+
                 </form>
             </div>
         </section>
@@ -53,7 +61,7 @@
             <p>© 2022 Suited Penguin</p>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

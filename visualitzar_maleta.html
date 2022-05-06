@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Suited Penguin - Visualitzar maleta</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -25,19 +26,12 @@
             <a href="landing_page.html">
                 <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Maleta
-                    </a>
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                            <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="llistar_maletes.html">Maleta</a></li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
                     <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
@@ -52,21 +46,26 @@
                 <div class="block-heading">
                     <div class="row">
                         <div class="col-md-5">
-                            <h3 class="text-info" style="padding-bottom: 1rem">Les meves maletes> <span class="text-muted">Maleta Escòcia</span></h3>
+                            <h3 class="text-info" style="padding-bottom: 1rem">Les meves maletes> <span
+                                    class="text-muted">Maleta Escòcia</span></h3>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-3">
-                          <div class="toggle" style="width:100%;">
-                            <input id="cond_new" type="radio" name="bike_cond" checked="checked" onchange="mostraPeces(); ocultaOutfit()" value="peces"/>
-                            <label class="form-label" for="cond_new" style="width:100%;">Peces</label>
-                            <input id="cond_used" type="radio" name="bike_cond" onchange="ocultaPeces(); mostraOutfit();" value="outfits"/>
-                            <label class="form-label" for="cond_used" style="width:100%;">Outfits</label>
-                          </div>
+                            <div class="toggle" style="width:100%;">
+                                <input id="cond_new" type="radio" name="bike_cond" checked="checked"
+                                    onchange="mostraPeces(); ocultaOutfit()" value="peces" />
+                                <label class="form-label" for="cond_new" style="width:100%;">Peces</label>
+                                <input id="cond_used" type="radio" name="bike_cond"
+                                    onchange="ocultaPeces(); mostraOutfit();" value="outfits" />
+                                <label class="form-label" for="cond_used" style="width:100%;">Outfits</label>
+                            </div>
                         </div>
                         <div class="col-md-9">
                             <div class="input-group">
-                                <input type="search" class="form-control rounded" placeholder="Introdueix la peça a cercar" aria-label="Cerca" aria-describedby="search-addon" />
+                                <input type="search" class="form-control rounded"
+                                    placeholder="Introdueix la peça a cercar" aria-label="Cerca"
+                                    aria-describedby="search-addon" />
                                 <button type="button" class="btn btn-outline-primary">Cerca</button>
                             </div>
                         </div>
@@ -78,15 +77,19 @@
                             <!--PER FER: EDITAR MALETA-->
                             <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#new-clothing-pop" style="width:100%;">
-                                  Afegeix una peça
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#new-clothing-pop" style="width:100%;">
+                                    Afegeix una peça
                                 </button>
                                 <!-- Modal  roba-->
-                                <div class="modal fade" id="new-clothing-pop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal fade" id="new-clothing-pop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
                                     <div class="modal-dialog modal-xl">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
 
@@ -101,13 +104,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/dessuadora_nike.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/dessuadora_nike.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Dessuadora nike</h5>
                                                                             </li>
                                                                         </ul>
@@ -118,13 +124,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/jersei_vans.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/jersei_vans.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Jersei vans</h5>
                                                                             </li>
                                                                         </ul>
@@ -134,13 +143,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/samarreta_esport.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/samarreta_esport.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Samarreta esport</h5>
                                                                             </li>
                                                                         </ul>
@@ -150,13 +162,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/termica.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/termica.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Termica</h5>
                                                                             </li>
                                                                         </ul>
@@ -171,13 +186,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/faldilla_flors.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/faldilla_flors.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Faldilla flors</h5>
                                                                             </li>
                                                                         </ul>
@@ -189,13 +207,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/pantalons_blancs_campana.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/pantalons_blancs_campana.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Pantalons blancs campana</h5>
                                                                             </li>
                                                                         </ul>
@@ -204,13 +225,16 @@
                                                             </div>
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch ">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/texans.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/texans.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Texans</h5>
                                                                             </li>
                                                                         </ul>
@@ -226,13 +250,16 @@
 
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/parca.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/parca.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Parca</h5>
                                                                             </li>
                                                                         </ul>
@@ -246,13 +273,16 @@
                                                             <h3 class="mostraMaletaTitol">Una peça</h3>
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/biquini_flors.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/biquini_flors.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Biquini flors</h5>
                                                                             </li>
                                                                         </ul>
@@ -267,13 +297,16 @@
                                                             <h3 class="mostraMaletaTitol">Complements</h3>
                                                             <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta"
+                                                                    style="width: 20rem;">
                                                                     <div class="card-thumbnail">
-                                                                        <img src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="">
+                                                                        <img src="assets/img/clothes/gorra_hivern.png"
+                                                                            class="card-img-top img-fluid" alt="">
                                                                     </div>
                                                                     <div class="card-body">
                                                                         <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
+                                                                            <li class="list-group-item"
+                                                                                style="text-align: center;">
                                                                                 <h5>Gorra d'hivern</h5>
                                                                             </li>
                                                                         </ul>
@@ -285,58 +318,68 @@
                                                         </div>
 
                                                 </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal">Surt</button>
-                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-secondary me-5"
+                                                    data-bs-dismiss="modal">Surt</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
 
-                                <hr />
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#new-outfit-pop" style="width:100%;">
-                                  Afegeix outfit
-                                </button>
+                            <hr />
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#new-outfit-pop" style="width:100%;">
+                                Afegeix outfit
+                            </button>
 
 
-                                <!-- Modal  outfit-->
-                                <div class="modal fade" id="new-outfit-pop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
+                            <!-- Modal  outfit-->
+                            <div class="modal fade" id="new-outfit-pop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
 
-                                                <!-- Contingut per la maleta a Roma, hardcoded -->
-                                                <form>
-                                                    <div class="container-fluid">
-                                                        <div class="mostraMaletaTitol">
-                                                            <h2 class="text-info">Selecciona un outfit per afegir</h2>
-                                                        </div>
-                                                        <div class="row mostraMaletaImprescindible">
-                                                            <h3 class="mostraMaletaTitol">Outfits creats</h3>
-                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch"  @click="selectNewOutfit()">
-                                                                <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" :class="{outfit_card_selected:selected}" style="width: 20rem;">
-                                                                    <div class="card-thumbnail">
-                                                                        <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
-                                                                    </div>
-                                                                    <div class="card-body">
-                                                                        <ul class="list-group list-group-flush">
-                                                                            <li class="list-group-item" style="text-align: center;">
-                                                                                <h5>Outfit 1</h5>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </div>
+                                            <!-- Contingut per la maleta a Roma, hardcoded -->
+                                            <form>
+                                                <div class="container-fluid">
+                                                    <div class="mostraMaletaTitol">
+                                                        <h2 class="text-info">Selecciona un outfit per afegir</h2>
+                                                    </div>
+                                                    <div class="row mostraMaletaImprescindible">
+                                                        <h3 class="mostraMaletaTitol">Outfits creats</h3>
+                                                        <div class="col-md-6 col-lg-4 d-flex align-items-stretch"
+                                                            @click="selectNewOutfit()">
+                                                            <!-- Bootstrap 5 card box -->
+                                                            <div class="card-box mostraMaletaCarta"
+                                                                :class="{outfit_card_selected:selected}"
+                                                                style="width: 20rem;">
+                                                                <div class="card-thumbnail">
+                                                                    <img src="assets/img/outfits/outfit_sencer.png"
+                                                                        class="card-img-top img-fluid" alt="">
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <ul class="list-group list-group-flush">
+                                                                        <li class="list-group-item"
+                                                                            style="text-align: center;">
+                                                                            <h5>Outfit 1</h5>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
                                                             </div>
-
-
                                                         </div>
+
+
+                                                    </div>
 
                                                 </form>
                                                 </div>
@@ -348,40 +391,71 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
 
-                                <section>
-                                    <hr style="margin-bottom: 0px;" />
-                                    <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
-                                        Recents
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-clock" viewBox="0 0 16 16">
-                                            <path
-                                                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                                            <path
-                                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                                        </svg>
-                                    </div>
-                                    <hr style="margin: 0px;" />
-                                    <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
-                                        Favorits
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-star" viewBox="0 0 16 16">
-                                            <path
-                                                d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                                        </svg>
-                                    </div>
-                                    <hr style="margin: 0px;" />
-                                    <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
-                                        Paperera
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash" viewBox="0 0 16 16">
-                                            <path
-                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                            <path fill-rule="evenodd"
-                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                        </svg>
-                                    </div>
-                                    <hr style="margin-top: 0px;" />
+                        <section>
+                            <hr style="margin-bottom: 0px;" />
+                            <div class="Folder folder-div" :class="{folder_active:recentSelected}"
+                                @click="selectedFolder(1)">
+                                Recents
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                    class="bi bi-clock" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                </svg>
+                            </div>
+                            <hr style="margin: 0px;" />
+                            <div class="Folder folder-div" :class="{folder_active:favoritsSelected}"
+                                @click="selectedFolder(2)">
+                                Favorits
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                    class="bi bi-star" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                </svg>
+                            </div>
+                            <hr style="margin: 0px;" />
+                            <div class="Folder folder-div" :class="{folder_active:papereraSelected}"
+                                @click="selectedFolder(3)">
+                                Paperera
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042"
+                                    class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                </svg>
+                            </div>
+                            <hr style="margin-top: 0px;" />
 
-                                </section>
-                                <a type="button" class="btn btn-primary" href="llistar_maletes.html" style="width:100%;">Guardar maleta</a> 
+                        </section>
+                        <a type="button" class="btn btn-primary" href="llistar_maletes.html" style="width:100%;">Guardar
+                            maleta</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
+                    <div class="row">
+
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/texans.png" class="card-img-top img-fluid" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Texans</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Informal</li>
+                                        <li class="list-group-item">Armari: Barcelona</li>
+                                        <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
@@ -417,174 +491,179 @@
                                     </div>
                                 </div>
 
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/biquini_flors.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Biquini Flors</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Informal</li>
-                                                <li class="list-group-item">Armari: Barcelona</li>
-                                                <li class="list-group-item">Categoria: Roba de bany</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/biquini_flors.png" class="card-img-top img-fluid"
+                                        alt="">
                                 </div>
-
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/jersei_vans.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Jersei Vans</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Informal</li>
-                                                <li class="list-group-item">Armari: Lleida</li>
-                                                <li class="list-group-item">Categoria: Abrics i Jerseis</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Biquini Flors</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Informal</li>
+                                        <li class="list-group-item">Armari: Barcelona</li>
+                                        <li class="list-group-item">Categoria: Roba de bany</li>
+                                    </ul>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/dessuadora_nike.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Dessuadora nike</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Informal</li>
-                                                <li class="list-group-item">Armari: Barcelona</li>
-                                                <li class="list-group-item">Categoria: Abrics i Jerseis</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/jersei_vans.png" class="card-img-top img-fluid" alt="">
                                 </div>
-
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/pantalons_blancs_campana.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Pantalons Blancs Campana</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Formal</li>
-                                                <li class="list-group-item">Armari: Lleida</li>
-                                                <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Jersei Vans</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Informal</li>
+                                        <li class="list-group-item">Armari: Lleida</li>
+                                        <li class="list-group-item">Categoria: Abrics i Jerseis</li>
+                                    </ul>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/parca.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Parca</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Formal</li>
-                                                <li class="list-group-item">Armari: Lleida</li>
-                                                <li class="list-group-item">Categoria: Abrics i Jerseis</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/dessuadora_nike.png" class="card-img-top img-fluid"
+                                        alt="">
                                 </div>
-
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/samarreta_esport.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Samarreta Esportiva</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Informal</li>
-                                                <li class="list-group-item">Armari: Barcelona</li>
-                                                <li class="list-group-item">Categoria: Roba d'esport</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Dessuadora nike</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Informal</li>
+                                        <li class="list-group-item">Armari: Barcelona</li>
+                                        <li class="list-group-item">Categoria: Abrics i Jerseis</li>
+                                    </ul>
                                 </div>
+                            </div>
+                        </div>
 
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/faldilla_flors.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Faldilla de flors</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Formal</li>
-                                                <li class="list-group-item">Armari: Barcelona</li>
-                                                <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/pantalons_blancs_campana.png"
+                                        class="card-img-top img-fluid" alt="">
                                 </div>
-
-                                <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
-                                    <!-- Bootstrap 5 card box -->
-                                    <div class="card-box" style="width: 20rem;">
-                                        <div class="card-thumbnail">
-                                            <img src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="">
-                                        </div>
-                                        <div class="card-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item" style="text-align: center;">
-                                                    <h5>Gorra hivern</h5>
-                                                </li>
-                                                <li class="list-group-item">Àmbit: Informal</li>
-                                                <li class="list-group-item">Armari: Lleida</li>
-                                                <li class="list-group-item">Categoria: Complements</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Pantalons Blancs Campana</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Formal</li>
+                                        <li class="list-group-item">Armari: Lleida</li>
+                                        <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
+                                    </ul>
                                 </div>
+                            </div>
+                        </div>
 
-                                <!-- Outfit afegit per l'usuari-->
-                                <div id="outfit" :class="{hidingCard:hideCard}">
-                                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                                        <!-- Bootstrap 5 card box -->
-                                        <div class="card-box" style="width: 20rem;">
-                                            <div class="card-thumbnail">
-                                                <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
-                                            </div>
-                                            <div class="card-body">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item" style="text-align: center;">
-                                                        <h5>Outfit 1</h5>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/parca.png" class="card-img-top img-fluid" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Parca</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Formal</li>
+                                        <li class="list-group-item">Armari: Lleida</li>
+                                        <li class="list-group-item">Categoria: Abrics i Jerseis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/samarreta_esport.png" class="card-img-top img-fluid"
+                                        alt="">
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Samarreta Esportiva</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Informal</li>
+                                        <li class="list-group-item">Armari: Barcelona</li>
+                                        <li class="list-group-item">Categoria: Roba d'esport</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/faldilla_flors.png" class="card-img-top img-fluid"
+                                        alt="">
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Faldilla de flors</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Formal</li>
+                                        <li class="list-group-item">Armari: Barcelona</li>
+                                        <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">
+                            <!-- Bootstrap 5 card box -->
+                            <div class="card-box" style="width: 20rem;">
+                                <div class="card-thumbnail">
+                                    <img src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid"
+                                        alt="">
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item" style="text-align: center;">
+                                            <h5>Gorra hivern</h5>
+                                        </li>
+                                        <li class="list-group-item">Àmbit: Informal</li>
+                                        <li class="list-group-item">Armari: Lleida</li>
+                                        <li class="list-group-item">Categoria: Complements</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Outfit afegit per l'usuari-->
+                        <div id="outfit" :class="{hidingCard:hideCard}">
+                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                                <!-- Bootstrap 5 card box -->
+                                <div class="card-box" style="width: 20rem;">
+                                    <div class="card-thumbnail">
+                                        <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid"
+                                            alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item" style="text-align: center;">
+                                                <h5>Outfit 1</h5>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -592,68 +671,92 @@
                     </div>
                 </div>
             </div>
+            </div>
+            </div>
         </section>
         <script language="JavaScript">
-          function ocultaPeces() {
+            function ocultaPeces() {
                 var elements = document.getElementsByClassName("peca");
-                for(var i = 0; i < elements.length; i++) {
-                  elements[i].classList.add("d-none");
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].classList.add("d-none");
                 }
-              }    
-              function mostraPeces() {
+            }
+            function mostraPeces() {
                 var elements = document.getElementsByClassName("peca");
-                for(var i = 0; i < elements.length; i++) {
-                  elements[i].classList.remove("d-none");
-                }
-              }    
-              function ocultaOutfit() {
-                var elements = document.getElementsByClassName("outfit");
-                for(var i = 0; i < elements.length; i++) {
-                  elements[i].classList.add("d-none");
-              }  
-            }   
-              function mostraOutfit() {
-                var elements = document.getElementsByClassName("outfit");
-                for(var i = 0; i < elements.length; i++) {
+                for (var i = 0; i < elements.length; i++) {
                     elements[i].classList.remove("d-none");
-              } 
+                }
+            }
+            function ocultaOutfit() {
+                var elements = document.getElementsByClassName("outfit");
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].classList.add("d-none");
+                }
+            }
+            function mostraOutfit() {
+                var elements = document.getElementsByClassName("outfit");
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].classList.remove("d-none");
+                }
             }    
-      </script>
-
+        </script>
     </main>
 
 
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <h5>Maleta</h5>
-                    <ul>
-                        <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-                        <li><a href="maleta.html">Crea una maleta</a></li>
-                    </ul>
+                <div class="col-md-3 col-lg-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                            <a href="#">
+                                <img style="max-width:75%;
+                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                            </a>
+                            <div class="row text-center">
+                                <h1 class="titol-footer">Suited Penguin</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <h5>Armari</h5>
-                    <ul>
-                        <li><a href="armari.html">Els meus armaris</a></li>
-                        <li><a href="#">Crea un armari</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Outfits</h5>
-                    <ul>
-                        <li><a href="outfit.html">Els meus outfits</a></li>
-                        <li><a href="#">Crea un outfit</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Perfil</h5>
-                    <ul>
-                        <li><a href="#">El meu perfil</a></li>
-                    </ul>
+
+                <div class="col-md-9 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Maleta</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                                </li>
+                                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Armari</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Outfit</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+                                <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Perfil</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
         <div class="footer-copyright">
             <p>© 2022 Suited Penguin</p>

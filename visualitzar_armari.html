@@ -32,16 +32,7 @@
       <div id="navcol-1" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Maleta
-            </a>
-            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-              <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-              <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="llistar_maletes.html">Maleta</a></li>
           <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
           <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
           <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
@@ -399,7 +390,8 @@
                   <!-- Bootstrap 5 card box -->
                   <div id="cardOcultable" class="card" style="width: 20rem;display: none;">
                     <div class="card-thumbnail">
-                      <img id="mostraImatge" src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="">
+                      <img id="mostraImatge" src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid"
+                        alt="">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -428,40 +420,63 @@
 
   <footer class="page-footer dark">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <h5>Maleta</h5>
-          <ul>
-            <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-            <li><a href="maleta.html">Crea una maleta</a></li>
-          </ul>
+        <div class="row">
+            <div class="col-md-3 col-lg-4">
+                <div class="row">
+                    <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                        <a href="#">
+                            <img style="max-width:75%;
+                            max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                        </a>
+                        <div class="row text-center">
+                            <h1 class="titol-footer">Suited Penguin</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9 col-lg-8">
+                <div class="row">
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Maleta</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                            </li>
+                            <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Armari</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                            <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Outfit</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+                            <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Perfil</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-3">
-          <h5>Armari</h5>
-          <ul>
-            <li><a href="armari.html">Els meus armaris</a></li>
-            <li><a href="#">Crea un armari</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h5>Outfits</h5>
-          <ul>
-            <li><a href="outfit.html">Els meus outfits</a></li>
-            <li><a href="#">Crea un outfit</a></li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <h5>Perfil</h5>
-          <ul>
-            <li><a href="#">El meu perfil</a></li>
-          </ul>
-        </div>
-      </div>
+
+
+
     </div>
     <div class="footer-copyright">
-      <p>© 2022 Suited Penguin</p>
+        <p>© 2022 Suited Penguin</p>
     </div>
-  </footer>
+</footer>
 
   <!-- For searching purpose -->
   <script>
@@ -511,16 +526,16 @@
       var armari = $('select[name="armari"] option:selected').text();
       var categoria = $('select[name="categoria"] option:selected').text();
       var nom = document.getElementById("nomPeça").value;
-      var image=document.getElementById("output").src;
-      if(ambit != "Selecciona l'àmbit" && armari!="Selecciona l'armari"
-      && categoria!="Selecciona Categoria" && nom!="" && image!=""){
+      var image = document.getElementById("output").src;
+      if (ambit != "Selecciona l'àmbit" && armari != "Selecciona l'armari"
+        && categoria != "Selecciona Categoria" && nom != "" && image != "") {
         console.log("ENTRO2");
-        document.getElementById("mostraAmbit").textContent="Àmbit: "+ambit;
-        document.getElementById("mostraArmari").textContent="Armari: "+armari;
-        document.getElementById("mostraCategoria").textContent="Categoria: "+categoria;
-        document.getElementById("mostraNom").innerHTML=nom;
-        document.getElementById("cardOcultable").style="display:flex;";
-        document.getElementById("mostraImatge").src=image;
+        document.getElementById("mostraAmbit").textContent = "Àmbit: " + ambit;
+        document.getElementById("mostraArmari").textContent = "Armari: " + armari;
+        document.getElementById("mostraCategoria").textContent = "Categoria: " + categoria;
+        document.getElementById("mostraNom").innerHTML = nom;
+        document.getElementById("cardOcultable").style = "display:flex;";
+        document.getElementById("mostraImatge").src = image;
         $('#staticBackdrop').modal('hide');
       }
 
@@ -557,7 +572,7 @@
                     var loadFile = function (event) {
                       var output = document.getElementById('output');
                       output.src = URL.createObjectURL(event.target.files[0]);
-                      
+
                     };
                   </script>
                 </div>
@@ -623,7 +638,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal">Cancel·la</button>
-        <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss="" onclick="visualitzarCard()">Desa</button>
+        <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss=""
+          onclick="visualitzarCard()">Desa</button>
       </div>
     </div>
   </div>

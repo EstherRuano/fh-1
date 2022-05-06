@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Suited Penguin - Llistat maletes</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -29,15 +30,7 @@
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Maleta
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                            <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="armari.html">Maleta</a></li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
                     <li class="nav-item"><a class="nav-link active" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
@@ -57,7 +50,8 @@
                         <div class="col-md-5 d-flex">
                             <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
                                 <div class="sticky-top">
-                                    <div type="button" class="btn btn-primary" style="width:100%;" data-bs-target="#staticBackdrop" v-on:click="enviaOutfit()">
+                                    <div type="button" class="btn btn-primary" style="width:100%;"
+                                        data-bs-target="#staticBackdrop" v-on:click="enviaOutfit()">
                                         Guardar outfit
                                     </div>
                                     <div class="grid-outfit" style="width:100%">
@@ -65,21 +59,30 @@
                                             <img v-bind:src="img_outfit" style=" width:100%; ">
                                         </div>
                                         <div class="btn maniqui-boto-cap " onclick="filterSelection( 'cap') ">
-                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
-                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
-                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 "
+                                                class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z " />
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z " />
                                             </svg>
                                         </div>
                                         <div class="btn maniqui-boto-cos " onclick="filterSelection( 'cos') ">
-                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
-                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
-                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 "
+                                                class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z " />
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z " />
                                             </svg>
                                         </div>
                                         <div class="btn maniqui-boto-cames " onclick="filterSelection( 'cames') ">
-                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 " class="bi bi-plus-circle " viewBox="0 0 16 16 ">
-                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z "/>
-                                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z "/>
+                                            <svg xmlns="http://www.w3.org/2000/svg " width="100% " fill="#173042 "
+                                                class="bi bi-plus-circle " viewBox="0 0 16 16 ">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z " />
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z " />
                                             </svg>
                                         </div>
                                     </div>
@@ -95,7 +98,8 @@
                                 <div class="row ">
 
                                     <div class="input-group " style="margin-bottom:1em; ">
-                                        <input type="search " class="form-control rounded " placeholder="Cercar peça " aria-label="Cerca " aria-describedby="search-addon " />
+                                        <input type="search " class="form-control rounded " placeholder="Cercar peça "
+                                            aria-label="Cerca " aria-describedby="search-addon " />
                                         <button type="button " class="btn btn-outline-primary ">Cerca</button>
                                     </div>
                                     <div class="row ">
@@ -104,7 +108,8 @@
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="baix " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
-                                                        <img src="assets/img/clothes/texans.png " class="card-img-top img-fluid " alt=" ">
+                                                        <img src="assets/img/clothes/texans.png "
+                                                            class="card-img-top img-fluid " alt=" ">
                                                     </div>
                                                     <div class="card-body ">
                                                         <ul class="list-group list-group-flush ">
@@ -124,7 +129,8 @@
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="abric " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
-                                                        <img src="assets/img/clothes/jersei_vans.png " class="card-img-top img-fluid " alt=" ">
+                                                        <img src="assets/img/clothes/jersei_vans.png "
+                                                            class="card-img-top img-fluid " alt=" ">
                                                     </div>
                                                     <div class="card-body ">
                                                         <ul class="list-group list-group-flush ">
@@ -143,7 +149,8 @@
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="baix " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
-                                                        <img src="assets/img/clothes/pantalons_blancs_campana.png " class="card-img-top img-fluid " alt=" ">
+                                                        <img src="assets/img/clothes/pantalons_blancs_campana.png "
+                                                            class="card-img-top img-fluid " alt=" ">
                                                     </div>
                                                     <div class="card-body ">
                                                         <ul class="list-group list-group-flush ">
@@ -162,7 +169,8 @@
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="abric " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
-                                                        <img src="assets/img/clothes/parca.png " class="card-img-top img-fluid " alt=" ">
+                                                        <img src="assets/img/clothes/parca.png "
+                                                            class="card-img-top img-fluid " alt=" ">
                                                     </div>
                                                     <div class="card-body ">
                                                         <ul class="list-group list-group-flush ">
@@ -181,7 +189,8 @@
                                                 <!-- Bootstrap 5 card box -->
                                                 <div class="card " data-category="abric " style="width: 20rem; ">
                                                     <div class="card-thumbnail ">
-                                                        <img src="assets/img/clothes/termica.png " class="card-img-top img-fluid " alt=" ">
+                                                        <img src="assets/img/clothes/termica.png "
+                                                            class="card-img-top img-fluid " alt=" ">
                                                     </div>
                                                     <div class="card-body ">
                                                         <ul class="list-group list-group-flush ">
@@ -208,39 +217,62 @@
         </section>
     </main>
 
-    <footer class="page-footer dark ">
-        <div class="container ">
-            <div class="row ">
-                <div class="col-sm-3 ">
-                    <h5>Maleta</h5>
-                    <ul>
-                        <li><a href="llistar_maletes.html ">Els meus outfits</a></li>
-                        <li><a href="outfit.html ">Crea un outfit</a></li>
-                    </ul>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                            <a href="#">
+                                <img style="max-width:75%;
+                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                            </a>
+                            <div class="row text-center">
+                                <h1 class="titol-footer">Suited Penguin</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3 ">
-                    <h5>Armari</h5>
-                    <ul>
-                        <li><a href="armari.html ">Els meus armaris</a></li>
-                        <li><a href="# ">Crea un armari</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 ">
-                    <h5>Outfits</h5>
-                    <ul>
-                        <li><a href="outfit.html ">Els meus outfits</a></li>
-                        <li><a href="# ">Crea un outfit</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 ">
-                    <h5>Perfil</h5>
-                    <ul>
-                        <li><a href="# ">El meu perfil</a></li>
-                    </ul>
+
+                <div class="col-md-9 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Maleta</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                                </li>
+                                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Armari</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Outfit</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block">Els meus outfits</a></li>
+                                <li><a href="#" class="py-1 d-block">Crea un outfit</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Perfil</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
-        <div class="footer-copyright ">
+        <div class="footer-copyright">
             <p>© 2022 Suited Penguin</p>
         </div>
     </footer>
