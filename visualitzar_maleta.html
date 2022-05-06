@@ -321,9 +321,9 @@
                                                         </div>
                                                         <div class="row mostraMaletaImprescindible">
                                                             <h3 class="mostraMaletaTitol">Outfits creats</h3>
-                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch" @click="selectNewOutfit()">
+                                                            <div class="col-md-6 col-lg-4 d-flex align-items-stretch"  @click="selectNewOutfit()">
                                                                 <!-- Bootstrap 5 card box -->
-                                                                <div class="card-box mostraMaletaCarta" style="width: 20rem;">
+                                                                <div class="card-box mostraMaletaCarta" :class="{outfit_card_selected:selected}" style="width: 20rem;">
                                                                     <div class="card-thumbnail">
                                                                         <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
                                                                     </div>

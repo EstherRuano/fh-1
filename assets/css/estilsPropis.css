@@ -304,3 +304,7 @@
     grid-area: cames;
     align-self: center;
 }
+
+.outfit_card_selected{
+    border: 3px solid #173042;
+}
