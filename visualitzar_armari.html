@@ -511,7 +511,6 @@
       var armari = $('select[name="armari"] option:selected').text();
       var categoria = $('select[name="categoria"] option:selected').text();
       var nom = document.getElementById("nomPeça").value;
-<<<<<<< HEAD
       var image=document.getElementById("output").src;
       if(ambit != "Selecciona l'àmbit" && armari!="Selecciona l'armari"
       && categoria!="Selecciona Categoria" && nom!="" && image!=""){
@@ -523,18 +522,6 @@
         document.getElementById("cardOcultable").style="display:flex;";
         document.getElementById("mostraImatge").src=image;
         $('#staticBackdrop').modal('hide');
-=======
-      console.log(nom);
-
-      if (ambit != "Selecciona l'àmbit" && armari != "Selecciona l'armari"
-        && categoria != "Selecciona Categoria" && nom != "") {
-        console.log("ENTRO2");
-        document.getElementById("mostraAmbit").textContent = "Àmbit: " + ambit;
-        document.getElementById("mostraArmari").textContent = "Armari: " + armari;
-        document.getElementById("mostraCategoria").textContent = "Categoria: " + categoria;
-        document.getElementById("mostraNom").innerHTML = nom;
-        document.getElementById("cardOcultable").style = "display:flex;";
->>>>>>> 3d48007c4d5a2066ad40c6a997f8f5bc3621636d
       }
 
     }
