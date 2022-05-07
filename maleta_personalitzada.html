@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Suited Penguin - Crea maleta</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
@@ -17,50 +18,53 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-      <div class="container">
-          <a href="landing_page.html">
-          <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
-          </a>
-      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-          <div id="navcol-1" class="collapse navbar-collapse">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="llistar_maletes.html">Maleta</a></li>
-                <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
-                <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
-                <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
-              </ul>
-          </div>
-      </div>
-  </nav>
+        <div class="container">
+            <a href="landing_page.html">
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div id="navcol-1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="llistar_maletes.html">Maleta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
+                    <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Bloc principal -->
     <main class="page contact-us-page">
         <section class="clean-block clean-form dark">
-            
+
 
             <div class="container">
-                
+
                 <div class="block-heading">
                     <h2 class="text-info">Nova maleta</h2>
                 </div>
 
                 <!-- Formulari -->
                 <form style="max-width:800px">
-                    <div class="mb-3"><label class="form-label" for="name">Nom</label><input class="form-control" type="text" id="name" name="name"></div>
-                    <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti" class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
+                    <div class="mb-3"><label class="form-label" for="name">Nom</label><input class="form-control"
+                            type="text" id="name" name="name"></div>
+                    <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti"
+                            class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
                     <script src="assets/js/country_list.js" type="text/javascript"></script>
                     <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control" type="number" step="1" id="weight" name="weight"></div>
 
                     <div class="mb-3">
                         <label class="form-label" for="closet">Armari</label>
-                        <select  class="form-select">
+                        <select class="form-select">
                             <option value="value1">Casa pares (Lleida)</option>
                             <option value="value2">Casa Uni (Barcelona)</option>
                             <option value="value3">Camping (Pineda)</option>
-                          </select>
+                        </select>
                     </div>
 
-                    
+
 
                     <div style="margin: 0px 0px 16px;">
                         <div class="row">
@@ -68,19 +72,27 @@
                                 <label class="form-label">Data inici</label>
                                 <input class="form-control" type="date" id="dataInici">
                                 <label class="form-label" style="margin-top: 10px;">Data final</label>
-                                <input class="form-control" type="date" id="dataFinal"></div>
+                                <input class="form-control" type="date" id="dataFinal">
+                            </div>
                             <div class="col" style="margin: 20px;"><label class="form-label">Àmbit</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Formal</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Informal</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Esportiu</label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                        id="formCheck-1"><label class="form-check-label"
+                                        for="formCheck-1">Formal</label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                        id="formCheck-3"><label class="form-check-label"
+                                        for="formCheck-3">Informal</label></div>
+                                <div class="form-check"><input class="form-check-input" type="checkbox"
+                                        id="formCheck-2"><label class="form-check-label"
+                                        for="formCheck-2">Esportiu</label></div>
                             </div>
                         </div>
                     </div>
                     <div class="mb-3" style="text-align:right">
 
-                        <a class="btn btn-outline-primary" type="submit" style="margin-right: 10px;" href="seleccio_tipus_maleta.html">Enrere</a>
+                        <a class="btn btn-outline-primary" type="submit" style="margin-right: 10px;"
+                            href="seleccio_tipus_maleta.html">Enrere</a>
                         <a type="button" class="btn btn-primary" href="visualitzar_maleta.html">Genera la maleta</a>
-                    
+
                     </div>
                 </form>
             </div>
@@ -90,34 +102,57 @@
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <h5>Maleta</h5>
-                    <ul>
-                        <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-                        <li><a href="maleta.html">Crea una maleta</a></li>
-                    </ul>
+                <div class="col-md-3 col-lg-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                            <a href="#">
+                                <img style="max-width:75%;
+                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                            </a>
+                            <div class="row text-center">
+                                <h1 class="titol-footer">Suited Penguin</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <h5>Armari</h5>
-                    <ul>
-                        <li><a href="armari.html">Els meus armaris</a></li>
-                        <li><a href="#">Crea un armari</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Outfits</h5>
-                    <ul>
-                        <li><a href="outfit.html">Els meus outfits</a></li>
-                        <li><a href="#">Crea un outfit</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Perfil</h5>
-                    <ul>
-                        <li><a href="#">El meu perfil</a></li>
-                    </ul>
+
+                <div class="col-md-9 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Maleta</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                                </li>
+                                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Armari</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Outfit</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+                                <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Perfil</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
         <div class="footer-copyright">
             <p>© 2022 Suited Penguin</p>

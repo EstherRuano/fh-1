@@ -2,6 +2,19 @@
     font-family: 'Abril Fatface';
 }
 
+.titol-footer {
+    font-family: 'Abril Fatface';
+    font-size: 30px;
+    color:white;
+}
+
+.perfil {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
 .mystyle {
     width: 100%;
     padding: 25px;
@@ -303,4 +316,12 @@
 .maniqui-boto-cames {
     grid-area: cames;
     align-self: center;
+}
+
+.outfit_card_selected{
+    border: 3px solid #173042;
+}
+
+.alert-not-shown{
+    display: none;
 }

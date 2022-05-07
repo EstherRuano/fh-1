@@ -22,24 +22,18 @@
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container">
             <a href="landing_page.html">
-            <img class="logo_img" src="assets/img/avatars/logo-i-text.png"/>
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item "><a class="nav-link active" href="landing_page.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Maleta
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                          <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                          <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-                        </ul>
-                      </li>
+                    <li class="nav-item"><a class="nav-link" href="llistar_maletes.html">Maleta</a></li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
                     <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+                    <i class="flag flag-us"></i>
                 </ul>
             </div>
         </div>
@@ -89,17 +83,21 @@
 
         <section class="clean-block clean-info dark" id="landing">
             <div class="container">
-                <div class="border rounded border-0 border-light d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+                <div
+                    class="border rounded border-0 border-light d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
                     <div class="col-sm-8 pb-2 pb-lg-1">
                         <h2 class="titol">Genera una maleta ràpidament</h2>
                         <p>Introdueix a continuació la informació del teu viatge i et generarem una maleta!</p>
-                            <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la previsió metereològica del teu lloc de destí i molt més
-                             per proposar-te la <span class="destacat">millor maleta possible</span></p>
+                        <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la
+                            previsió metereològica del teu lloc de destí i molt més
+                            per proposar-te la <span class="destacat">millor maleta possible</span></p>
                         <input type="search" placeholder="On viatjaràs?" v-model="desti">
                         <input type="date" id="anada" v-model="anada">
                         <input type="date" id="tornada" v-model="tornada">
                     </div>
-                    <div class="col-sm-4 align-self-end my-2"><button v-on:click="envia()" class="btn btn-primary fs-5 py-2 px-4" role="button" type="button">Maleta ràpida</button></div>
+                    <div class="col-sm-4 align-self-end my-2"><button v-on:click="envia()"
+                            class="btn btn-primary fs-5 py-2 px-4" role="button" type="button">Maleta ràpida</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -115,7 +113,8 @@
                             <p>El generador de maletes aleatòries de Suited Penguin et permet organitzar-te la maleta en
                                 segons. Omplint els camps demanats, et generarà una combinació de peces de roba idònies
                                 pel viatge.</p>
-                        </div><a class="btn btn-outline-primary btn-lg" type="button" href="maleta.html">Crear una
+                        </div><a class="btn btn-outline-primary btn-lg" type="button"
+                            href="maleta_personalitzada.html">Crear una
                             maleta personalitzada</a>
                     </div>
                 </div>
@@ -164,40 +163,63 @@
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <h5>Maleta</h5>
-                    <ul>
-                        <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-                        <li><a href="maleta.html">Crea una maleta</a></li>
-                    </ul>
+                <div class="col-md-3 col-lg-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                            <a href="#">
+                                <img style="max-width:75%;
+                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                            </a>
+                            <div class="row text-center">
+                                <h1 class="titol-footer">Suited Penguin</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <h5>Armari</h5>
-                    <ul>
-                        <li><a href="armari.html">Els meus armaris</a></li>
-                        <li><a href="#">Crea un armari</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Outfits</h5>
-                    <ul>
-                        <li><a href="outfit.html">Els meus outfits</a></li>
-                        <li><a href="#">Crea un outfit</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Perfil</h5>
-                    <ul>
-                        <li><a href="#">El meu perfil</a></li>
-                    </ul>
+
+                <div class="col-md-9 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Maleta</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                                </li>
+                                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Armari</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Outfit</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+                                <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Perfil</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
         <div class="footer-copyright">
             <p>© 2022 Suited Penguin</p>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets/js/landing.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

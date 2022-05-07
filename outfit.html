@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Suited Penguin - Visualitzar armari</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
@@ -54,19 +55,11 @@
                 <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
             </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
-          class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div id="navcol-1" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Maleta
-            </a>
-                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                            <li><a class="dropdown-item" href="llistar_maletes.html">Les meves maletes</a></li>
-                            <li><a class="dropdown-item" href="maleta.html">Crear maleta</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="llistar_maletes.html">Maleta</a></li>
                     <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
                     <li class="nav-item"><a class="nav-link active" href="outfit.html">Outfit</a></li>
                     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
@@ -89,7 +82,9 @@
                         </div>
                         <div class="col-md-9">
                             <div class="input-group">
-                                <input type="search" id="filter" class="form-control rounded" placeholder="Introdueix la peça a cercar" aria-label="Cerca" aria-describedby="search-addon" />
+                                <input type="search" id="filter" class="form-control rounded"
+                                    placeholder="Introdueix la peça a cercar" aria-label="Cerca"
+                                    aria-describedby="search-addon" />
                                 <button type="button" class="btn btn-outline-primary">Cerca</button>
                             </div>
                         </div>
@@ -101,37 +96,46 @@
                             <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
                                 <div class="sticky-top">
                                     <!-- Button trigger modal -->
-                                    <a type="button" class="btn btn-primary" style="width:100%;" data-bs-target="#staticBackdrop" href="crear_outfit.html">
+                                    <a type="button" class="btn btn-primary" style="width:100%;"
+                                        data-bs-target="#staticBackdrop" href="crear_outfit.html">
                                         Crear outfit
                                     </a>
                                     <!-- Modal -->
 
                                     <section id="app">
                                         <hr style="margin-bottom: 0px;" />
-                                        <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
+                                        <div class="Folder folder-div" :class="{folder_active:recentSelected}"
+                                            @click="selectedFolder(1)">
                                             Recents
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-clock" viewBox="0 0 16 16">
-                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
-                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
-                      </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-clock" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                <path
+                                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                            </svg>
                                         </div>
                                         <hr style="margin: 0px;" />
-                                        <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
+                                        <div class="Folder folder-div" :class="{folder_active:favoritsSelected}"
+                                            @click="selectedFolder(2)">
                                             Favorits
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-star" viewBox="0 0 16 16">
-                        <path
-                          d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
-                      </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-star" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+                                            </svg>
                                         </div>
                                         <hr style="margin: 0px;" />
-                                        <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
+                                        <div class="Folder folder-div" :class="{folder_active:papereraSelected}"
+                                            @click="selectedFolder(3)">
                                             Paperera
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash" viewBox="0 0 16 16">
-                        <path
-                          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                        <path fill-rule="evenodd"
-                          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                      </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="#173042" class="bi bi-trash" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                            </svg>
                                         </div>
                                         <hr style="margin-top: 0px;" />
 
@@ -145,53 +149,63 @@
                                             Filtra per:
                                         </div>
                                         <hr style="margin: 0px;" />
-                                        <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse" data-bs-target="#collapseExample" type="button" aria-expanded="false" aria-controls="collapse">
-                      Categoria
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                      </svg>
-                    </button>
+                                        <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample" type="button" aria-expanded="false"
+                                            aria-controls="collapse">
+                                            Categoria
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-compact-down"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                                            </svg>
+                                        </button>
                                         <hr style="margin: 0px;" />
                                         <div class="collapse" id="collapseExample">
                                             <div class="card-body">
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="interior"> Roba Interior</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="interior"> Roba Interior</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="calcat"> Calçat</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="calcat"> Calçat</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="complements">
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="complements">
                                                                 Complements
                                                             </label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="abric"> Roba d’abric</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="abric"> Roba d’abric</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="dalt"> Part de dalt</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="dalt"> Part de dalt</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="baix"> Part de baix</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="baix"> Part de baix</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="una"> Una peça</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="una"> Una peça</label>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -203,31 +217,37 @@
                                         </div>
 
                                         <hr style="margin: 0px;" />
-                                        <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse" data-bs-target="#collapseExample2" type="button" aria-expanded="false" aria-controls="collapse">
-                      Ambit
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
-                      </svg>
-                    </button>
+                                        <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample2" type="button" aria-expanded="false"
+                                            aria-controls="collapse">
+                                            Ambit
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-compact-down"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+                                            </svg>
+                                        </button>
                                         <hr style="margin: 0px;" />
                                         <div class="collapse" id="collapseExample2">
                                             <div class="card-body">
                                                 <ul class="list-group list-group-flush">
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="formal"> Formal</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="formal"> Formal</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="informal"> Informal</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="informal"> Informal</label>
                                                         </div>
                                                     </li>
                                                     <li class="list-group-item">
                                                         <div class="form-check">
-                                                            <label><input class="cardCheckBox" type="checkbox" value="esportiu"> Esportiu</label>
+                                                            <label><input class="cardCheckBox" type="checkbox"
+                                                                    value="esportiu"> Esportiu</label>
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -243,11 +263,12 @@
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
                                 <div id="cardAOcultar" style="display:none;">
-                                    <div id="mycard"  class="col-md-6 col-lg-4 d-flex align-items-stretch" >
+                                    <div id="mycard" class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                         <!-- Bootstrap 5 card box -->
                                         <div class="card" data-category="baix" style="width: 20rem;">
                                             <div class="card-thumbnail">
-                                                <img src="assets/img/outfits/outfit_sencer.png" class="card-img-top img-fluid" alt="">
+                                                <img src="assets/img/outfits/outfit_sencer.png"
+                                                    class="card-img-top img-fluid" alt="">
                                             </div>
                                             <div class="card-body">
                                                 <ul class="list-group list-group-flush">
@@ -271,34 +292,57 @@
     <footer class="page-footer dark">
         <div class="container">
             <div class="row">
-                <div class="col-sm-3">
-                    <h5>Maleta</h5>
-                    <ul>
-                        <li><a href="llistar_maletes.html">Les meves maletes</a></li>
-                        <li><a href="maleta.html">Crea una maleta</a></li>
-                    </ul>
+                <div class="col-md-3 col-lg-4">
+                    <div class="row">
+                        <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                            <a href="#">
+                                <img style="max-width:75%;
+                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                            </a>
+                            <div class="row text-center">
+                                <h1 class="titol-footer">Suited Penguin</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <h5>Armari</h5>
-                    <ul>
-                        <li><a href="armari.html">Els meus armaris</a></li>
-                        <li><a href="#">Crea un armari</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Outfits</h5>
-                    <ul>
-                        <li><a href="outfit.html">Els meus outfits</a></li>
-                        <li><a href="#">Crea un outfit</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <h5>Perfil</h5>
-                    <ul>
-                        <li><a href="#">El meu perfil</a></li>
-                    </ul>
+
+                <div class="col-md-9 col-lg-8">
+                    <div class="row">
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Maleta</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                                </li>
+                                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Armari</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Outfit</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block">Els meus outfits</a></li>
+                                <li><a href="#" class="py-1 d-block">Crea un outfit</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-4 border-left">
+                            <h5>Perfil</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
         <div class="footer-copyright">
             <p>© 2022 Suited Penguin</p>
@@ -307,10 +351,10 @@
 
     <!-- For searching purpose -->
     <script>
-        $(document).ready(function() {
-            $("#filter").on("keyup", function() {
+        $(document).ready(function () {
+            $("#filter").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
-                $("#mycard > div").filter(function() {
+                $("#mycard > div").filter(function () {
                     $(this).toggle($(this).find('h5').text().toLowerCase().indexOf(value) > -1)
                 });
             });
@@ -319,12 +363,12 @@
 
     <!-- For filtering purpose -->
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Cache your elements
             const $cards = $("[data-category]");
             const $cardsCkb = $(".cardCheckBox");
 
-            $cardsCkb.on("change", function() {
+            $cardsCkb.on("change", function () {
 
                 // Create an Array of checked values
                 const checkedArr = $cardsCkb.filter(":checked").get().map(el => el.value);
@@ -333,7 +377,7 @@
                 if (!checkedArr.length) return $cards.removeClass("is-hidden");
 
                 // Finally, use jQuery's .toggleClass() and JS's Array.prototype.includes()
-                $cards.each(function() {
+                $cards.each(function () {
                     const category = $(this).data("category");
                     $(this).toggleClass("is-hidden", !checkedArr.includes(category));
                 });
@@ -342,13 +386,13 @@
         });
     </script>
 
-         
+
     <script language="JavaScript">
         var desti = obtener_valor("mostra");
 
-        if(desti== 1)
-            document.getElementById("cardAOcultar").style="display:block;";             
-    </script> 
+        if (desti == 1)
+            document.getElementById("cardAOcultar").style = "display:block;";             
+    </script>
 
 
 
@@ -359,7 +403,8 @@
     <script src="assets/js/theme.js"></script>
 </body>
 
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -377,10 +422,10 @@
                                     <input type="file" accept="image/*" onchange="loadFile(event)">
                                     <img id="output" />
                                     <script>
-                                        var loadFile = function(event) {
+                                        var loadFile = function (event) {
                                             var output = document.getElementById('output');
                                             output.src = URL.createObjectURL(event.target.files[0]);
-                                            output.onload = function() {
+                                            output.onload = function () {
                                                 URL.revokeObjectURL(output.src) // free memory
                                             }
                                         };
@@ -391,46 +436,47 @@
                                 <div class="row">
                                     <div class="form-group">
                                         <label for="Nom">Nom de la peça</label>
-                                        <input type="Nom" class="form-control" id="exampleInputNom1" aria-describedby="nomHelp" placeholder="Introdueix el nom de la peça">
+                                        <input type="Nom" class="form-control" id="exampleInputNom1"
+                                            aria-describedby="nomHelp" placeholder="Introdueix el nom de la peça">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group">
                                         <label for="Àmbit">Àmbit</label>
                                         <select class="form-select" aria-label="Default select àmbit">
-                      <option selected>Selecciona l'àmbit</option>
-                      <option value="1">Formal</option>
-                      <option value="2">Informal</option>
-                    </select>
+                                            <option selected>Selecciona l'àmbit</option>
+                                            <option value="1">Formal</option>
+                                            <option value="2">Informal</option>
+                                        </select>
                                         <small id="ambitHelp" class="form-text text-muted">En quin
-                      context
-                      social et posaries aquesta peça?</small>
+                                            context
+                                            social et posaries aquesta peça?</small>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group">
                                         <label for="Armari">Armari</label>
                                         <select class="form-select" aria-label="Default select armari">
-                      <option selected>Selecciona l'armari</option>
-                      <option value="1">Lleida</option>
-                      <option value="2">Barcelona</option>
-                    </select>
+                                            <option selected>Selecciona l'armari</option>
+                                            <option value="1">Lleida</option>
+                                            <option value="2">Barcelona</option>
+                                        </select>
                                         <small id="armariHelp" class="form-text text-muted">En quin
-                      armari es
-                      troba guardada la peça de roba?</small>
+                                            armari es
+                                            troba guardada la peça de roba?</small>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group">
                                         <label for="Categoria">Categoria</label>
                                         <select class="form-select" aria-label="Default select categoria">
-                      <option selected>Selecciona la categoria</option>
-                      <option value="1">Pantalons</option>
-                      <option value="2">Samarretes</option>
-                    </select>
+                                            <option selected>Selecciona la categoria</option>
+                                            <option value="1">Pantalons</option>
+                                            <option value="2">Samarretes</option>
+                                        </select>
                                         <small id="categoriaHelp" class="form-text text-muted">En quina
-                      part del
-                      cos et col·loques la peça de roba?</small>
+                                            part del
+                                            cos et col·loques la peça de roba?</small>
                                     </div>
                                 </div>
                             </div>
