@@ -83,7 +83,7 @@
                         <div class="col-md-9">
                             <div class="input-group">
                                 <input type="search" id="filter" class="form-control rounded"
-                                    placeholder="Introdueix la peça a cercar" aria-label="Cerca"
+                                    placeholder="Introdueix l'outfit a cercar" aria-label="Cerca"
                                     aria-describedby="search-addon" />
                                 <button type="button" class="btn btn-outline-primary">Cerca</button>
                             </div>
@@ -93,7 +93,7 @@
                 <div class="content">
                     <div class="row">
                         <div class="col-md-3 d-flex">
-                            <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
+                            <div class="d-none d-md-block" style="width:100%; margin-top: 1rem; margin-bottom: 1rem;">
                                 <div class="sticky-top">
                                     <!-- Button trigger modal -->
                                     <a type="button" class="btn btn-primary" style="width:100%;"
@@ -148,6 +148,7 @@
                                         <div class="filter">
                                             Filtra per:
                                         </div>
+<!--                                    EL FILTRATGE PER CATEGORIES NO TE SENTIT EN OUTFITS
                                         <hr style="margin: 0px;" />
                                         <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
                                             data-bs-target="#collapseExample" type="button" aria-expanded="false"
@@ -215,7 +216,7 @@
                                         <div class="space">
                                             &nbsp;
                                         </div>
-
+-->
                                         <hr style="margin: 0px;" />
                                         <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
                                             data-bs-target="#collapseExample2" type="button" aria-expanded="false"
@@ -228,6 +229,7 @@
                                                     d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
                                             </svg>
                                         </button>
+                                    
                                         <hr style="margin: 0px;" />
                                         <div class="collapse" id="collapseExample2">
                                             <div class="card-body">
@@ -262,6 +264,8 @@
                         </div>
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
+                                <p id="missatgeAOcultar"> <br> &emsp; &emsp; No tens cap outfit creat.</p>
+
                                 <div id="cardAOcultar" style="display:none;">
                                     <div id="mycard" class="col-md-6 col-lg-4 d-flex align-items-stretch">
                                         <!-- Bootstrap 5 card box -->
@@ -390,8 +394,10 @@
     <script language="JavaScript">
         var desti = obtener_valor("mostra");
 
-        if (desti == 1)
-            document.getElementById("cardAOcultar").style = "display:block;";             
+        if (desti == 1){
+            document.getElementById("missatgeAOcultar").style = "display:none;";
+            document.getElementById("cardAOcultar").style = "display:block;"; 
+        }            
     </script>
 
 
