@@ -264,6 +264,9 @@
                         </div>
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
+                                <div id="alert-container">
+
+                                </div>
                                 <p id="missatgeAOcultar"> <br> &emsp; &emsp; No tens cap outfit creat.</p>
 
                                 <div id="cardAOcultar" style="display:none;">
@@ -397,6 +400,18 @@
         if (desti == 1){
             document.getElementById("missatgeAOcultar").style = "display:none;";
             document.getElementById("cardAOcultar").style = "display:block;"; 
+            var container = document.querySelector("#alert-container");
+                container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
+                <strong>Èxit!</strong> Outfit afegit correctament a la maleta.
+                </div>`;
+                const alert = document.querySelector("#succeed-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
         }            
     </script>
 
