@@ -205,8 +205,9 @@
                           </li>
                         </ul>
                       </div>
-                    </div>
 
+                    </div>
+                    
 
                   </section>
                 </div>
@@ -214,6 +215,9 @@
 
             </div>
             <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
+              <div id="alert-container">
+
+              </div>
               <div class="row">
                 <div id="mycard" data-category="baix" class="col-md-6 col-lg-4 d-flex align-items-stretch">
                   <!-- Bootstrap 5 card box -->
@@ -537,6 +541,33 @@
         document.getElementById("cardOcultable").style = "display:flex;";
         document.getElementById("mostraImatge").src = image;
         $('#staticBackdrop').modal('hide');
+        var container = document.querySelector("#alert-container");
+                container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
+                <strong>Èxit!</strong> Peça afegida correctament.
+                </div>`;
+                const alert = document.querySelector("#succeed-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
+      }
+      else{
+        console.log("ENTRO3");
+        var container = document.querySelector("#alert-container-error");
+                container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                <strong>Compte!</strong> Falta alguna cosa per seleccionar.
+                </div>`;
+                const alert = document.querySelector("#danger-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
       }
 
     }
@@ -630,6 +661,9 @@
                       part del
                       cos et col·loques la peça de roba?</small>
                   </div>
+                </div>
+                <div id="alert-container-error">
+
                 </div>
               </div>
             </div>
