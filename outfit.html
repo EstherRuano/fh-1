@@ -68,7 +68,7 @@
         </div>
     </nav>
     <main class="page">
-        <section class="container-fluid llistar_maletes">
+        <section class="container-fluid llistar_maletes" >
             <div class="container">
                 <div class="block-heading">
                     <div class="row">
@@ -398,8 +398,10 @@
         var desti = obtener_valor("mostra");
 
         if (desti == 1){
+            //Mostra card que toca
             document.getElementById("missatgeAOcultar").style = "display:none;";
             document.getElementById("cardAOcultar").style = "display:block;"; 
+            //mostra missatge d'exit
             var container = document.querySelector("#alert-container");
                 container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
                 <strong>Èxit!</strong> Outfit afegit correctament a la maleta.
@@ -413,19 +415,20 @@
                 bsAlert.close();
                 }, 2000);
         }        
-        else if(desti == 0){
+        else if(desti == 2){
+            //mostra missatge d'error
             var container = document.querySelector("#alert-container");
-                container.innerHTML = `<div id="error-alert" class="alert alert-danger alert-dismissible" role="alert">
-                <strong>Error!</strong> Hi ha hagut un problema al afegir outfit.
-                </div>`;
-                const alert = document.querySelector("#error-alert");
-                // Create Bootstrap alert instance
-                const bsAlert = new bootstrap.Alert(alert);
+            container.innerHTML = `<div id="error-alert" class="alert alert-danger alert-dismissible" role="alert">
+            <strong>Error!</strong> Hi ha hagut un problema al afegir outfit.
+            </div>`;
+            const alert = document.querySelector("#error-alert");
+            // Create Bootstrap alert instance
+            const bsAlert = new bootstrap.Alert(alert);
 
-                // Dismiss time out
-                setTimeout(() => {
-                bsAlert.close();
-                }, 2000);
+            // Dismiss time out
+            setTimeout(() => {
+            bsAlert.close();
+            }, 2000);
         }    
     </script>
 

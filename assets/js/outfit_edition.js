@@ -68,7 +68,7 @@ const outfit_app = Vue.createApp({
             if(this.opcio == 2){
                 location.href = ('outfit.html?mostra=1');
             }else{
-                location.href = ('outfit.html?mostra=0');
+                location.href = ('outfit.html?mostra=2');
             }
         }
     }
