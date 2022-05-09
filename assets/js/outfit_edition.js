@@ -1,4 +1,4 @@
-filterSelection("all")
+filterSelection("selecciona_btn")
 
 function filterSelection(c) {
     var x, i;
