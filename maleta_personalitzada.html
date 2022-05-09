@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="assets/css/estilsPropis.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -48,17 +51,17 @@
 
                 <!-- Formulari -->
                 <form style="max-width:800px">
-                    <div class="mb-3"><label class="form-label" for="name">Nom</label><input class="form-control"
-                            type="text" id="name" name="name"></div>
+                    <div class="mb-3"><label class="form-label" for="name">Nom</label><input class="form-control" type="text"
+                        id="name" name="name"></div>
                     <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti"
-                            class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
-                    <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control"
-                            type="text" placeholder="Només es permeten números"
-                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                        class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
+                    <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input id="pes" class="form-control" placeholder="Només es permeten números"
+                        type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
                     </div>
                     <div class="mb-3">
                         <label class="form-label" for="closet">Armari</label>
-                        <select class="form-select">
+                        <select id="armari" name="armari" class="form-select" aria-label="Default select armari">
+                            <option selected>Selecciona l'armari</option>
                             <option value="value1">Casa pares (Lleida)</option>
                             <option value="value2">Casa Uni (Barcelona)</option>
                             <option value="value3">Camping (Pineda)</option>
@@ -70,30 +73,29 @@
                     <div style="margin: 0px 0px 16px;">
                         <div class="row">
                             <div class="col" style="margin: 20px;">
-                                <label class="form-label">Data inici</label>
-                                <input class="form-control" type="date" id="dataInici">
-                                <label class="form-label" style="margin-top: 10px;">Data final</label>
-                                <input class="form-control" type="date" id="dataFinal">
+                              <label class="form-label">Data inici</label>
+                              <input class="form-control" type="date" id="dataInici">
+                              <label class="form-label" style="margin-top: 10px;">Data final</label>
+                              <input class="form-control" type="date" id="dataFinal">
                             </div>
                             <div class="col" style="margin: 20px;"><label class="form-label">Àmbit</label>
-                                <div class="form-check"><input class="form-check-input" type="checkbox"
-                                        id="formCheck-1"><label class="form-check-label"
-                                        for="formCheck-1">Formal</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox"
-                                        id="formCheck-3"><label class="form-check-label"
-                                        for="formCheck-3">Informal</label></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox"
-                                        id="formCheck-2"><label class="form-check-label"
-                                        for="formCheck-2">Esportiu</label></div>
+                              <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label
+                                  class="form-check-label" for="formCheck-1">Formal</label></div>
+                              <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label
+                                  class="form-check-label" for="formCheck-3">Informal</label></div>
+                              <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label
+                                  class="form-check-label" for="formCheck-2">Esportiu</label></div>
                             </div>
-                        </div>
+                          </div>
                     </div>
                     <div class="mb-3" style="text-align:right">
 
                         <a class="btn btn-outline-primary" type="submit" style="margin-right: 10px;"
                             href="seleccio_tipus_maleta.html">Enrere</a>
-                        <a type="button" class="btn btn-primary" href="visualitzar_maleta.html">Genera la maleta</a>
-
+                        <button type="button" class="btn btn-primary" onclick="visualitzarMaleta()">Genera la maleta</button>
+                       <p></p>
+                        <div id="alert-container-error">
+                        </div>
                     </div>
                 </form>
             </div>
@@ -160,6 +162,74 @@
             <p>© 2022 Suited Penguin</p>
         </div>
     </footer>
+    <!-- Vigilar compleció dels camps -->
+    <script type="text/javascript">
+          
+        function visualitzarMaleta() {
+          var nom = document.getElementById("name").value;
+          var desti = document.getElementById("inputDesti").value;
+          var anada = document.getElementById("dataInici").value;
+          var tornada = document.getElementById("dataFinal").value;
+          var pes = document.getElementById("pes").value;
+          var c1 = document.getElementById("formCheck-1").checked;
+          var c2 = document.getElementById("formCheck-2").checked;
+          var c3 = document.getElementById("formCheck-3").checked;
+          var armari = $('select[name="armari"] option:selected').text();
+          if (nom != "" && desti!="" && anada!="" && tornada!="" && armari != "Selecciona l'armari" && pes!="" &&(c1 || c2 || c3)) {
+            console.log("esta ple");
+            let url = location.href; 
+            location.href = "visualitzar_maleta.html";
+          }
+          else if (nom != "" && desti!="" && anada!="" && tornada!="" && pes!="" && armari != "Selecciona l'armari") {
+            console.log("no ple");
+            var container = document.querySelector("#alert-container-error");
+                    container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                    <strong>Compte!</strong> Has de seleccionar com a mínim un àmbit.
+                    </div>`;
+                    const alert = document.querySelector("#danger-alert");
+                    // Create Bootstrap alert instance
+                    const bsAlert = new bootstrap.Alert(alert);
+
+                    // Dismiss time out
+                    setTimeout(() => {
+                    bsAlert.close();
+                    }, 2000);
+          }
+          else if(nom != "" && desti!="" && anada!="" && tornada!="" && pes!=""){
+            console.log("no ple");
+            var container = document.querySelector("#alert-container-error");
+                    container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                    <strong>Compte!</strong> Has de seleccionar un armari.
+                    </div>`;
+                    const alert = document.querySelector("#danger-alert");
+                    // Create Bootstrap alert instance
+                    const bsAlert = new bootstrap.Alert(alert);
+
+                    // Dismiss time out
+                    setTimeout(() => {
+                    bsAlert.close();
+                    }, 2000);
+          }
+
+          else {
+            console.log("no ple");
+            var container = document.querySelector("#alert-container-error");
+                    container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                    <strong>Compte!</strong> Has d'omplir tots els camps.
+                    </div>`;
+                    const alert = document.querySelector("#danger-alert");
+                    // Create Bootstrap alert instance
+                    const bsAlert = new bootstrap.Alert(alert);
+
+                    // Dismiss time out
+                    setTimeout(() => {
+                    bsAlert.close();
+                    }, 2000);
+          }
+
+        }
+
+        </script>
 
     <script src="assets/css/estilsPropis.css"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
