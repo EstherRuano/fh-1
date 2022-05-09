@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Suited Penguin - Crea maleta</title>
+  <title>Suited Penguin - Maleta ràpida</title>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="assets/css/estilsPropis.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <!--Rebuda de dades-->
   <script language="JavaScript">
@@ -40,9 +43,12 @@
       }
     }
   </script>
-</head>
+
+  
+  </head>
 
 <body>
+  <!--NavBar-->
   <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
     <div class="container">
       <a href="landing_page.html">
@@ -53,14 +59,15 @@
       <div id="navcol-1" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="llistar_maletes.html">Maleta</a></li>
-          <li class="nav-item"><a class="nav-link" href="armari.html">Armari</a></li>
+          <li class="nav-item"><a class="nav-link" href="llistar_maletes.html">Maleta</a></li>
+          <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
           <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
           <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
   <!-- Bloc principal -->
   <main class="page contact-us-page">
     <section class="clean-block clean-form dark">
@@ -78,9 +85,10 @@
               id="name" name="name"></div>
           <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti"
               class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
-          <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control" placeholder="Només es permeten números"
+          <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input id="pes" class="form-control" placeholder="Només es permeten números"
               type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
           </div>
+
           <div style="margin: 0px 0px 16px;">
             <div class="row">
               <div class="col" style="margin: 20px;">
@@ -99,12 +107,16 @@
               </div>
             </div>
           </div>
+          
           <div class="mb-3" style="text-align:right">
             <a class="btn btn-outline-primary" type="submit" style="margin-right: 10px;" href="index.html">Enrere</a>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <button type="button" class="btn btn-primary" onclick="visualitzarMaleta()">
               Genera la maleta
             </button>
+            <p></p>
+            <div id="alert-container-error">
+            </div>
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
               aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -145,7 +157,7 @@
                             <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                               <div class="card-thumbnail">
                                 <img src="assets/img/maletaRapida/partsDeBaix.jpg" class="card-img-top img-fluid"
-                                  alt="pantalons o faldilles">
+                                  alt="parts de baix">
                               </div>
                               <div class="card-body">
                                 <ul class="list-group list-group-flush">
@@ -162,7 +174,7 @@
                             <!-- Bootstrap 5 card box -->
                             <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                               <div class="card-thumbnail">
-                                <img src="assets/img/maletaRapida/mitjons.jpg" class="card-img-top img-fluid" alt="roba interior">
+                                <img src="assets/img/maletaRapida/mitjons.jpg" class="card-img-top img-fluid" alt="mitjons">
                               </div>
                               <div class="card-body">
                                 <ul class="list-group list-group-flush">
@@ -229,7 +241,7 @@
                             <!-- Bootstrap 5 card box -->
                             <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                               <div class="card-thumbnail">
-                                <img src="assets/img/maletaRapida/mobil.jpg" class="card-img-top img-fluid" alt="mòbil i carregador">
+                                <img src="assets/img/maletaRapida/mobil.jpg" class="card-img-top img-fluid" alt="mòbil">
                               </div>
                               <div class="card-body">
                                 <ul class="list-group list-group-flush">
@@ -247,7 +259,7 @@
                             <!-- Bootstrap 5 card box -->
                             <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                               <div class="card-thumbnail">
-                                <img src="assets/img/maletaRapida/muda.png" class="card-img-top img-fluid" alt="muda">
+                                <img src="assets/img/maletaRapida/muda.png" class="card-img-top img-fluid" alt="muda de recanvi">
                               </div>
                               <div class="card-body">
                                 <ul class="list-group list-group-flush">
@@ -271,7 +283,6 @@
                                   <li class="list-group-item" style="text-align: center;">
                                     <h5>Càmera fotogràfica</h5>
                                   </li>
-                                  <li class="list-group-item">Unitats: 2</li>
                                 </ul>
                               </div>
                             </div>
@@ -295,9 +306,9 @@
 
                           <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
                             <!-- Bootstrap 5 card box -->
-                            <div class="card-box mostraMaletaCarta" style="width: 20rem; overflow-y: auto;">
+                            <div class="card-box mostraMaletaCarta" style="width: 20rem;">
                               <div class="card-thumbnail">
-                                <img src="assets/img/maletaRapida/lentilles.png" class="card-img-top img-fluid" alt="lentilles">
+                                <img src="assets/img/maletaRapida/lentilles.png" class="card-img-top img-fluid" alt="lents de contactes o ulleres">
                               </div>
                               <div class="card-body">
                                 <ul class="list-group list-group-flush">
@@ -367,10 +378,9 @@
                 </div>
               </div>
             </div>
-
-
           </div>
         </form>
+
         <!--Completo les dades rebudes-->
         <script language="JavaScript">
           var desti = obtener_valor("desti");
@@ -380,70 +390,120 @@
           var dataTornada = obtener_valor("tornada");
           document.getElementById("dataFinal").value = dataTornada;             
         </script>
+        <!-- Vigilar compleció dels camps -->
+        <script type="text/javascript">
+          
+          function visualitzarMaleta() {
+            var nom = document.getElementById("name").value;
+            var desti = document.getElementById("inputDesti").value;
+            var anada = document.getElementById("dataInici").value;
+            var tornada = document.getElementById("dataFinal").value;
+            var pes = document.getElementById("pes").value;
+            var c1 = document.getElementById("formCheck-1").checked;
+            var c2 = document.getElementById("formCheck-2").checked;
+            var c3 = document.getElementById("formCheck-3").checked;
+            if (nom != "" && desti!="" && anada!="" && tornada!="" && pes!="" &&(c1 || c2 || c3)) {
+              console.log("esta ple");
+              $('#staticBackdrop').modal('show');
+              console.log("a");
+            }
+            else if (nom != "" && desti!="" && anada!="" && tornada!="" && pes!="" ) {
+              console.log("no ple");
+              var container = document.querySelector("#alert-container-error");
+                      container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                      <strong>Compte!</strong> Has de seleccionar com a mínim un àmbit.
+                      </div>`;
+                      const alert = document.querySelector("#danger-alert");
+                      // Create Bootstrap alert instance
+                      const bsAlert = new bootstrap.Alert(alert);
+
+                      // Dismiss time out
+                      setTimeout(() => {
+                      bsAlert.close();
+                      }, 2000);
+            }
+            else {
+              console.log("no ple");
+              var container = document.querySelector("#alert-container-error");
+                      container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                      <strong>Compte!</strong> Has d'omplir tots els camps.
+                      </div>`;
+                      const alert = document.querySelector("#danger-alert");
+                      // Create Bootstrap alert instance
+                      const bsAlert = new bootstrap.Alert(alert);
+
+                      // Dismiss time out
+                      setTimeout(() => {
+                      bsAlert.close();
+                      }, 2000);
+            }
+
+    }
+
+  </script>
       </div>
     </section>
   </main>
-
+  <!--Footer -->
   <footer class="page-footer dark">
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-lg-4">
-          <div class="row">
-            <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
-              <a href="#">
-                <img style="max-width:75%;
-                            max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" 
-                            alt="logo sense fons"/>
-              </a>
-              <div class="row text-center">
-                <h1 class="titol-footer">Suited Penguin</h1>
-              </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-4">
+                <div class="row">
+                    <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+                        <a href="#">
+                            <img style="max-width:75%;
+                            max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" alt="logo sense fons"/>
+                        </a>
+                        <div class="row text-center">
+                            <h1 class="titol-footer">Suited Penguin</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="col-md-9 col-lg-8">
-          <div class="row">
-            <div class="col-md-3 mb-md-0 mb-4 border-left">
-              <h5>Maleta</h5>
-              <ul class="list-unstyled">
-                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
-                </li>
-                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3 mb-md-0 mb-4 border-left">
-              <h5>Armari</h5>
-              <ul class="list-unstyled">
-                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
-                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+            <div class="col-md-9 col-lg-8">
+                <div class="row">
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Maleta</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                            </li>
+                            <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Armari</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                            <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
 
-              </ul>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Outfit</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+                            <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-md-0 mb-4 border-left">
+                        <h5>Perfil</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3 mb-md-0 mb-4 border-left">
-              <h5>Outfit</h5>
-              <ul class="list-unstyled">
-                <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
-                <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
-              </ul>
-            </div>
-            <div class="col-md-3 mb-md-0 mb-4 border-left">
-              <h5>Perfil</h5>
-              <ul class="list-unstyled">
-                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
 
 
 
     </div>
     <div class="footer-copyright">
-      <p>© 2022 Suited Penguin</p>
+        <p>© 2022 Suited Penguin</p>
     </div>
-  </footer>
+</footer>
 
   <script src="assets/css/estilsPropis.css"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
