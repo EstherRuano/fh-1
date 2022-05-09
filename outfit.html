@@ -412,7 +412,21 @@
                 setTimeout(() => {
                 bsAlert.close();
                 }, 2000);
-        }            
+        }        
+        else if(desti == 0){
+            var container = document.querySelector("#alert-container");
+                container.innerHTML = `<div id="error-alert" class="alert alert-danger alert-dismissible" role="alert">
+                <strong>Error!</strong> Hi ha hagut un problema al afegir outfit.
+                </div>`;
+                const alert = document.querySelector("#error-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
+        }    
     </script>
 
 
