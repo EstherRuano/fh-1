@@ -52,8 +52,10 @@
                             type="text" id="name" name="name"></div>
                     <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti"
                             class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
-                    <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control" type="number" step="1" id="weight" name="weight"></div>
-
+                    <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control"
+                            type="text" placeholder="Només es permeten números"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                    </div>
                     <div class="mb-3">
                         <label class="form-label" for="closet">Armari</label>
                         <select class="form-select">

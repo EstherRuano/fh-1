@@ -78,8 +78,9 @@
               id="name" name="name"></div>
           <div class="mb-3"><label class="form-label" for="subject">Destí</label><input id="inputDesti"
               class="form-control" type="text" id="input" name="input" autocomplete="off"></div>
-          <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control" type="number"
-              step="1" id="weight" name="weight"></div>
+          <div class="mb-3"><label class="form-label" for="weight">Pes (kg)</label><input class="form-control" placeholder="Només es permeten números"
+              type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+          </div>
           <div style="margin: 0px 0px 16px;">
             <div class="row">
               <div class="col" style="margin: 20px;">
@@ -385,63 +386,63 @@
 
   <footer class="page-footer dark">
     <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-lg-4">
-                <div class="row">
-                    <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
-                        <a href="#">
-                            <img style="max-width:75%;
+      <div class="row">
+        <div class="col-md-3 col-lg-4">
+          <div class="row">
+            <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+              <a href="#">
+                <img style="max-width:75%;
                             max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
-                        </a>
-                        <div class="row text-center">
-                            <h1 class="titol-footer">Suited Penguin</h1>
-                        </div>
-                    </div>
-                </div>
+              </a>
+              <div class="row text-center">
+                <h1 class="titol-footer">Suited Penguin</h1>
+              </div>
             </div>
-
-            <div class="col-md-9 col-lg-8">
-                <div class="row">
-                    <div class="col-md-3 mb-md-0 mb-4 border-left">
-                        <h5>Maleta</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
-                            </li>
-                            <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 mb-md-0 mb-4 border-left">
-                        <h5>Armari</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
-                            <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
-
-                        </ul>
-                    </div>
-                    <div class="col-md-3 mb-md-0 mb-4 border-left">
-                        <h5>Outfit</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
-                            <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 mb-md-0 mb-4 border-left">
-                        <h5>Perfil</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="col-md-9 col-lg-8">
+          <div class="row">
+            <div class="col-md-3 mb-md-0 mb-4 border-left">
+              <h5>Maleta</h5>
+              <ul class="list-unstyled">
+                <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+                </li>
+                <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-md-0 mb-4 border-left">
+              <h5>Armari</h5>
+              <ul class="list-unstyled">
+                <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+                <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+              </ul>
+            </div>
+            <div class="col-md-3 mb-md-0 mb-4 border-left">
+              <h5>Outfit</h5>
+              <ul class="list-unstyled">
+                <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+                <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-md-0 mb-4 border-left">
+              <h5>Perfil</h5>
+              <ul class="list-unstyled">
+                <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
     </div>
     <div class="footer-copyright">
-        <p>© 2022 Suited Penguin</p>
+      <p>© 2022 Suited Penguin</p>
     </div>
-</footer>
+  </footer>
 
   <script src="assets/css/estilsPropis.css"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
