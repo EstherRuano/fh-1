@@ -19,7 +19,7 @@
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container">
             <a class="col-m" href="index.html">
-                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" alt="logo i text"/>
             </a>
             <div class="col-m"><a class="btn btn-primary" type="button" href="login.html">Log in</a>
                 <a class="btn btn-outline-primary" type="button" href="register.html">Register</a>
@@ -49,10 +49,10 @@
                     </div>
 
                     <div id="register">
-                        <p><br>Ja tens compte? <a href="login.html">Inicia sessió</a> </p>
+                        <p><br>Ja tens compte? <a href="login.html"><span class="enllac">Inicia sessió</a></span> </p>
                         <button v-on:click="mostra()" class="btn btn-primary" type="button">Register</button>
                         <p v-if="!isHidden"><br>Ups! Sembla que tenim problemes per registrar-te.<br>Prova a <a
-                                href="login.html">iniciar sessió</a> </p>
+                                href="login.html"><span class="enllac">iniciar sessió</span></a> </p>
                     </div>
 
                 </form>

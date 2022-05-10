@@ -65,80 +65,18 @@
                 <div class="content">
                     <div class="row">
                         <div class="col-md-3 d-flex">
-                            <div class="d-none d-md-block" style="width: 100%; margin-top: 1rem;">
+                            <div class="d-md-block" style="width: 100%; margin-top: 1rem;">
+                                <div class="sticky-top">
+
+
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary" style="width: 100%;"
                                     data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                                     Afegeix un armari
                                 </button>
 
-                                <!-- Modal -->
-                                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
-                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-xl">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Afegir roba</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <!-- Form -->
-                                                <form>
-                                                    <div class="container-fluid">
-                                                        <div class="row">
-                                                            <div class="col-md-4">
-                                                                <div class="row">
-                                                                    <input type="file" accept="image/*"
-                                                                        onchange="loadFile(event)">
-                                                                    <img id="output" />
-                                                                    <script>
-                                                                        var loadFile = function (event) {
-                                                                            var output = document.getElementById('output');
-                                                                            output.src = URL.createObjectURL(event.target.files[0]);
-                                                                            output.onload = function () {
-                                                                                URL.revokeObjectURL(output.src) // free memory
-                                                                            }
-                                                                        };
-                                                                    </script>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-8">
-                                                                <div class="row">
-                                                                    <div class="form-group">
-                                                                        <label for="Nom">Nom de l'armari</label>
-                                                                        <input type="Nom" class="form-control"
-                                                                            id="exampleInputNom1"
-                                                                            aria-describedby="nomHelp"
-                                                                            placeholder="Introdueix el nom de l'armari">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="form-group">
-                                                                        <label for="Nom">Localització</label>
-                                                                        <input type="Nom" class="form-control"
-                                                                            id="exampleInputNom1"
-                                                                            aria-describedby="nomHelp"
-                                                                            placeholder="Introdueix la localització de l'armari">
-                                                                    </div>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-outline-secondary me-5"
-                                                    data-bs-dismiss="modal">Cancel·la</button>
-                                                <button type="button" class="btn btn-outline-primary me-3">Desa</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <section id="app">
+                                
+                                <section id="app" class="d-none d-md-block">
                                     <hr style="margin-bottom: 0px;" />
                                     <div class="Folder folder-div" :class="{folder_active:recentSelected}"
                                         @click="selectedFolder(1)">
@@ -175,6 +113,7 @@
                                     </div>
                                     <hr style="margin-top: 0px;" />
                                 </section>
+                            </div>
                             </div>
                         </div>
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
@@ -229,19 +168,24 @@
                                     <div class="armari-clothing-view">
                                         <img class="rounded float-start"
                                             style="grid-area: cl-1; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/texans.png">
+                                            src="assets/img/clothes/texans.png"
+                                            alt="texans">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-2; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/biquini_flors.png">
+                                            src="assets/img/clothes/biquini_flors.png"
+                                            alt="biquini flors">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-3; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/jersei_vans.png">
+                                            src="assets/img/clothes/jersei_vans.png"
+                                            alt="jersei vans">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-4; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/dessuadora_nike.png">
+                                            src="assets/img/clothes/dessuadora_nike.png"
+                                            alt="dessuadora nike">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-5; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/pantalons_blancs_campana.png">
+                                            src="assets/img/clothes/pantalons_blancs_campana.png"
+                                            alt="pantalons blancs campana">
                                     </div>
 
                                 </div>
@@ -274,7 +218,7 @@
                                 <div class="card-body grid-armari-card">
 
                                     <div class="armari-img">
-                                        <img class="img" src="assets/img/scenery/piso.jpg" alt="casa armari 1">
+                                        <img class="img" src="assets/img/scenery/piso.jpg" alt="casa armari 2">
                                     </div>
 
                                     <div class="armari-body-card">
@@ -316,19 +260,24 @@
                                     <div class="armari-clothing-view">
                                         <img class="rounded float-start"
                                             style="grid-area: cl-1; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/texans.png">
+                                            src="assets/img/clothes/texans.png"
+                                            alt="texans">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-2; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/biquini_flors.png">
+                                            src="assets/img/clothes/biquini_flors.png"
+                                            alt="biquini flors">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-3; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/jersei_vans.png">
+                                            src="assets/img/clothes/jersei_vans.png"
+                                            alt="jersei vans">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-4; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/dessuadora_nike.png">
+                                            src="assets/img/clothes/dessuadora_nike.png"
+                                            alt="dessuadora nike">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-5; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/pantalons_blancs_campana.png">
+                                            src="assets/img/clothes/pantalons_blancs_campana.png"
+                                            alt="pantalons blancs campana">
                                     </div>
 
                                 </div>
@@ -403,19 +352,24 @@
                                     <div class="armari-clothing-view">
                                         <img class="rounded float-start"
                                             style="grid-area: cl-1; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/texans.png">
+                                            src="assets/img/clothes/texans.png"
+                                            alt="texans">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-2; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/biquini_flors.png">
+                                            src="assets/img/clothes/biquini_flors.png"
+                                            alt="biquini flors">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-3; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/jersei_vans.png">
+                                            src="assets/img/clothes/jersei_vans.png"
+                                            alt="jersei vans">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-4; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/dessuadora_nike.png">
+                                            src="assets/img/clothes/dessuadora_nike.png"
+                                            alt="dessuadora nike">
                                         <img class="rounded float-end"
                                             style="grid-area: cl-5; justify-self: center; width:70%;"
-                                            src="assets/img/clothes/pantalons_blancs_campana.png">
+                                            src="assets/img/clothes/pantalons_blancs_campana.png"
+                                            alt="pantalons blancs campana">
                                     </div>
 
                                 </div>
@@ -511,5 +465,72 @@
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
 </body>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-xl">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Afegir roba</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <!-- Form -->
+            <form>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <input type="file" accept="image/*"
+                                    onchange="loadFile(event)">
+                                <img id="output" />
+                                <script>
+                                    var loadFile = function (event) {
+                                        var output = document.getElementById('output');
+                                        output.src = URL.createObjectURL(event.target.files[0]);
+                                        output.onload = function () {
+                                            URL.revokeObjectURL(output.src) // free memory
+                                        }
+                                    };
+                                </script>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="Nom">Nom de l'armari</label>
+                                    <input type="Nom" class="form-control"
+                                        id="exampleInputNom1"
+                                        aria-describedby="nomHelp"
+                                        placeholder="Introdueix el nom de l'armari">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group">
+                                    <label for="Nom">Localització</label>
+                                    <input type="Nom" class="form-control"
+                                        id="exampleInputNom1"
+                                        aria-describedby="nomHelp"
+                                        placeholder="Introdueix la localització de l'armari">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary me-5"
+                data-bs-dismiss="modal">Cancel·la</button>
+            <button type="button" class="btn btn-outline-primary me-3">Desa</button>
+        </div>
+    </div>
+</div>
+</div>
 
 </html>

@@ -1,4 +1,4 @@
-filterSelection("all")
+filterSelection("selecciona_btn")
 
 function filterSelection(c) {
     var x, i;
@@ -65,7 +65,11 @@ const outfit_app = Vue.createApp({
             }
         },
         enviaOutfit() {
-            location.href = ('outfit.html?mostra=1')
+            if(this.opcio == 2){
+                location.href = ('outfit.html?mostra=1');
+            }else{
+                location.href = ('outfit.html?mostra=2');
+            }
         }
     }
 });

@@ -25,7 +25,7 @@
   <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
     <div class="container">
       <a href="landing_page.html">
-        <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
+        <img class="logo_img" src="assets/img/avatars/logo-i-text.png" alt="logo i text"/>
       </a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
           class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -46,8 +46,7 @@
         <div class="block-heading">
           <div class="row">
             <div class="col-md-5">
-              <h3 class="text-info" style="padding-bottom: 1rem">Els meus Armaris > <span class="text-muted">Armari
-                  Lleida</span></h3>
+              <h3 class="text-info" style="padding-bottom: 1rem">Els meus Armaris > <span class="text-muted">Casa pares</span></h3>
             </div>
           </div>
           <div class="row">
@@ -66,7 +65,7 @@
         <div class="content">
           <div class="row">
             <div class="col-md-3 d-flex">
-              <div class="d-none d-md-block" style="width:100%; margin-top: 1rem;">
+              <div class="d-md-block" style="width:100%; margin-top: 1rem;">
                 <div class="sticky-top">
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" style="width:100%;" data-bs-toggle="modal"
@@ -75,7 +74,7 @@
                   </button>
                   <!-- Modal -->
 
-                  <section id="app">
+                  <section id="app" class="d-none d-md-block">
                     <hr style="margin-bottom: 0px;" />
                     <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
                       Recents
@@ -205,8 +204,9 @@
                           </li>
                         </ul>
                       </div>
-                    </div>
 
+                    </div>
+                    
 
                   </section>
                 </div>
@@ -214,12 +214,15 @@
 
             </div>
             <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
+              <div id="alert-container">
+
+              </div>
               <div class="row">
                 <div id="mycard" data-category="baix" class="col-md-6 col-lg-4 d-flex align-items-stretch">
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/texans.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/texans.png" class="card-img-top img-fluid" alt="texans">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -227,18 +230,18 @@
                           <h5 class="card-title">Texans</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Informal</li>
-                        <li class="list-group-item">Armari: Barcelona</li>
-                        <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Part de baix</li>
                       </ul>
                     </div>
                   </div>
                 </div>
 
-                <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div id="mycard" data-category="una" class="col-md-6 col-lg-4 d-flex align-items-stretch">
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/biquini_flors.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/biquini_flors.png" class="card-img-top img-fluid" alt="biquini flors">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -246,8 +249,8 @@
                           <h5 class="card-title">Biquini Flors</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Informal</li>
-                        <li class="list-group-item">Armari: Barcelona</li>
-                        <li class="list-group-item">Categoria: Roba de bany</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Una peça</li>
                       </ul>
                     </div>
                   </div>
@@ -257,7 +260,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/jersei_vans.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/jersei_vans.png" class="card-img-top img-fluid" alt="jersei vans">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -265,8 +268,8 @@
                           <h5 class="card-title">Jersei Vans</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Informal</li>
-                        <li class="list-group-item">Armari: Lleida</li>
-                        <li class="list-group-item">Categoria: Abrics i Jerseis</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Roba d'abric</li>
                       </ul>
                     </div>
                   </div>
@@ -276,7 +279,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/dessuadora_nike.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/dessuadora_nike.png" class="card-img-top img-fluid" alt="dessuadora nike">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -284,8 +287,8 @@
                           <h5 class="card-title">Dessuadora nike</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Informal</li>
-                        <li class="list-group-item">Armari: Barcelona</li>
-                        <li class="list-group-item">Categoria: Abrics i Jerseis</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Roba d'abric</li>
                       </ul>
                     </div>
                   </div>
@@ -295,7 +298,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/pantalons_blancs_campana.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/pantalons_blancs_campana.png" class="card-img-top img-fluid" alt="pantalons blancs campana">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -303,8 +306,8 @@
                           <h5 class="card-title">Pantalons Blancs Campana</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Formal</li>
-                        <li class="list-group-item">Armari: Lleida</li>
-                        <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Part de baix</li>
                       </ul>
                     </div>
                   </div>
@@ -314,7 +317,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/parca.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/parca.png" class="card-img-top img-fluid" alt="parca">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -322,8 +325,8 @@
                           <h5 class="card-title">Parca</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Formal</li>
-                        <li class="list-group-item">Armari: Lleida</li>
-                        <li class="list-group-item">Categoria: Abrics i Jerseis</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Part de baix</li>
                       </ul>
                     </div>
                   </div>
@@ -333,7 +336,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/samarreta_esport.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/samarreta_esport.png" class="card-img-top img-fluid" alt="samarreta esportiva">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -341,8 +344,8 @@
                           <h5 class="card-title">Samarreta Esportiva</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Esportiu</li>
-                        <li class="list-group-item">Armari: Barcelona</li>
-                        <li class="list-group-item">Categoria: Roba d'esport</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Part de dalt</li>
                       </ul>
                     </div>
                   </div>
@@ -352,7 +355,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/faldilla_flors.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/faldilla_flors.png" class="card-img-top img-fluid" alt="faldilla de flors">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -360,8 +363,8 @@
                           <h5 class="card-title">Faldilla de flors</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Informal</li>
-                        <li class="list-group-item">Armari: Barcelona</li>
-                        <li class="list-group-item">Categoria: Pantalons i Faldilles</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
+                        <li class="list-group-item">Categoria: Part de baix</li>
                       </ul>
                     </div>
                   </div>
@@ -371,7 +374,7 @@
                   <!-- Bootstrap 5 card box -->
                   <div class="card" style="width: 20rem;">
                     <div class="card-thumbnail">
-                      <img src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="">
+                      <img src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid" alt="gorra hivern">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -379,19 +382,19 @@
                           <h5 class="card-title">Gorra hivern</h5>
                         </li>
                         <li class="list-group-item">Àmbit: Informal</li>
-                        <li class="list-group-item">Armari: Lleida</li>
+                        <li class="list-group-item">Armari: Casa pares</li>
                         <li class="list-group-item">Categoria: Complements</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div id="mycard" data-category="dalt" class="col-md-6 col-lg-4 d-flex align-items-stretch">
 
                   <!-- Bootstrap 5 card box -->
                   <div id="cardOcultable" class="card" style="width: 20rem;display: none;">
                     <div class="card-thumbnail">
                       <img id="mostraImatge" src="assets/img/clothes/gorra_hivern.png" class="card-img-top img-fluid"
-                        alt="">
+                        alt="samarreta termica">
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
@@ -399,8 +402,8 @@
                           <h5 id="mostraNom" class="card-title">Samarreta térmica</h5>
                         </li>
                         <li id="mostraAmbit" class="list-group-item">Àmbit: Informal</li>
-                        <li id="mostraArmari" class="list-group-item">Armari: Lleida</li>
-                        <li id="mostraCategoria" class="list-group-item">Categoria: Samarretes</li>
+                        <li id="mostraArmari" class="list-group-item">Armari: Casa pares</li>
+                        <li id="mostraCategoria" class="list-group-item">Categoria: Part de dalt</li>
                       </ul>
                     </div>
                   </div>
@@ -426,7 +429,7 @@
                     <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
                         <a href="#">
                             <img style="max-width:75%;
-                            max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                            max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" alt="logo sense fons"/>
                         </a>
                         <div class="row text-center">
                             <h1 class="titol-footer">Suited Penguin</h1>
@@ -537,6 +540,33 @@
         document.getElementById("cardOcultable").style = "display:flex;";
         document.getElementById("mostraImatge").src = image;
         $('#staticBackdrop').modal('hide');
+        var container = document.querySelector("#alert-container");
+                container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
+                <strong>Èxit!</strong> Peça afegida correctament.
+                </div>`;
+                const alert = document.querySelector("#succeed-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
+      }
+      else{
+        console.log("ENTRO3");
+        var container = document.querySelector("#alert-container-error");
+                container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                <strong>Compte!</strong> Falta alguna cosa per seleccionar.
+                </div>`;
+                const alert = document.querySelector("#danger-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
       }
 
     }
@@ -604,9 +634,9 @@
                     <label for="Armari">Armari</label>
                     <select id="armari" name="armari" class="form-select" aria-label="Default select armari">
                       <option selected>Selecciona l'armari</option>
-                      <option value="1">Lleida</option>
-                      <option value="2">Barcelona</option>
-                      <option value="3">Pineda</option>
+                      <option value="1">Casa pares</option>
+                      <option value="2">Casa uni</option>
+                      <option value="3">Camping</option>
                     </select>
                     <small id="armariHelp" class="form-text text-muted">En quin
                       armari es
@@ -630,6 +660,9 @@
                       part del
                       cos et col·loques la peça de roba?</small>
                   </div>
+                </div>
+                <div id="alert-container-error">
+
                 </div>
               </div>
             </div>

@@ -23,6 +23,11 @@
     font-size: 25px;
   }
 
+.enllac {
+    color: blue;
+    text-decoration: underline;
+}
+
 .destacat {
     font-family: 'Euphoria Script';
     font-size: 130%;

@@ -52,7 +52,7 @@
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
         <div class="container">
             <a href="landing_page.html">
-                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" />
+                <img class="logo_img" src="assets/img/avatars/logo-i-text.png" alt="logo i text"/>
             </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
                     class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -68,12 +68,12 @@
         </div>
     </nav>
     <main class="page">
-        <section class="container-fluid llistar_maletes">
+        <section class="container-fluid llistar_maletes" >
             <div class="container">
                 <div class="block-heading">
                     <div class="row">
                         <div class="col-md-5">
-                            <h3 class="text-info" style="padding-bottom: 1rem">Els meus outfits > </h3>
+                            <h3 class="text-info" style="padding-bottom: 1rem">Els meus outfits</h3>
                         </div>
                     </div>
                     <div class="row">
@@ -93,7 +93,7 @@
                 <div class="content">
                     <div class="row">
                         <div class="col-md-3 d-flex">
-                            <div class="d-none d-md-block" style="width:100%; margin-top: 1rem; margin-bottom: 1rem;">
+                            <div class="d-md-block" style="width:100%; margin-top: 1rem; margin-bottom: 1rem;">
                                 <div class="sticky-top">
                                     <!-- Button trigger modal -->
                                     <a type="button" class="btn btn-primary" style="width:100%;"
@@ -102,7 +102,7 @@
                                     </a>
                                     <!-- Modal -->
 
-                                    <section id="app">
+                                    <section id="app" class="d-none d-md-block">
                                         <hr style="margin-bottom: 0px;" />
                                         <div class="Folder folder-div" :class="{folder_active:recentSelected}"
                                             @click="selectedFolder(1)">
@@ -221,7 +221,7 @@
                                         <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
                                             data-bs-target="#collapseExample2" type="button" aria-expanded="false"
                                             aria-controls="collapse">
-                                            Ambit
+                                            Àmbit
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-chevron-compact-down"
                                                 viewBox="0 0 16 16">
@@ -264,6 +264,9 @@
                         </div>
                         <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
                             <div class="row">
+                                <div id="alert-container">
+
+                                </div>
                                 <p id="missatgeAOcultar"> <br> &emsp; &emsp; No tens cap outfit creat.</p>
 
                                 <div id="cardAOcultar" style="display:none;">
@@ -272,7 +275,7 @@
                                         <div class="card" data-category="baix" style="width: 20rem;">
                                             <div class="card-thumbnail">
                                                 <img src="assets/img/outfits/outfit_sencer.png"
-                                                    class="card-img-top img-fluid" alt="">
+                                                    class="card-img-top img-fluid" alt="outfit sencer">
                                             </div>
                                             <div class="card-body">
                                                 <ul class="list-group list-group-flush">
@@ -301,7 +304,7 @@
                         <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
                             <a href="#">
                                 <img style="max-width:75%;
-                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+                                max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" alt="logo sense fons"/>
                             </a>
                             <div class="row text-center">
                                 <h1 class="titol-footer">Suited Penguin</h1>
@@ -395,9 +398,38 @@
         var desti = obtener_valor("mostra");
 
         if (desti == 1){
+            //Mostra card que toca
             document.getElementById("missatgeAOcultar").style = "display:none;";
             document.getElementById("cardAOcultar").style = "display:block;"; 
-        }            
+            //mostra missatge d'exit
+            var container = document.querySelector("#alert-container");
+                container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
+                <strong>Èxit!</strong> Outfit afegit correctament a la maleta.
+                </div>`;
+                const alert = document.querySelector("#succeed-alert");
+                // Create Bootstrap alert instance
+                const bsAlert = new bootstrap.Alert(alert);
+
+                // Dismiss time out
+                setTimeout(() => {
+                bsAlert.close();
+                }, 2000);
+        }        
+        else if(desti == 2){
+            //mostra missatge d'error
+            var container = document.querySelector("#alert-container");
+            container.innerHTML = `<div id="error-alert" class="alert alert-danger alert-dismissible" role="alert">
+            <strong>Error!</strong> Hi ha hagut un problema al afegir outfit.
+            </div>`;
+            const alert = document.querySelector("#error-alert");
+            // Create Bootstrap alert instance
+            const bsAlert = new bootstrap.Alert(alert);
+
+            // Dismiss time out
+            setTimeout(() => {
+            bsAlert.close();
+            }, 2000);
+        }    
     </script>
 
 
@@ -453,6 +485,7 @@
                                             <option selected>Selecciona l'àmbit</option>
                                             <option value="1">Formal</option>
                                             <option value="2">Informal</option>
+                                            <option value="3">Esportiu</option>
                                         </select>
                                         <small id="ambitHelp" class="form-text text-muted">En quin
                                             context
@@ -464,8 +497,9 @@
                                         <label for="Armari">Armari</label>
                                         <select class="form-select" aria-label="Default select armari">
                                             <option selected>Selecciona l'armari</option>
-                                            <option value="1">Lleida</option>
-                                            <option value="2">Barcelona</option>
+                                            <option value="1">Casa pares</option>
+                                            <option value="2">Casa uni</option>
+                                            <option value="3">Camping</option>
                                         </select>
                                         <small id="armariHelp" class="form-text text-muted">En quin
                                             armari es
@@ -477,8 +511,8 @@
                                         <label for="Categoria">Categoria</label>
                                         <select class="form-select" aria-label="Default select categoria">
                                             <option selected>Selecciona la categoria</option>
-                                            <option value="1">Pantalons</option>
-                                            <option value="2">Samarretes</option>
+                                            <option value="1">Part de dalt</option>
+                                            <option value="2">Part de baix</option>
                                         </select>
                                         <small id="categoriaHelp" class="form-text text-muted">En quina
                                             part del
