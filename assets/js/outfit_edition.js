@@ -49,25 +49,30 @@ const outfit_app = Vue.createApp({
     data: function() {
         return {
             opcio: 3,
-            img_outfit: "assets/img/avatars/stick-figure.png"
+            img_outfit: "assets/img/avatars/stick-figure.png",
+            selectedDalt: false,
+            selectedBaix: false
         };
     },
     methods: {
         changeOutfit(opcio) {
             this.opcio = opcio;
             if (this.opcio == 1) {
-                console.log("apretat");
-                this.img_outfit = "assets/img/outfits/outfit_pantalons.png";
+                this.selectedBaix = !this.selectedBaix;
+                this.img_outfit = this.selectedBaix ? "assets/img/outfits/outfit_pantalons.png" : "assets/img/avatars/stick-figure.png";
             } else if (this.opcio == 2) {
-                this.img_outfit = "assets/img/outfits/outfit_sencer.png";
+                this.selectedDalt = !this.selectedDalt;
+                this.img_outfit = this.selectedDalt ? "assets/img/outfits/outfit_sencer.png" : "assets/img/outfits/outfit_pantalons.png";
             } else if (this.opcio == 3) {
+                this.selectedBaix = false;
+                this.selectedDalt = false;
                 this.img_outfit = "assets/img/avatars/stick-figure.png";
             }
         },
         enviaOutfit() {
-            if(this.opcio == 2){
+            if (this.opcio == 2) {
                 location.href = ('outfit.html?mostra=1');
-            }else{
+            } else {
                 location.href = ('outfit.html?mostra=2');
             }
         }

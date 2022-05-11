@@ -5,7 +5,7 @@
 .titol-footer {
     font-family: 'Abril Fatface';
     font-size: 30px;
-    color:white;
+    color: white;
 }
 
 .perfil {
@@ -13,7 +13,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  }
+}
 
 .mystyle {
     width: 100%;
@@ -21,7 +21,7 @@
     background-color: coral;
     color: white;
     font-size: 25px;
-  }
+}
 
 .enllac {
     color: blue;
@@ -324,10 +324,10 @@
     align-self: center;
 }
 
-.outfit_card_selected{
-    border: 3px solid #173042;
+.outfit_card_selected {
+    border: 3px solid #236477;
 }
 
-.alert-not-shown{
+.alert-not-shown {
     display: none;
 }
