@@ -1,43 +1,58 @@
+$(function() {
+    $('input[name="daterange"]').daterangepicker({
+        "autoApply": true,
+    "locale": {
+        "format": "DD/MM/YYYY",
+        "separator": " - ",
+        "applyLabel": "Apply",
+        "cancelLabel": "Cancel",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "customRangeLabel": "Custom",
+        "weekLabel": "W",
+        "daysOfWeek": [
+            "Dg",
+            "Dl",
+            "Dt",
+            "Dc",
+            "Dj",
+            "Dv",
+            "Ds"
+        ],
+        "monthNames": [
+            "Gener",
+            "Febrer",
+            "Març",
+            "Abril",
+            "Maig",
+            "Juny",
+            "Juliol",
+            "Agost",
+            "Setembre",
+            "Octubre",
+            "Novembre",
+            "Desembre"
+        ],
+        "firstDay": 1
+    }
+}, function(start, end, label) {
+  console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+})});
+
+
 const landing = Vue.createApp({
     data: function(){
         return {
             desti: "",
-            anada: "",
-            tornada: ""
+            
         };
     },
     methods: {
         envia(){
-            console.log(this.anada);
-            console.log(this.tornada);
-            if(this.anada > this.tornada){
-                console.log("INCORRECTE");
-                var container = document.querySelector("#alert-container-error");
-                container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
-                <strong>Compte!</strong> La data de sortida és posterior a la de tornada.
-                </div>`;
-                const alert = document.querySelector("#danger-alert");
-                // Create Bootstrap alert instance
-                const bsAlert = new bootstrap.Alert(alert);
-
-                // Dismiss time out
-                setTimeout(() => {
-                bsAlert.close();
-                }, 2000);
-            }
-            else{
-                console.log("CORRECTE");
-                location.href=('nova_maleta_rapida.html?desti=').concat(this.desti).concat('&anada=').concat(this.anada).concat('&tornada=').concat(this.tornada);
-
-            }
-            /*if (true){
-                location.href=('nova_maleta_rapida.html?desti=').concat(this.desti).concat('&anada=').concat(this.anada).concat('&tornada=').concat(this.tornada);
-            }
-            else{
-                console.log("NO POTS!")
-            }*/
-            
+            a = document.getElementById("dates").value;
+            location.href=('nova_maleta_rapida.html?desti=').concat(this.desti).concat('&dates=').concat(a);
         }
+
     }
 });
 landing.mount("#landing");

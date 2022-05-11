@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 </head>
 
 <body>
@@ -91,12 +96,16 @@
                         <p>A <span class="titol">Suited Penguin</span> ens preocupem de tot, tindrem en compte la
                             previsió metereològica del teu lloc de destí i molt més
                             per proposar-te la <span class="destacat">millor maleta possible</span></p>
-                        <input type="search" placeholder="On viatjaràs?" v-model="desti">
-                        <input type="date" id="anada" v-model="anada">
-                        <input type="date" id="tornada" v-model="tornada">
-                        <div id="alert-container-error" style="margin-right: 5%;">
-
-                        </div>
+                        <div class="row">
+                            <div class = "col-md-6">
+                                <label class="form-label">On viatjaràs?</label>
+                                <input type="search" placeholder="Destí" v-model="desti">
+                            </div>
+                            <div class = "col-md-6">
+                                <label class="form-label">Quan viatjaràs?</label>
+                                <input type="text" name="daterange" value="01/05/2022 - 04/05/2022" id="dates"/>
+                            </div>
+                    </div>
                     </div>
                     <div class="col-sm-4 align-self-end my-2"><button v-on:click="envia()"
                             class="btn btn-primary fs-5 py-2 px-4" role="button" type="button">Maleta ràpida</button>
