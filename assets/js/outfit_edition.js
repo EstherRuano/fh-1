@@ -2,6 +2,29 @@ filterSelection("selecciona_btn")
 
 function filterSelection(c) {
     var x, i;
+    var btn1, btn2, btn3;
+
+    btn1=document.getElementById("botoCap");
+    btn2=document.getElementById("botoCos");
+    btn3=document.getElementById("botoCames");
+
+    if(c==="cap"){
+        btn1.style.fill="green";
+        btn2.style.fill="#173042";
+        btn3.style.fill="#173042";
+    }
+    else if(c==="cos"){
+        btn2.style.fill="green";
+        btn1.style.fill="#173042";
+        btn3.style.fill="#173042";
+    }
+    else{ //cames
+        btn3.style.fill="green";
+        btn2.style.fill="#173042";
+        btn1.style.fill="#173042";
+    }
+
+    
     x = document.getElementsByClassName("filterDiv");
     // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
     for (i = 0; i < x.length; i++) {
