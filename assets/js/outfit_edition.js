@@ -18,7 +18,7 @@ function filterSelection(c) {
         btn1.style.fill="#173042";
         btn3.style.fill="#173042";
     }
-    else{ //cames
+    else if(c==="cames"){
         btn3.style.fill="green";
         btn2.style.fill="#173042";
         btn1.style.fill="#173042";
