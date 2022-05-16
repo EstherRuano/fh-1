@@ -151,7 +151,7 @@
                             </div>
 
                             <!--MALETA 1-->
-                            <div class="card text-center recent" style=" margin-bottom: 1rem;">
+                            <div id="maleta_oculta" class="card text-center recent" style=" margin-bottom: 1rem; display: none;">
                                 <a href="visualitzar_maleta.html"></a>
                                 <div class="card-body grid-maleta">
 
@@ -550,6 +550,9 @@
         var desti = obtener_valor("mostra");
 
         if (desti == 1){
+
+            document.getElementById("maleta_oculta").style.display = "block";
+
             var container = document.querySelector("#alert-container");
             container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
             <strong>Èxit!</strong> Maleta "Maleta a Escòcia" guardada correctament.
