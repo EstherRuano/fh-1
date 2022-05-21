@@ -34,7 +34,7 @@ const viz_maleta = Vue.createApp({
                 // Dismiss time out
                 setTimeout(() => {
                 bsAlert.close();
-                }, 2000);
+                }, 5000);
             }
         },
         //lògica de pestanyes
