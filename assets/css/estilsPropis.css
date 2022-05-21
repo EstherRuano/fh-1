@@ -40,6 +40,22 @@
     text-align: center;
 }
 
+.consells{
+    text-align: left;
+    padding: 20px;
+    margin: 20px;
+    border-radius: calc(0.50rem - 1px);
+    background-color: rgb(207, 223, 218);
+}
+
+.btnDreta{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 .mostraMaletaInfo {
     text-align: left;
 }

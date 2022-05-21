@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="assets/css/toggle-switches.css">
     <script src="https://unpkg.com/vue@next"></script>
     <script src="assets\js\visualitzar_maleta.js" defer></script>
+    <script language="JavaScript">
+        function tancaConsells(){
+                  document.getElementById("consell").classList.add("d-none");
+              }
+      </script>
 
 </head>
 
@@ -453,7 +458,18 @@
                     <div id="alert-container">
 
                     </div>
-
+                    <div class="consells" id="consell">
+                        <h5>Informació</h5>
+                        A continuació et mostrem les nostres suggerències per l'equipatge. <br>Estan basades en
+                        el contingut del teu armari Casa Uni (Barcelona) i hi hem afegit altres objectes imprescindibles
+                        per un viatge còmode.
+                        <br>Bon viatge!
+                        <div class="btnDreta">
+                            <button type="button" class="btn btn-outline-primary me-3" 
+                
+                                onclick="tancaConsells()">Entesos</button>
+                            </div>
+                        </div>
                     <div class="row">
 
                         <div class="peca col-md-6 col-lg-4 d-flex align-items-stretch">

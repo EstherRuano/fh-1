@@ -18,7 +18,11 @@
  <script src="assets\js\folder-logic.js" defer></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-
+<script language="JavaScript">
+  function tancaConsells(){
+            document.getElementById("consell").classList.add("d-none");
+        }
+</script>
 </head>
 
 <body>
@@ -218,6 +222,16 @@
        <div id="alert-container">
 
        </div>
+       <div class="consells" id="consell">
+        <h5>Informació</h5>
+        <p>A continuació trobes un llistat amb el contingut del teu armari.
+        </p>
+        <div class="btnDreta">
+            <button type="button" class="btn btn-outline-primary me-3" 
+
+                onclick="tancaConsells()">Entesos</button>
+            </div>
+        </div>
        <div class="row">
 
         <div id="mycard" data-category="calcat" class="col-md-6 col-lg-4 d-flex align-items-stretch">
