@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+ <title>Suited Penguin - Visualitzar armari</title>
+ <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;display=swap">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
+ <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+ <link rel="stylesheet" href="assets/css/estilsPropis.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+ <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
+ <script src="https://unpkg.com/vue@next"></script>
+ <script src="assets\js\folder-logic.js" defer></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+</head>
+
+<body>
+ <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+  <div class="container">
+   <a href="landing_page.html">
+    <img class="logo_img" src="assets/img/avatars/logo-i-text.png" alt="logo i text" />
+   </a>
+   <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span
+     class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+   <div id="navcol-1" class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+     <li class="nav-item"><a class="nav-link" href="landing_page.html">Home</a></li>
+     <li class="nav-item"><a class="nav-link" href="llistar_maletes.html">Maleta</a></li>
+     <li class="nav-item"><a class="nav-link active" href="armari.html">Armari</a></li>
+     <li class="nav-item"><a class="nav-link" href="outfit.html">Outfit</a></li>
+     <li class="nav-item"><a class="nav-link" href="perfil.html">Perfil</a></li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+ <main class="page">
+  <section class="container-fluid llistar_maletes">
+   <div class="container">
+    <div class="block-heading">
+     <div class="row">
+      <div class="col-md-5">
+       <h3 class="text-info" style="padding-bottom: 1rem">Els meus Armaris > <span class="text-muted">Camping</span>
+       </h3>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-3">
+       <h3 class="text-info"></h3>
+      </div>
+      <div class="col-md-9">
+       <div class="input-group">
+        <input type="search" id="filter" class="form-control rounded" placeholder="Introdueix la peça a cercar"
+         aria-label="Cerca" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">Cerca</button>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="content">
+     <div class="row">
+      <div class="col-md-3 d-flex">
+       <div class="d-md-block" style="width:100%; margin-top: 1rem;">
+        <div class="sticky-top">
+         <!-- Button trigger modal -->
+         <button type="button" class="btn btn-primary" style="width:100%;" data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop">
+          Afegeix una peça
+         </button>
+         <!-- Modal -->
+
+         <section id="app" class="d-none d-md-block">
+          <hr style="margin-bottom: 0px;" />
+          <div class="Folder folder-div" :class="{folder_active:recentSelected}" @click="selectedFolder(1)">
+           Recents
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-clock"
+            viewBox="0 0 16 16">
+            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+           </svg>
+          </div>
+          <hr style="margin: 0px;" />
+          <div class="Folder folder-div" :class="{folder_active:favoritsSelected}" @click="selectedFolder(2)">
+           Favorits
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-star"
+            viewBox="0 0 16 16">
+            <path
+             d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+           </svg>
+          </div>
+          <hr style="margin: 0px;" />
+          <div class="Folder folder-div" :class="{folder_active:papereraSelected}" @click="selectedFolder(3)">
+           Paperera
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#173042" class="bi bi-trash"
+            viewBox="0 0 16 16">
+            <path
+             d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+            <path fill-rule="evenodd"
+             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+           </svg>
+          </div>
+          <hr style="margin-top: 0px;" />
+
+          <div class="space">
+           &nbsp;
+          </div>
+          <div class="space">
+           &nbsp;
+          </div>
+          <div class="filter">
+           Filtra per:
+          </div>
+          <hr style="margin: 0px;" />
+          <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
+           data-bs-target="#collapseExample" type="button" aria-expanded="false" aria-controls="collapse">
+           Categoria
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+             d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+           </svg>
+          </button>
+          <hr style="margin: 0px;" />
+          <div class="collapse" id="collapseExample">
+           <div class="card-body">
+            <ul class="list-group list-group-flush">
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="interior"> Roba Interior</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="calcat"> Calçat</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="complements">
+                Complements</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="abric"> Roba d’abric</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="dalt"> Part de dalt</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="baix"> Part de baix</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="una"> Una peça</label>
+              </div>
+             </li>
+            </ul>
+           </div>
+          </div>
+
+          <div class="space">
+           &nbsp;
+          </div>
+
+          <hr style="margin: 0px;" />
+          <button class="btn btn-secondary" style="width:100%;" data-bs-toggle="collapse"
+           data-bs-target="#collapseExample2" type="button" aria-expanded="false" aria-controls="collapse">
+           Ambit
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+             d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z" />
+           </svg>
+          </button>
+          <hr style="margin: 0px;" />
+          <div class="collapse" id="collapseExample2">
+           <div class="card-body">
+            <ul class="list-group list-group-flush">
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="formal"> Formal</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="informal"> Informal</label>
+              </div>
+             </li>
+             <li class="list-group-item">
+              <div class="form-check">
+               <label><input class="cardCheckBox" type="checkbox" value="esportiu"> Esportiu</label>
+              </div>
+             </li>
+            </ul>
+           </div>
+
+          </div>
+
+
+         </section>
+        </div>
+       </div>
+
+      </div>
+      <div class="col-md-9" style=" margin-top: 1rem; margin-bottom: 1rem;">
+       <div id="alert-container">
+
+       </div>
+       <div class="row">
+
+        <div id="mycard" data-category="calcat" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/crocs.png" class="card-img-top img-fluid" alt="sabates crocs">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Sabates crocs</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="baix" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/faldilla_nus.png" class="card-img-top img-fluid" alt="faldilla nus">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Faldilla nus</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Formal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de baix</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/anells_verds.png" class="card-img-top img-fluid" alt="anells verds">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Anells verds</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Formal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="una" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/banyador_punts.png" class="card-img-top img-fluid" alt="banyadors amb punts">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Banyador puntejat</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Una peça</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/barret_pescador.png" class="card-img-top img-fluid" alt="parca">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Barret pescador</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="abric" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/jaqueta_texana.png" class="card-img-top img-fluid" alt="jaqueta texana">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Jaqueta texana</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Roba d'abric</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="baix" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/jeggins.png" class="card-img-top img-fluid" alt="jeggins">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Jeggins</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Esportiu</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de baix</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="calcat" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/converse_blanques.png" class="card-img-top img-fluid" alt="converse">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Converse blanques</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="dalt" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/blusa_fulles.png" class="card-img-top img-fluid" alt="blusa fulles">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Blusa de fulles</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Formal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de dalt</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div id="mycard" data-category="una" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/bikini_ratlles.png" class="card-img-top img-fluid" alt="biquini ratllat">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5>Biquini ratllat</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div id="mycard" data-category="abric" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/anorac_negre.png" class="card-img-top img-fluid" alt="Anorac negre">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5>Anorac negre</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Esportiu</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Roba d'abric</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div id="mycard" data-category="dalt" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/samarreta_adidas.png" class="card-img-top img-fluid" alt="Samarreta Adidas">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5>Samarreta Adidas</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de dalt</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div id="mycard" data-category="dalt" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/samarreta_pijama.png" class="card-img-top img-fluid" alt="Samarreta pijama">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5>Samarreta pijama</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de dalt</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div id="mycard" data-category="baix" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/pantalo_pijama.png" class="card-img-top img-fluid" alt="Pantalons pijama">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5>Pantalons pijama</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de baix</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/mitjons_blancs.png" class="card-img-top img-fluid" alt="mitjons blancs">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Mitjons blancs</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/mitjons_negres.png" class="card-img-top img-fluid" alt="mitjons negres">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Mitjons negres</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="una" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/peto_blau.png" class="card-img-top img-fluid" alt="peto blau">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Peto blau</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Una peça</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="complements" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/ulleres_sol.png" class="card-img-top img-fluid" alt="ulleres sol">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Ulleres de sol</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="calcat" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/xancletes.png" class="card-img-top img-fluid" alt="xancletes">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Xancletes</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Complements</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+        <div id="mycard" data-category="dalt" class="col-md-6 col-lg-4 d-flex align-items-stretch">
+         <!-- Bootstrap 5 card box -->
+         <div class="card" style="width: 20rem;">
+          <div class="card-thumbnail">
+           <img src="assets/img/clothes/samarreta_tirants_png.webp" class="card-img-top img-fluid" alt="samarreta tirants">
+          </div>
+          <div class="card-body">
+           <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="text-align: center;">
+             <h5 class="card-title">Samarreta tirants</h5>
+            </li>
+            <li class="list-group-item">Àmbit: Informal</li>
+            <li class="list-group-item">Armari: Casa camping</li>
+            <li class="list-group-item">Categoria: Part de dalt</li>
+           </ul>
+          </div>
+         </div>
+        </div>
+
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+ </main>
+
+
+ <footer class="page-footer dark">
+  <div class="container">
+   <div class="row">
+    <div class="col-md-3 col-lg-4">
+     <div class="row">
+      <div class="col-md-12 col-lg-8 mb-md-0 mb-4 text-center">
+       <a href="#">
+        <img style="max-width:75%;
+                            max-height:75%;" class="logo_img" src="assets/img/avatars/logo_sensefons.png" />
+       </a>
+       <div class="row text-center">
+        <h1 class="titol-footer">Suited Penguin</h1>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="col-md-9 col-lg-8">
+     <div class="row">
+      <div class="col-md-3 mb-md-0 mb-4 border-left">
+       <h5>Maleta</h5>
+       <ul class="list-unstyled">
+        <li><a href="llistar_maletes.html" class="py-1 d-block">Les meves maletes</a>
+        </li>
+        <li><a href="seleccio_tipus_maleta.html" class="py-1 d-block">Crea una maleta</a></li>
+       </ul>
+      </div>
+      <div class="col-md-3 mb-md-0 mb-4 border-left">
+       <h5>Armari</h5>
+       <ul class="list-unstyled">
+        <li><a href="armari.html" class="py-1 d-block">Els meus armaris</a></li>
+        <li><a href="armari.html" class="py-1 d-block">Crea un armari</a></li>
+
+       </ul>
+      </div>
+      <div class="col-md-3 mb-md-0 mb-4 border-left">
+       <h5>Outfit</h5>
+       <ul class="list-unstyled">
+        <li><a href="outfit.html" class="py-1 d-block">Els meus outfits</a></li>
+        <li><a href="outfit.html" class="py-1 d-block">Crea un outfit</a></li>
+       </ul>
+      </div>
+      <div class="col-md-3 mb-md-0 mb-4 border-left">
+       <h5>Altres</h5>
+       <ul class="list-unstyled">
+        <li><a href="perfil.html" class="py-1 d-block">El meu perfil</a></li>
+        <li><a href="ajuda.html" class="py-1 d-block">Necessites ajuda?</a></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer-copyright">
+   <p>© 2022 Suited Penguin</p>
+  </div>
+ </footer>
+
+ <!-- For searching purpose -->
+ <script>
+  $("#filter").on("keyup", function () {
+   const input = document.querySelector(".form-control");
+   const cards = document.getElementsByClassName("col-md-6");
+   let filter = input.value.toUpperCase();
+   for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].querySelector(".card-body h5");
+    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+     cards[i].classList.remove("d-none")
+    } else {
+     cards[i].classList.add("d-none")
+    }
+   }
+  });
+ </script>
+
+ <!-- For filtering purpose -->
+ <script>
+  $(document).ready(function () {
+   // Cache your elements
+   const $cards = $("[data-category]");
+   const $cardsCkb = $(".cardCheckBox");
+
+   $cardsCkb.on("change", function () {
+
+    // Create an Array of checked values
+    const checkedArr = $cardsCkb.filter(":checked").get().map(el => el.value);
+
+    // Show all and exit if no filter is active
+    if (!checkedArr.length) return $cards.removeClass("d-none");
+
+    // Finally, use jQuery's .toggleClass() and JS's Array.prototype.includes()
+    $cards.each(function () {
+     const category = $(this).data("category");
+     $(this).toggleClass("d-none", !checkedArr.includes(category));
+    });
+
+   });
+  });
+ </script>
+ <script type="text/javascript">
+  function visualitzarCard() {
+   console.log("ENTRO1");
+   var ambit = $('select[name="ambit"] option:selected').text();
+
+   var categoria = $('select[name="categoria"] option:selected').text();
+   var nom = document.getElementById("nomPeça").value;
+   var image = document.getElementById("output").src;
+   if (ambit != "Selecciona l'àmbit"
+    && categoria != "Selecciona Categoria" && nom != "" && image != "") {
+    console.log("ENTRO2");
+    document.getElementById("mostraAmbit").textContent = "Àmbit: " + ambit;
+
+    document.getElementById("mostraCategoria").textContent = "Categoria: " + categoria;
+    document.getElementById("mostraNom").innerHTML = nom;
+    document.getElementById("cardOcultable").style = "display:flex;";
+    document.getElementById("mostraImatge").src = image;
+    $('#staticBackdrop').modal('hide');
+    var container = document.querySelector("#alert-container");
+    container.innerHTML = `<div id="succeed-alert" class="alert alert-success alert-dismissible" role="alert">
+                <strong>Èxit!</strong> Peça afegida correctament.
+                </div>`;
+    const alert = document.querySelector("#succeed-alert");
+    // Create Bootstrap alert instance
+    const bsAlert = new bootstrap.Alert(alert);
+
+    // Dismiss time out
+    setTimeout(() => {
+     bsAlert.close();
+    }, 2000);
+   }
+   else {
+    console.log("ENTRO3");
+    var container = document.querySelector("#alert-container-error");
+    container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
+                <strong>Compte!</strong> Falta alguna cosa per seleccionar.
+                </div>`;
+    const alert = document.querySelector("#danger-alert");
+    // Create Bootstrap alert instance
+    const bsAlert = new bootstrap.Alert(alert);
+
+    // Dismiss time out
+    setTimeout(() => {
+     bsAlert.close();
+    }, 2000);
+   }
+
+  }
+
+ </script>
+
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+ <script src="assets/js/vanilla-zoom.js"></script>
+ <script src="assets/js/theme.js"></script>
+</body>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+ aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ <div class="modal-dialog modal-xl">
+  <div class="modal-content">
+   <div class="modal-header">
+    <h5 class="modal-title" id="staticBackdropLabel">Afegir roba</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body">
+
+    <!-- Form -->
+    <form>
+     <div class="container-fluid">
+      <div class="row">
+       <div class="col-md-4">
+        <div class="row">
+         <input id="imatge" type="file" accept="image/*" onchange="loadFile(event)">
+         <img id="output" />
+         <script>
+          var loadFile = function (event) {
+           var output = document.getElementById('output');
+           output.src = URL.createObjectURL(event.target.files[0]);
+
+          };
+         </script>
+        </div>
+       </div>
+       <div class="col-md-8">
+        <div class="row">
+         <div class="form-group">
+          <label for="Nom">Nom de la peça</label>
+          <input id="nomPeça" type="Nom" class="form-control" id="exampleInputNom1" aria-describedby="nomHelp"
+           placeholder="Introdueix el nom de la peça">
+         </div>
+        </div>
+        <div class="row">
+         <div class="form-group">
+          <label for="Àmbit">Àmbit</label>
+          <select id="ambit" name="ambit" class="form-select" aria-label="Default select àmbit">
+           <option selected>Selecciona l'àmbit</option>
+           <option value="1">Formal</option>
+           <option value="2">Informal</option>
+           <option value="3">Esportiu</option>
+          </select>
+          <small id="ambitHelp" class="form-text text-muted">En quin
+           context
+           social et posaries aquesta peça?</small>
+         </div>
+        </div>
+
+        <div class="row">
+         <div class="form-group">
+          <label for="Categoria">Categoria</label>
+          <select id="categoria" name="categoria" class="form-select" aria-label="Default select categoria">
+           <option selected>Selecciona la categoria</option>
+           <option value="1">Roba interior</option>
+           <option value="2">Calçat</option>
+           <option value="3">Complements</option>
+           <option value="4">Roba d'abric</option>
+           <option value="5">Part de dalt</option>
+           <option value="6">Part de baix</option>
+           <option value="7">Una peça</option>
+          </select>
+          <small id="categoriaHelp" class="form-text text-muted">En quina
+           part del
+           cos et col·loques la peça de roba?</small>
+         </div>
+        </div>
+        <div id="alert-container-error">
+
+        </div>
+       </div>
+      </div>
+     </div>
+    </form>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary me-5" data-bs-dismiss="modal">Cancel·la</button>
+    <button type="button" class="btn btn-outline-primary me-3" data-bs-dismiss=""
+     onclick="visualitzarCard()">Desa</button>
+   </div>
+  </div>
+ </div>
+</div>
+
+</html>
