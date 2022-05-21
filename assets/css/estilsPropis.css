@@ -40,11 +40,15 @@
     text-align: center;
 }
 
+.mostraMaletaInfo {
+    text-align: left;
+}
+
 .mostraMaletaImprescindible {
     border-radius: calc(0.50rem - 1px);
     padding: 10px;
     margin: 10px;
-    background-color: rgba(207, 223, 218, 0.8);
+    background-color: rgb(207, 223, 218);
 }
 
 .mostraMaletaCarta {

@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap">
   <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
   <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css">
   <link rel="stylesheet" href="assets/css/estilsPropis.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
@@ -127,21 +128,31 @@
                       <div class="container-fluid">
                         <div class="mostraMaletaTitol">
                           <h2 class="text-info">Maleta</h2>
-                        </div>
-                        <div class="row">
-                          <h3>Informació del viatge</h3>
-                          <div class="row">
-                            <div class="col-md-6">
-                               <p>Desti: </p> 
-                                <label name="desti"></label>
-                            </div>
-                            <div class="col-md-6">
-                              <p>Dates: </p> 
-                               <label name="daterange"></label>
-                           </div>
-                          </div>
                           
                         </div>
+
+                          <div class="row mostraMaletaInfo mostraMaletaImprescindible">
+                            <div class="row">
+                              <h3>Informació del viatge</h3>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <p>Desti: <span id="destiDisplay"></span></p> 
+                                </div>
+                                <div class="col-md-6">
+                                  <p>Dates: <span id="datesDisplay"></span></p> 
+                                  
+                              </div>
+                              </div>
+                        
+                            </div>
+                            <hr>
+                            <p class="mostraMaletaInfo">A continuació et mostrem les nostres suggerències per l'equipatge.
+                              <br>Per fer't-ho més fàcil, ho hem dividit entre <span class="destacat">imprescindibles</span> (allò que no et pots oblidar)
+                              i <span class="destacat">altres suggerències</span> que creiem que et poden ser útils.
+                              <br>Bon viatge!
+                            </p>
+                          </div>
+                        
                         <div class="row mostraMaletaImprescindible">
                           <h3 class="mostraMaletaTitol">Imprescindibles</h3>
                           <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
@@ -408,8 +419,10 @@
             var c1 = document.getElementById("formCheck-1").checked;
             var c2 = document.getElementById("formCheck-2").checked;
             var c3 = document.getElementById("formCheck-3").checked;
-            if (nom != "" && desti!="" && dates!="" && pes!="" &&(c1 || c2 || c3)) {
+            if (nom != "" && desti!="" && anada!="" && pes!="" &&(c1 || c2 || c3)) {
               console.log("esta ple");
+              document.getElementById("destiDisplay").innerHTML = desti;
+              document.getElementById("datesDisplay").innerHTML = anada;
               $('#staticBackdrop').modal('show');
               console.log("a");
             }
