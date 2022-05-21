@@ -475,7 +475,6 @@
                   <strong>Avís!</strong> Aquesta funcionalitat encara no està
                   implementada.
                   </div>`;
-<<<<<<< Updated upstream
                   const alert = document.querySelector("#info-alert");
                   // Create Bootstrap alert instance
                   const bsAlert = new bootstrap.Alert(alert);
@@ -549,67 +548,6 @@ aria-hidden="true">
                                         id="nomArmari"
                                         aria-describedby="nomHelp"
                                         placeholder="Introdueix el nom de l'armari">
-=======
-                const alert = document.querySelector("#info-alert");
-                // Create Bootstrap alert instance
-                const bsAlert = new bootstrap.Alert(alert);
-
-                // Dismiss time out
-                setTimeout(() => {
-                    bsAlert.close();
-                }, 2000);
-
-
-            }
-            else {
-                var container = document.querySelector("#alert-container-error");
-                container.innerHTML = `<div id="danger-alert" class="alert alert-danger alert-dismissible" role="alert">
-                  <strong>Compte!</strong> Falta alguna cosa per seleccionar.
-                  </div>`;
-                const alert = document.querySelector("#danger-alert");
-                // Create Bootstrap alert instance
-                const bsAlert = new bootstrap.Alert(alert);
-
-                // Dismiss time out
-                setTimeout(() => {
-                    bsAlert.close();
-                }, 2000);
-
-            }
-        }
-
-    </script>
-</body>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Afegir roba</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-
-                <!-- Form -->
-                <form>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="row">
-                                    <input type="file" accept="image/*" onchange="loadFile(event)">
-                                    <img id="output" />
-                                    <script>
-                                        var loadFile = function (event) {
-                                            var output = document.getElementById('output');
-                                            output.src = URL.createObjectURL(event.target.files[0]);
-                                            output.onload = function () {
-                                                URL.revokeObjectURL(output.src) // free memory
-                                            }
-                                        };
-                                    </script>
->>>>>>> Stashed changes
                                 </div>
                             </div>
                             <div class="col-md-8">
