@@ -27,6 +27,10 @@
         url = url.replace(remplaza, " ");
         url = url.toUpperCase();
 
+        function tancaConsells(){
+            document.getElementById("consell").classList.add("d-none");
+        }
+
         function obtener_valor(variable) {
             var variable_may = variable.toUpperCase();
             var variable_pos = url.indexOf(variable_may);
@@ -149,7 +153,17 @@
                             <div id="alert-container">
 
                             </div>
-
+                            <div class="consells" id="consell">
+                                <h5>Informació</h5>
+                                <p>A continuació trobes un llistat amb totes les teves maletes; per veure el que contenen amb
+                                    detall clica sobre elles
+                                </p>
+                                <div class="btnDreta">
+                                    <button type="button" class="btn btn-outline-primary me-3" 
+                
+                                        onclick="tancaConsells()">Entesos</button>
+                                    </div>
+                                </div>
                             <!--MALETA 1-->
                             <div id="maleta_oculta" class="card text-center recent" style=" margin-bottom: 1rem; display: none;">
                                 <a href="visualitzar_maleta.html"></a>
@@ -564,7 +578,7 @@
             // Dismiss time out
             setTimeout(() => {
             bsAlert.close();
-            }, 2000);
+            }, 5000);
         }            
     </script>
 
